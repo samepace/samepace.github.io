@@ -80,8 +80,10 @@
   // Upright video on phones, wide one on laptops.
   const video = document.getElementById('video');
   const portrait = window.matchMedia('(max-aspect-ratio: 1/1)').matches;
-  video.poster = portrait ? 'media/samepace_cover_9x16.jpg' : 'media/samepace_thumbnail_16x9.jpg';
-  video.src = portrait ? 'media/samepace_reel_9x16.mp4' : 'media/samepace_video_16x9.mp4';
+  // ...and in the page's language.
+  const s = lang === 'en' ? '_en' : '';
+  video.poster = portrait ? `media/samepace_cover_9x16${s}.jpg` : `media/samepace_thumbnail_16x9${s}.jpg`;
+  video.src = portrait ? `media/samepace_reel_9x16${s}.mp4` : `media/samepace_video_16x9${s}.mp4`;
 </script>
 </body>
 </html>

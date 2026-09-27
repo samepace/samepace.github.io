@@ -152,7 +152,7 @@
 
   <section class="card video">
     <strong data-i="videoTitle"></strong>
-    <video controls playsinline preload="metadata" poster="media/samepace_thumbnail_16x9.jpg" src="media/samepace_video_16x9.mp4"></video>
+    <video id="promo" controls playsinline preload="metadata"></video>
   </section>
 
   <section class="card intro">
@@ -307,7 +307,7 @@
       brand: 'SAMEPACE · TEST PHASE',
       title: 'Test protocol',
       intro: 'Thanks for testing SAMEPACE! 💚 Go through the tasks in order, mark whether each one worked, and jot down anything you notice. At the end, send everything with one tap.',
-      videoTitle: 'What is SAMEPACE? Watch the short video first (46 sec, no sound, text in German).',
+      videoTitle: 'What is SAMEPACE? Watch the short video first (46 sec, no sound).',
       beforeTitle: 'Before you start',
       before1: 'Takes about <strong>20-30 minutes</strong>.',
       before2: 'Best on your <strong>phone</strong>. Even better <strong>in pairs</strong>, so you can message each other.',
@@ -443,6 +443,13 @@
     document.documentElement.lang = lang;
     document.title = lang === 'de' ? 'SAMEPACE Testprotokoll' : 'SAMEPACE test protocol';
     document.querySelectorAll('[data-i]').forEach(el => { el.innerHTML = t[el.dataset.i]; });
+    // The promo video in the page's language (only reloaded when it changes).
+    const promo = document.getElementById('promo');
+    const promoSrc = `media/samepace_video_16x9${lang === 'en' ? '_en' : ''}.mp4`;
+    if (promo.getAttribute('src') !== promoSrc) {
+      promo.poster = `media/samepace_thumbnail_16x9${lang === 'en' ? '_en' : ''}.jpg`;
+      promo.setAttribute('src', promoSrc);
+    }
     document.getElementById('name').placeholder = t.namePh;
     document.getElementById('device').placeholder = t.devicePh;
     document.querySelectorAll('.lang button').forEach(b =>
