@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAMEPACE Video</title>
+  <meta name="description" content="SAMEPACE in 46 Sekunden: Leute finden, die zur gleichen Zeit im gleichen Tempo Sport machen.">
+  <meta name="theme-color" content="#1B4332">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root {
+      --primary: #1B4332;
+      --accent-light: #D8F3DC;
+      --bg: #F8F6F1;
+      --text: #1B2E28;
+      --muted: #6B7A75;
+      --border: #E5E1D8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --primary: #9AD5B0;
+        --accent-light: #1E3A2C;
+        --bg: #111814;
+        --text: #E6EFE9;
+        --muted: #9AAAA2;
+        --border: #2B3832;
+      }
+    }
+    :root[data-theme="dark"] {
+      --primary: #9AD5B0;
+      --accent-light: #1E3A2C;
+      --bg: #111814;
+      --text: #E6EFE9;
+      --muted: #9AAAA2;
+      --border: #2B3832;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--text); }
+    body { font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main {
+      min-height: 100dvh; display: flex; flex-direction: column; align-items: center;
+      gap: 16px; padding: 16px 16px 24px; max-width: 1100px; margin: 0 auto;
+    }
+    .top { width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-weight: 800; letter-spacing: .04em; color: var(--primary); }
+    .back { color: var(--muted); text-decoration: none; font-size: 15px; padding: 8px 0; }
+    video {
+      display: block; width: 100%; background: #000; border-radius: 16px;
+      max-height: calc(100dvh - 240px); object-fit: contain;
+    }
+    .actions { display: grid; gap: 10px; width: 100%; max-width: 420px; }
+    .btn {
+      display: block; text-align: center; text-decoration: none; font-weight: 700;
+      border-radius: 14px; padding: 14px; background: var(--primary); color: var(--bg);
+    }
+    .btn.secondary { background: var(--accent-light); color: var(--primary); }
+  </style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <span class="brand">SAMEPACE</span>
+    <a class="back" href="./#/login" data-i="back"></a>
+  </div>
+  <video id="video" controls playsinline muted autoplay preload="metadata"></video>
+  <div class="actions">
+    <a class="btn" href="./#/register" data-i="register"></a>
+    <a class="btn secondary" href="./#/login" data-i="login"></a>
+  </div>
+</main>
+<script>
+  const texts = {
+    de: { back: '← Zurück', register: 'Jetzt kostenlos registrieren', login: 'Ich habe schon ein Konto' },
+    en: { back: '← Back', register: 'Sign up for free', login: 'I already have an account' },
+  };
+  const lang = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'de';
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i]').forEach((el) => { el.textContent = texts[lang][el.dataset.i]; });
+
+  // Upright video on phones, wide one on laptops.
+  const video = document.getElementById('video');
+  const portrait = window.matchMedia('(max-aspect-ratio: 1/1)').matches;
+  video.poster = portrait ? 'media/samepace_cover_9x16.jpg' : 'media/samepace_thumbnail_16x9.jpg';
+  video.src = portrait ? 'media/samepace_reel_9x16.mp4' : 'media/samepace_video_16x9.mp4';
+</script>
+</body>
+</html>

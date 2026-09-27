@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAMEPACE Testprotokoll</title>
+  <meta name="description" content="Testprotokoll für SAMEPACE-Tester: Aufgaben durchklicken, abhaken, Ergebnis senden.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root {
+      --primary: #1B4332;
+      --accent: #40916C;
+      --accent-light: #D8F3DC;
+      --bg: #F8F6F1;
+      --surface: #FFFFFF;
+      --text: #1B2E28;
+      --muted: #6B7A75;
+      --border: #E5E1D8;
+      --bad: #D64545;
+      --bad-light: #FBE3E3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --primary: #9AD5B0;
+        --accent: #52B788;
+        --accent-light: #1E3A2C;
+        --bg: #111814;
+        --surface: #19221D;
+        --text: #E6EFE9;
+        --muted: #9AAAA2;
+        --border: #2B3832;
+        --bad: #F08080;
+        --bad-light: #3A2323;
+      }
+    }
+    :root[data-theme="dark"] {
+      --primary: #9AD5B0;
+      --accent: #52B788;
+      --accent-light: #1E3A2C;
+      --bg: #111814;
+      --surface: #19221D;
+      --text: #E6EFE9;
+      --muted: #9AAAA2;
+      --border: #2B3832;
+      --bad: #F08080;
+      --bad-light: #3A2323;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 640px; margin: 0 auto; padding: 20px 16px 120px; }
+    header { padding: 8px 0 4px; }
+    .brand { font-weight: 800; letter-spacing: .04em; color: var(--primary); font-size: 14px; }
+    h1 { font-size: 26px; line-height: 1.2; margin: 6px 0 8px; }
+    h2 { font-size: 18px; margin: 28px 0 10px; }
+    p { margin: 0 0 12px; }
+    .muted { color: var(--muted); }
+    a { color: var(--accent); }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .intro li { margin-bottom: 6px; }
+    .progress {
+      position: sticky; top: 0; z-index: 5;
+      background: var(--bg);
+      padding: 10px 0;
+      margin: 0 -16px; padding-left: 16px; padding-right: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .bar { height: 8px; border-radius: 8px; background: var(--border); overflow: hidden; }
+    .bar > div { height: 100%; width: 0; background: var(--accent); transition: width .3s; }
+    .progress small { display: block; margin-top: 4px; color: var(--muted); }
+    .task { position: relative; }
+    .task h3 { font-size: 16px; margin: 0 0 6px; display: flex; gap: 10px; align-items: baseline; }
+    .num {
+      flex: none; width: 26px; height: 26px; border-radius: 50%;
+      display: inline-grid; place-items: center;
+      background: var(--accent-light); color: var(--primary);
+      font-size: 13px; font-weight: 700;
+    }
+    .task ol { margin: 6px 0 12px; padding-left: 22px; }
+    .task ol li { margin-bottom: 4px; }
+    .task.ok { border-color: var(--accent); }
+    .task.bad { border-color: var(--bad); }
+    .task.ok .num { background: var(--accent); color: #fff; }
+    .task.bad .num { background: var(--bad); color: #fff; }
+    .verdict { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+    .verdict button, .scale button {
+      font: inherit; font-size: 15px;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+      border-radius: 999px; padding: 8px 14px; cursor: pointer;
+      min-height: 40px;
+    }
+    .verdict button[aria-pressed="true"].yes { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .verdict button[aria-pressed="true"].no { background: var(--bad); border-color: var(--bad); color: #fff; }
+    .verdict button[aria-pressed="true"].skip { background: var(--muted); border-color: var(--muted); color: #fff; }
+    .scale { display: flex; gap: 8px; flex-wrap: wrap; }
+    .scale button[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: var(--bg); }
+    textarea, input[type="text"] {
+      width: 100%; font: inherit; font-size: 15px;
+      border: 1px solid var(--border); border-radius: 12px;
+      padding: 10px 12px; background: var(--bg); color: var(--text);
+    }
+    textarea { min-height: 70px; resize: vertical; }
+    label { display: block; font-weight: 600; margin: 12px 0 6px; font-size: 15px; }
+    .actions { display: grid; gap: 10px; margin-top: 12px; }
+    .btn {
+      display: block; text-align: center; text-decoration: none;
+      font: inherit; font-weight: 700; font-size: 16px;
+      border: none; border-radius: 14px; padding: 14px; cursor: pointer;
+      background: var(--primary); color: var(--bg);
+    }
+    .toast {
+      position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%);
+      background: var(--primary); color: var(--bg);
+      padding: 10px 16px; border-radius: 12px; font-size: 14px;
+      opacity: 0; pointer-events: none; transition: opacity .2s;
+      max-width: calc(100% - 32px);
+    }
+    .toast.show { opacity: 1; }
+    .sent { margin: 0; padding: 10px 12px; border-radius: 12px; background: var(--accent-light); color: var(--primary); font-weight: 600; }
+    .btn[disabled] { opacity: .6; cursor: default; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .lang { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; background: var(--surface); }
+    .lang button { font: inherit; font-size: 13px; font-weight: 700; border: none; background: none; color: var(--muted); padding: 6px 12px; cursor: pointer; min-height: 32px; }
+    .lang button[aria-pressed="true"] { background: var(--primary); color: var(--bg); }
+    .video video { display: block; width: 100%; aspect-ratio: 16 / 9; margin-top: 10px; border-radius: 12px; background: #000; }
+    .reset { background: none; border: none; color: var(--muted); font: inherit; font-size: 14px; text-decoration: underline; cursor: pointer; padding: 8px 0; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="top">
+      <div class="brand" data-i="brand"></div>
+      <div class="lang" role="group" aria-label="Sprache / Language">
+        <button type="button" data-lang="de">DE</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+    <h1 data-i="title"></h1>
+    <p class="muted" data-i="intro"></p>
+  </header>
+
+  <section class="card video">
+    <strong data-i="videoTitle"></strong>
+    <video controls playsinline preload="metadata" poster="media/samepace_thumbnail_16x9.jpg" src="media/samepace_video_16x9.mp4"></video>
+  </section>
+
+  <section class="card intro">
+    <strong data-i="beforeTitle"></strong>
+    <ul>
+      <li data-i="before1"></li>
+      <li data-i="before2"></li>
+      <li><span data-i="before3"></span> <a href="./" target="_blank" rel="noopener">samepace.github.io</a></li>
+      <li data-i="before4"></li>
+      <li data-i="before5"></li>
+      <li data-i="before6"></li>
+    </ul>
+  </section>
+
+  <div class="progress" aria-live="polite">
+    <div class="bar"><div id="bar"></div></div>
+    <small id="progressText"></small>
+  </div>
+
+  <label for="name" data-i="nameLabel"></label>
+  <input type="text" id="name" autocomplete="given-name">
+  <label for="device" data-i="deviceLabel"></label>
+  <input type="text" id="device">
+
+  <h2 data-i="tasksTitle"></h2>
+  <div id="tasks"></div>
+
+  <h2 data-i="overallTitle"></h2>
+  <section class="card">
+    <label data-i="ratingLabel"></label>
+    <div class="scale" id="rating" role="group">
+      <button type="button" data-v="1">1 😕</button>
+      <button type="button" data-v="2">2</button>
+      <button type="button" data-v="3">3</button>
+      <button type="button" data-v="4">4</button>
+      <button type="button" data-v="5">5 🤩</button>
+    </div>
+    <label data-i="wouldUseLabel"></label>
+    <div class="scale" id="wouldUse" role="group">
+      <button type="button" data-v="yes" data-i="yes"></button>
+      <button type="button" data-v="maybe" data-i="maybe"></button>
+      <button type="button" data-v="no" data-i="no"></button>
+    </div>
+    <label for="liked" data-i="likedLabel"></label>
+    <textarea id="liked"></textarea>
+    <label for="confusing" data-i="confusingLabel"></label>
+    <textarea id="confusing"></textarea>
+    <label for="missing" data-i="missingLabel"></label>
+    <textarea id="missing"></textarea>
+  </section>
+
+  <h2 data-i="sendTitle"></h2>
+  <section class="card">
+    <p class="muted" data-i="sendIntro"></p>
+    <div class="actions">
+      <button class="btn" id="sendApp" type="button"></button>
+      <p class="sent" id="sentNote" hidden data-i="sentNote"></p>
+    </div>
+    <button class="reset" id="reset" type="button" data-i="reset"></button>
+  </section>
+</main>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+  const I18N = {
+    de: {
+      brand: 'SAMEPACE · TESTPHASE',
+      title: 'Testprotokoll',
+      intro: 'Danke, dass du SAMEPACE testest! 💚 Geh die Aufgaben der Reihe nach durch, markiere bei jeder, ob sie geklappt hat, und schreib kurz dazu, was dir auffällt. Am Ende schickst du alles mit einem Tipp ab.',
+      videoTitle: 'Was ist SAMEPACE? Schau dir zuerst das kurze Video an (46 Sek., ohne Ton).',
+      beforeTitle: 'Bevor du startest',
+      before1: 'Dauer: ca. <strong>20-30 Minuten</strong>.',
+      before2: 'Am besten am <strong>Handy</strong>. Am schönsten ist es <strong>zu zweit</strong>, dann könnt ihr euch gegenseitig schreiben.',
+      before3: 'Öffne die App:',
+      before4: '<strong>Tipp:</strong> Leg die App auf deinen Home-Bildschirm. Dann fühlt sie sich wie eine echte App an:<br><span class="muted">iPhone (Safari): Teilen-Symbol → „Zum Home-Bildschirm“<br>Android (Chrome): ⋮ oben rechts → „Zum Startbildschirm hinzufügen“</span>',
+      before5: 'Es gibt kein Richtig oder Falsch. Wenn etwas verwirrend ist, ist <strong>das</strong> genau das, was wir wissen wollen.',
+      before6: 'Deine Antworten werden nur auf deinem Handy gespeichert, bis du sie abschickst.',
+      progress: (d, n) => `${d} von ${n} Aufgaben erledigt`,
+      nameLabel: 'Dein Vorname', namePh: 'z. B. Lisa',
+      deviceLabel: 'Dein Handy & Browser', devicePh: 'z. B. iPhone 13, Safari',
+      tasksTitle: 'Aufgaben',
+      ok: '👍 Hat geklappt', bad: '👎 Problem', skip: 'Übersprungen',
+      notePh: 'Was ist dir aufgefallen? (optional)',
+      notePhBad: 'Was genau ist passiert? Wo? (hilft sehr!)',
+      overallTitle: 'Dein Gesamteindruck',
+      ratingLabel: 'Wie gefällt dir SAMEPACE insgesamt?',
+      wouldUseLabel: 'Würdest du die App nutzen, um Sportpartner:innen zu finden?',
+      yes: 'Ja', maybe: 'Vielleicht', no: 'Eher nicht',
+      likedLabel: 'Was hat dir am besten gefallen?',
+      confusingLabel: 'Was war verwirrend oder hat genervt?',
+      missingLabel: 'Was fehlt dir noch?',
+      sendTitle: 'Fertig? Ergebnis senden',
+      sendIntro: 'Ein Tipp genügt, dann ist dein Ergebnis bei uns.',
+      send: '🚀 An SAMEPACE senden', sending: 'Wird gesendet …', sent: '✅ Gesendet',
+      resend: '🚀 Nochmal senden (mit Änderungen)',
+      sentNote: '✅ Angekommen, danke! Du kannst die Seite jetzt schließen.',
+      sentToast: 'Angekommen, danke! 💚',
+      failToast: 'Senden ging nicht - bitte in ein paar Minuten nochmal versuchen.',
+      confirmEmpty: 'Du hast noch keine Aufgabe bewertet. Trotzdem senden?',
+      reset: 'Alles zurücksetzen', confirmReset: 'Wirklich alle Antworten löschen?',
+      tasks: [
+        { title: 'Registrieren & Einrichtung', steps: [
+          'Öffne die App und tippe auf „Jetzt registrieren“.',
+          'Registriere dich mit Name, E-Mail und Passwort.',
+          'Geh die Einrichtung durch: Sportarten wählen, Level/Tempo angeben, Basisdaten ausfüllen.'
+        ], ask: 'War klar, was du bei jedem Schritt tun sollst?' },
+        { title: 'Tutorial', steps: [
+          'Schau dir das kurze Tutorial an (erscheint beim ersten Start; später über das ?-Symbol).'
+        ], ask: 'Hast du danach verstanden, wofür SAMEPACE da ist?' },
+        { title: 'Profil ausfüllen', steps: [
+          'Tippe unten auf „Profil“.',
+          'Lade ein Profilfoto hoch und schreib ein paar Worte über dich.',
+          'Wähle Interessen und beantworte einen Profil-Prompt.'
+        ] },
+        { title: 'Sportzeit eintragen', steps: [
+          'Tippe unten auf „Plan“ und dann auf „Sportzeit hinzufügen“.',
+          'Wähle eine Sportart aus der Liste, einen Tag und eine Uhrzeit.',
+          'Lege einen Treffpunkt auf der Karte fest und speichere.'
+        ], ask: 'Hat das Speichern geklappt? Passten die Fragen (Tempo, Level, Platz …) zu deiner Sportart?' },
+        { title: 'Sportplan ansehen', steps: [
+          'Schau dir deinen Plan als Liste und als Wochenansicht an.',
+          'Stell über das Uhr-Symbol ein, welche Uhrzeiten angezeigt werden.'
+        ] },
+        { title: 'Leute & Events entdecken', steps: [
+          'Tippe unten auf „Entdecken“ und scrolle durch die Tage.',
+          'Probier die Filter aus (Sportart, Uhrzeit, Events).',
+          'Öffne das Profil einer Person.'
+        ] },
+        { title: 'Matches & Sportbuddys', steps: [
+          'Öffne bei einer deiner Sportzeiten die passenden Vorschläge.',
+          'Gib jemandem ein High Five 🙌 (z. B. deiner Test-Partnerin/deinem Test-Partner).',
+          'Wenn ihr euch gegenseitig ein High Five gegeben habt, schau unter „Buddys“ nach.'
+        ], ask: 'Tipp: Das klappt nur, wenn ihr beide eine Sportzeit zur ähnlichen Zeit habt.' },
+        { title: 'Chatten', steps: [
+          'Schreib jemandem eine Nachricht (über „Buddys“, „Entdecken“ oder das Profil).',
+          'Antworte auf eine Nachricht und schau, ob der rote Punkt bei „Chat“ auftaucht.',
+          'Lege im Chat einen Treffpunkt fest.'
+        ], ask: 'Kamen die Nachrichten an? Hat die Tastatur etwas verdeckt?' },
+        { title: 'Event erstellen oder beitreten', steps: [
+          'Tippe bei „Entdecken“ auf „Event hosten“ und erstelle ein Test-Event, oder tritt einem Event bei.'
+        ] },
+        { title: 'Design & Sprache', steps: [
+          'Geh zu Profil → ⚙️ Einstellungen.',
+          'Wechsle das Design (z. B. „Girly“ oder „Sporty“) und die Sprache auf Englisch und wieder zurück.'
+        ] },
+        { title: 'Feedback in der App', steps: [
+          'Profil → ⚙️ → „Feedback geben“: Schick eine kurze Idee oder einen Fehler.'
+        ] },
+      ],
+    },
+    en: {
+      brand: 'SAMEPACE · TEST PHASE',
+      title: 'Test protocol',
+      intro: 'Thanks for testing SAMEPACE! 💚 Go through the tasks in order, mark whether each one worked, and jot down anything you notice. At the end, send everything with one tap.',
+      videoTitle: 'What is SAMEPACE? Watch the short video first (46 sec, no sound, text in German).',
+      beforeTitle: 'Before you start',
+      before1: 'Takes about <strong>20-30 minutes</strong>.',
+      before2: 'Best on your <strong>phone</strong>. Even better <strong>in pairs</strong>, so you can message each other.',
+      before3: 'Open the app:',
+      before4: '<strong>Tip:</strong> Add the app to your home screen so it feels like a real app:<br><span class="muted">iPhone (Safari): Share icon → “Add to Home Screen”<br>Android (Chrome): ⋮ top right → “Add to Home screen”</span>',
+      before5: 'There is no right or wrong. If something is confusing, <strong>that</strong> is exactly what we want to know.',
+      before6: 'Your answers are only stored on your phone until you send them.',
+      progress: (d, n) => `${d} of ${n} tasks done`,
+      nameLabel: 'Your first name', namePh: 'e.g. Lisa',
+      deviceLabel: 'Your phone & browser', devicePh: 'e.g. iPhone 13, Safari',
+      tasksTitle: 'Tasks',
+      ok: '👍 Worked', bad: '👎 Problem', skip: 'Skipped',
+      notePh: 'Anything you noticed? (optional)',
+      notePhBad: 'What exactly happened? Where? (really helps!)',
+      overallTitle: 'Your overall impression',
+      ratingLabel: 'How do you like SAMEPACE overall?',
+      wouldUseLabel: 'Would you use the app to find sports partners?',
+      yes: 'Yes', maybe: 'Maybe', no: 'Probably not',
+      likedLabel: 'What did you like most?',
+      confusingLabel: 'What was confusing or annoying?',
+      missingLabel: 'What is still missing?',
+      sendTitle: 'Done? Send your results',
+      sendIntro: 'One tap and your results are with us.',
+      send: '🚀 Send to SAMEPACE', sending: 'Sending …', sent: '✅ Sent',
+      resend: '🚀 Send again (with changes)',
+      sentNote: '✅ Received, thank you! You can close this page now.',
+      sentToast: 'Received, thank you! 💚',
+      failToast: 'Sending failed - please try again in a few minutes.',
+      confirmEmpty: 'You haven’t rated any task yet. Send anyway?',
+      reset: 'Reset everything', confirmReset: 'Really delete all your answers?',
+      tasks: [
+        { title: 'Sign up & setup', steps: [
+          'Open the app and tap “Register now”.',
+          'Sign up with name, email and password.',
+          'Go through the setup: pick your sports, set level/pace, fill in the basics.'
+        ], ask: 'Was it clear what to do at each step?' },
+        { title: 'Tutorial', steps: [
+          'Watch the short tutorial (shown on first start; later via the ? icon).'
+        ], ask: 'Did you understand what SAMEPACE is for afterwards?' },
+        { title: 'Fill in your profile', steps: [
+          'Tap “Profile” at the bottom.',
+          'Upload a profile photo and write a few words about yourself.',
+          'Pick interests and answer a profile prompt.'
+        ] },
+        { title: 'Add a sport time', steps: [
+          'Tap “Plan” at the bottom, then “Add sport time”.',
+          'Pick a sport from the list, a day and a time.',
+          'Set a meeting point on the map and save.'
+        ], ask: 'Did saving work? Did the questions (pace, level, venue …) fit your sport?' },
+        { title: 'View your plan', steps: [
+          'Look at your plan as a list and as a week view.',
+          'Use the clock icon to choose which hours are shown.'
+        ] },
+        { title: 'Discover people & events', steps: [
+          'Tap “Discover” at the bottom and scroll through the days.',
+          'Try the filters (sport, time, events).',
+          'Open someone’s profile.'
+        ] },
+        { title: 'Matches & sport buddies', steps: [
+          'Open the suggestions for one of your sport times.',
+          'Give someone a high five 🙌 (e.g. your test partner).',
+          'If you both gave each other a high five, check “Buddies”.'
+        ], ask: 'Tip: this only works if you both have a sport time around the same time.' },
+        { title: 'Chat', steps: [
+          'Message someone (via “Buddies”, “Discover” or their profile).',
+          'Reply to a message and check whether the red dot appears on “Chat”.',
+          'Set a meeting point in the chat.'
+        ], ask: 'Did the messages arrive? Did the keyboard cover anything?' },
+        { title: 'Create or join an event', steps: [
+          'In “Discover”, tap “Host event” and create a test event, or join an event.'
+        ] },
+        { title: 'Design & language', steps: [
+          'Go to Profile → ⚙️ Settings.',
+          'Switch the design (e.g. “Girly” or “Sporty”) and the language to English and back.'
+        ] },
+        { title: 'In-app feedback', steps: [
+          'Profile → ⚙️ → “Send feedback”: send a quick idea or a bug.'
+        ] },
+      ],
+    },
+  };
+
+  const KEY = 'samepace-testprotokoll-v1';
+  let state = { tasks: {}, name: '', device: '', rating: '', wouldUse: '', liked: '', confusing: '', missing: '', lang: '' };
+  try {
+    const saved = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (saved) state = Object.assign(state, saved);
+  } catch (e) { /* storage unavailable - works without saving */ }
+  // Answers saved by the earlier German-only version.
+  state.wouldUse = { 'Ja': 'yes', 'Vielleicht': 'maybe', 'Eher nicht': 'no' }[state.wouldUse] || state.wouldUse;
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
+
+  let lang = state.lang || ((navigator.language || 'de').toLowerCase().startsWith('de') ? 'de' : 'en');
+  const T = () => I18N[lang];
+  const TASK_COUNT = I18N.de.tasks.length;
+
+  const tasksEl = document.getElementById('tasks');
+  const taskEls = [];
+  for (let i = 0; i < TASK_COUNT; i++) {
+    const s = state.tasks[i] || (state.tasks[i] = { verdict: '', note: '' });
+    const el = document.createElement('section');
+    el.className = 'card task';
+    el.innerHTML = `
+      <h3><span class="num">${i + 1}</span><span class="t"></span></h3>
+      <ol></ol>
+      <p class="muted ask" style="font-size:14px"></p>
+      <div class="verdict" role="group">
+        <button type="button" class="yes" data-v="ok"></button>
+        <button type="button" class="no" data-v="bad"></button>
+        <button type="button" class="skip" data-v="skip"></button>
+      </div>
+      <textarea></textarea>`;
+    const buttons = el.querySelectorAll('.verdict button');
+    const ta = el.querySelector('textarea');
+    const paint = () => {
+      buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === s.verdict)));
+      el.classList.toggle('ok', s.verdict === 'ok');
+      el.classList.toggle('bad', s.verdict === 'bad');
+      ta.placeholder = s.verdict === 'bad' ? T().notePhBad : T().notePh;
+    };
+    buttons.forEach(b => b.addEventListener('click', () => {
+      s.verdict = s.verdict === b.dataset.v ? '' : b.dataset.v;
+      paint(); save(); updateProgress();
+    }));
+    ta.value = s.note;
+    ta.addEventListener('input', () => { s.note = ta.value; save(); });
+    tasksEl.appendChild(el);
+    taskEls.push({ el, paint });
+  }
+
+  function render() {
+    const t = T();
+    document.documentElement.lang = lang;
+    document.title = lang === 'de' ? 'SAMEPACE Testprotokoll' : 'SAMEPACE test protocol';
+    document.querySelectorAll('[data-i]').forEach(el => { el.innerHTML = t[el.dataset.i]; });
+    document.getElementById('name').placeholder = t.namePh;
+    document.getElementById('device').placeholder = t.devicePh;
+    document.querySelectorAll('.lang button').forEach(b =>
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    taskEls.forEach(({ el, paint }, i) => {
+      const task = t.tasks[i];
+      el.querySelector('.t').textContent = task.title;
+      el.querySelector('ol').innerHTML = task.steps.map(x => `<li>${x}</li>`).join('');
+      const ask = el.querySelector('.ask');
+      ask.textContent = task.ask || '';
+      ask.hidden = !task.ask;
+      el.querySelector('.yes').textContent = t.ok;
+      el.querySelector('.no').textContent = t.bad;
+      el.querySelector('.skip').textContent = t.skip;
+      paint();
+    });
+    sendApp.textContent = sendApp.disabled && state.sentAt ? t.sent : (state.sentAt ? t.resend : t.send);
+    updateProgress();
+  }
+
+  document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => {
+    lang = b.dataset.lang; state.lang = lang; save(); render();
+  }));
+
+  ['name', 'device', 'liked', 'confusing', 'missing'].forEach(id => {
+    const el = document.getElementById(id);
+    el.value = state[id] || '';
+    el.addEventListener('input', () => { state[id] = el.value; save(); });
+  });
+  ['rating', 'wouldUse'].forEach(id => {
+    const group = document.getElementById(id);
+    const paint = () => group.querySelectorAll('button').forEach(b =>
+      b.setAttribute('aria-pressed', String(b.dataset.v === String(state[id]))));
+    group.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+      state[id] = String(state[id]) === b.dataset.v ? '' : b.dataset.v;
+      paint(); save();
+    }));
+    paint();
+  });
+
+  function updateProgress() {
+    const done = Object.keys(state.tasks).filter(i => state.tasks[i] && state.tasks[i].verdict).length;
+    document.getElementById('bar').style.width = `${(done / TASK_COUNT) * 100}%`;
+    document.getElementById('progressText').textContent = T().progress(done, TASK_COUNT);
+  }
+
+  // The report always goes to the admin view in German, whatever language
+  // the tester used - only their own notes stay as written.
+  function report() {
+    const de = I18N.de;
+    const label = { ok: '👍 geklappt', bad: '👎 Problem', skip: '- übersprungen', '': '? offen' };
+    const useLabel = { yes: 'Ja', maybe: 'Vielleicht', no: 'Eher nicht' };
+    const lines = [
+      'SAMEPACE Testprotokoll',
+      `Von: ${state.name || '(kein Name)'}`,
+      `Gerät: ${state.device || '(nicht angegeben)'}`,
+      `Sprache: ${lang.toUpperCase()}`,
+      '',
+    ];
+    de.tasks.forEach((task, i) => {
+      const s = state.tasks[i] || {};
+      lines.push(`${i + 1}. ${task.title}: ${label[s.verdict || '']}`);
+      if (s.note && s.note.trim()) lines.push(`   → ${s.note.trim()}`);
+    });
+    lines.push('', `Gesamteindruck: ${state.rating ? state.rating + '/5' : '-'}`);
+    lines.push(`Würde die App nutzen: ${useLabel[state.wouldUse] || '-'}`);
+    if (state.liked.trim()) lines.push(`Am besten: ${state.liked.trim()}`);
+    if (state.confusing.trim()) lines.push(`Verwirrend: ${state.confusing.trim()}`);
+    if (state.missing.trim()) lines.push(`Fehlt noch: ${state.missing.trim()}`);
+    return lines.join('\n');
+  }
+
+  const toast = (msg) => {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2200);
+  };
+
+  // Straight into the app's admin view (Feedback tab). Reads the app's
+  // public Supabase address and key from the same deploy, so this page
+  // never has to be edited when they change.
+  async function supabaseConfig() {
+    const text = await (await fetch('assets/.env', { cache: 'no-store' })).text();
+    const env = {};
+    text.split(/\r?\n/).forEach(line => {
+      const i = line.indexOf('=');
+      if (i > 0) env[line.slice(0, i).trim()] = line.slice(i + 1).trim();
+    });
+    return { url: env.SUPABASE_URL, key: env.SUPABASE_ANON_KEY };
+  }
+
+  const sendApp = document.getElementById('sendApp');
+  sendApp.addEventListener('click', async () => {
+    const answered = Object.values(state.tasks).some(s => s && s.verdict);
+    if (!answered && !confirm(T().confirmEmpty)) return;
+    sendApp.disabled = true;
+    sendApp.textContent = T().sending;
+    try {
+      const { url, key } = await supabaseConfig();
+      const res = await fetch(`${url}/rest/v1/rpc/submit_test_protocol`, {
+        method: 'POST',
+        headers: { apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tester_name: state.name || null, protocol: report() }),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      state.sentAt = new Date().toISOString(); save();
+      document.getElementById('sentNote').hidden = false;
+      sendApp.textContent = T().sent;
+      toast(T().sentToast);
+    } catch (e) {
+      sendApp.disabled = false;
+      sendApp.textContent = state.sentAt ? T().resend : T().send;
+      toast(T().failToast);
+    }
+  });
+  if (state.sentAt) document.getElementById('sentNote').hidden = false;
+
+  document.getElementById('reset').addEventListener('click', () => {
+    if (!confirm(T().confirmReset)) return;
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    location.reload();
+  });
+
+  render();
+</script>
+</body>
+</html>
