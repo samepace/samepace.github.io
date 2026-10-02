@@ -82,8 +82,16 @@
   const portrait = window.matchMedia('(max-aspect-ratio: 1/1)').matches;
   // ...and in the page's language.
   const s = lang === 'en' ? '_en' : '';
-  video.poster = portrait ? `media/samepace_cover_9x16${s}.jpg` : `media/samepace_thumbnail_16x9${s}.jpg`;
-  video.src = portrait ? `media/samepace_reel_9x16${s}.mp4` : `media/samepace_video_16x9${s}.mp4`;
+  // ?video=trainer: the coach-focused reel instead of the general one -
+  // only shot upright and only in German so far, so it plays the same way
+  // whatever the screen shape or page language asks for.
+  if (new URLSearchParams(location.search).get('video') === 'trainer') {
+    video.poster = 'media/samepace_trainer_cover_9x16.jpg';
+    video.src = 'media/samepace_trainer_9x16.mp4';
+  } else {
+    video.poster = portrait ? `media/samepace_cover_9x16${s}.jpg` : `media/samepace_thumbnail_16x9${s}.jpg`;
+    video.src = portrait ? `media/samepace_reel_9x16${s}.mp4` : `media/samepace_video_16x9${s}.mp4`;
+  }
 </script>
 </body>
 </html>
