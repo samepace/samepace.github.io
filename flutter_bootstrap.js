@@ -44,7 +44,7 @@ _flutter.buildConfig = {"engineRevision":"af7e796e161ae0bb1ff0758c71a7105418bd9d
 // Load this deploy's main.dart.js, never a cached older one (the build id
 // is stamped in by tool/stamp_build.py).
 _flutter.buildConfig.builds.forEach(function (build) {
-  if (build.mainJsPath) build.mainJsPath += '?v=20261002111610-9fe9192';
+  if (build.mainJsPath) build.mainJsPath += '?v=20261002112514-b8e6ef0';
 });
 
 // No Flutter service worker: it cached old app versions (see index.html),
