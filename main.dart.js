@@ -209,7 +209,7 @@ bPd(a,b,c){return J.cD(a).Kf(a,b,c)},
 bCy(a,b,c){return J.cD(a).kA(a,b,c)},
 bCz(a,b,c){return J.cD(a).nv(a,b,c)},
 bCA(a){return J.cD(a).rn(a)},
-bPe(a,b){return J.cD(a).bs(a,b)},
+bPe(a,b){return J.cD(a).br(a,b)},
 bCB(a,b){return J.cD(a).l6(a,b)},
 c6(a,b,c){return J.cD(a).e3(a,b,c)},
 bPf(a,b,c){return J.wf(a).ut(a,b,c)},
@@ -1170,7 +1170,7 @@ if(!r)r=s!=null?b+"\n":b
 else r=""
 if(s!=null)r+=s
 return r.length!==0?r.charCodeAt(0)==0?r:r:null},
-c_8(a,b){var s=t.Ri,r=new A.aB(new A.cQ(A.b([a,b],t._m),s),new A.bto(),s.i("aB<I.E>")).bs(0," ")
+c_8(a,b){var s=t.Ri,r=new A.aB(new A.cQ(A.b([a,b],t._m),s),new A.bto(),s.i("aB<I.E>")).br(0," ")
 return r.length!==0?r:null},
 bWm(a){var s=new A.a9x(B.r3,a),r=A.zu(s.e6(),a)
 s.a!==$&&A.b6()
@@ -1374,7 +1374,7 @@ r.n(0,k.b,new A.Ku(B.wd,k))}return new A.CC(A.x(s,t.m),A.x(s,s),A.x(s,s),r,A.bSb
 bSb(a){var s,r=A.b([],t.s)
 for(s=new A.d3(a,a.r,a.e);s.t();)r.push(s.d.b.b)
 B.b.m0(r)
-return B.b.bs(r,"*")},
+return B.b.br(r,"*")},
 bxf(a,b){var s,r=A.a6(a.h(0,"uniqueIdentifier")),q=t.kc.a(a.h(0,"hints")),p=q==null||J.dt(q)?null:A.a6(J.n6(q)),o=A.bE4(t.a.a(a.h(0,"editingValue")))
 if(p!=null){s=$.bLS().a.h(0,p)
 if(s==null)s=p}else s=null
@@ -1653,7 +1653,7 @@ byt(a,b){var s=A.dB(a.h(0,b))
 return s==null?null:B.d.e1(s)},
 aC8(a,b){var s=A.dB(a.h(0,b))
 return s==null?null:s},
-c2f(a){return new A.W(a,new A.bv_(),A.eD(a).i("W<bo.E,o>")).bs(0," ")},
+c2f(a){return new A.W(a,new A.bv_(),A.eD(a).i("W<bo.E,o>")).br(0," ")},
 pP(a,b,c){A.ak(a.style,b,c)},
 bLG(a){var s=v.G,r=s.document.querySelector("#flutterweb-theme")
 if(a!=null){if(r==null){r=A.dq(s.document,"meta")
@@ -7590,7 +7590,7 @@ bJd(a,b,c){if(a==null)return""
 return A.WN(a,b,c,16,!1,!1)},
 brW(a,b,c,d,e,f){var s,r=e==="file",q=r||f
 if(a==null){if(d==null)return r?"/":""
-s=new A.W(d,new A.brX(),A.a_(d).i("W<1,o>")).bs(0,"/")}else if(d!=null)throw A.r(A.bO("Both path and pathSegments specified",null))
+s=new A.W(d,new A.brX(),A.a_(d).i("W<1,o>")).br(0,"/")}else if(d!=null)throw A.r(A.bO("Both path and pathSegments specified",null))
 else s=A.WN(a,b,c,128,!0,!0)
 if(s.length===0){if(r)return"/"}else if(q&&!B.c.de(s,"/"))s="/"+s
 return A.bZy(s,e,f)},
@@ -7663,7 +7663,7 @@ for(r=a.split("/"),q=r.length,p=!1,o=0;o<q;++o){n=r[o]
 if(n===".."){if(s.length!==0){s.pop()
 if(s.length===0)s.push("")}p=!0}else{p="."===n
 if(!p)s.push(n)}}if(p)s.push("")
-return B.b.bs(s,"/")},
+return B.b.br(s,"/")},
 bAb(a,b){var s,r,q,p,o,n
 if(!A.bJe(a))return!b?A.bJa(a):a
 s=A.b([],t.s)
@@ -7674,7 +7674,7 @@ p=!0}else{p="."===n
 if(!p)s.push(n.length===0&&s.length===0?"./":n)}}if(s.length===0)return"./"
 if(p)s.push("")
 if(!b)s[0]=A.bJa(s[0])
-return B.b.bs(s,"/")},
+return B.b.br(s,"/")},
 bJa(a){var s,r,q=a.length
 if(q>=2&&A.bJb(a.charCodeAt(0)))for(s=1;s<q;++s){r=a.charCodeAt(s)
 if(r===58)return B.c.ab(a,0,s)+"%3A"+B.c.dE(a,s+1)
@@ -9730,8 +9730,8 @@ if(s===1)k.push("(elided one frame from "+B.b.gdn(q)+")")
 else if(s>1){j=q.length
 if(j>1)q[j-1]="and "+B.b.gaF(q)
 j="(elided "+s
-if(q.length>2)k.push(j+" frames from "+B.b.bs(q,", ")+")")
-else k.push(j+" frames from "+B.b.bs(q," ")+")")}return k},
+if(q.length>2)k.push(j+" frames from "+B.b.br(q,", ")+")")
+else k.push(j+" frames from "+B.b.br(q," ")+")")}return k},
 cW(a){var s=$.f0
 if(s!=null)s.$1(a)},
 c2P(a,b,c){var s,r
@@ -9739,7 +9739,7 @@ A.bxW(a)
 s=A.b(B.c.SW((c==null?A.rx():A.bEi(c)).j(0)).split("\n"),t.s)
 r=s.length
 s=J.YY(r!==0?new A.OX(s,new A.bvd(),t.Ws):s,b)
-A.bxW(B.b.bs(A.bEj(s),"\n"))},
+A.bxW(B.b.br(A.bEj(s),"\n"))},
 bRp(a,b,c){A.bRq(b,c)
 return new A.a21(b)},
 bRq(a,b){if(a==null)return A.b([],t.F)
@@ -9883,7 +9883,7 @@ bWJ(a){var s,r,q="<unknown>",p=$.bN6().py(a)
 if(p==null)return null
 s=A.b(p.b[1].split("."),t.s)
 r=s.length>1?B.b.gV(s):q
-return new A.nX(a,-1,q,q,q,-1,-1,r,s.length>1?A.ha(s,1,null,t.N).bs(0,"."):B.b.gdn(s))},
+return new A.nX(a,-1,q,q,q,-1,-1,r,s.length>1?A.ha(s,1,null,t.N).br(0,"."):B.b.gdn(s))},
 bWL(a){var s,r,q,p,o,n,m,l,k,j,i=null,h="<unknown>"
 if(a==="<asynchronous suspension>")return B.arV
 else if(a==="...")return B.arW
@@ -35148,7 +35148,7 @@ q.toString
 p.n(0,r,q)}return p},
 Yp(a,b){var s=t.s,r=A.N(A.b(a.split("/"),s),t.N)
 B.b.H(r,A.b(b.split("/"),s))
-return"/"+new A.aB(r,new A.bv3(),A.a_(r).i("aB<1>")).bs(0,"/")},
+return"/"+new A.aB(r,new A.bv3(),A.a_(r).i("aB<1>")).br(0,"/")},
 btz:function btz(){},
 bv3:function bv3(){},
 iV(a,b){var s=A.b([],t.s),r=new A.KR(b,a,s,null,B.ae2,null)
@@ -36785,7 +36785,7 @@ n=A.a_(b)
 m=n.i("k3<1>")
 l=new A.k3(b,0,s,m)
 l.Dr(b,0,s,n.c)
-m=o+new A.W(l,new A.buw(),m.i("W<ac.E,o>")).bs(0,", ")
+m=o+new A.W(l,new A.buw(),m.i("W<ac.E,o>")).br(0,", ")
 p.a=m
 p.a=m+("): part "+(r-1)+" was null, but part "+r+" was not.")
 throw A.r(A.bO(p.j(0),null))}},
@@ -40859,10 +40859,10 @@ n=p}m=k.$1(A.b(["village","town","city","municipality","suburb","city_district",
 k=A.b([],s)
 if(n!=null)k.push(n)
 if(m!=null&&m!==n)k.push(m)
-if(k.length!==0)return B.b.bs(k,", ")
+if(k.length!==0)return B.b.br(k,", ")
 l=A.ay(a.h(0,"display_name"))
 k=t.a4
-return A.ha(new A.W(A.b((l==null?"":l).split(","),s),new A.bwd(),k),0,A.l6(2,"count",t.S),k.i("ac.E")).bs(0,", ")},
+return A.ha(new A.W(A.b((l==null?"":l).split(","),s),new A.bwd(),k),0,A.l6(2,"count",t.S),k.i("ac.E")).br(0,", ")},
 bQn(a){var s,r,q,p,o,n,m=null,l=t.F5.a(a.h(0,"address")),k=l==null?m:l.iH(0,t.N,t.z)
 l=new A.atc(k==null?A.x(t.N,t.z):k)
 s=t.s
@@ -40874,7 +40874,7 @@ o=l.$1(A.b(["country"],s))
 l=A.b([],s)
 if(p!=null&&p!==r)l.push(p)
 if(o!=null)l.push(o)
-n=B.b.bs(l,", ")
+n=B.b.br(l,", ")
 return new A.q7(r,n.length===0?m:n)},
 a3_:function a3_(){},
 az8:function az8(){},
@@ -41557,12 +41557,12 @@ q.n(0,"text",d)
 q.n(0,"dates",A.apR(c)+"/"+A.apR(a))
 if(b!=null&&b.length!==0)q.n(0,"location",b)
 s=q.$ti.i("dn<1,2>")
-return"https://calendar.google.com/calendar/render?"+A.jT(new A.dn(q,s),new A.buF(),s.i("I.E"),r).bs(0,"&")},
+return"https://calendar.google.com/calendar/render?"+A.jT(new A.dn(q,s),new A.buF(),s.i("I.E"),r).br(0,"&")},
 btD:function btD(){},
 buF:function buF(){},
-buD(a,b){var s,r,q,p=new A.buE(),o=A.b([new A.W(a,p,A.a_(a).i("W<1,o>")).bs(0,";")],t.s)
-for(s=b.length,r=t.N,q=0;q<b.length;b.length===s||(0,A.C)(b),++q)o.push(B.b.e3(b[q],p,r).bs(0,";"))
-return"\ufeff"+B.b.bs(o,"\r\n")+"\r\n"},
+buD(a,b){var s,r,q,p=new A.buE(),o=A.b([new A.W(a,p,A.a_(a).i("W<1,o>")).br(0,";")],t.s)
+for(s=b.length,r=t.N,q=0;q<b.length;b.length===s||(0,A.C)(b),++q)o.push(B.b.e3(b[q],p,r).br(0,";"))
+return"\ufeff"+B.b.br(o,"\r\n")+"\r\n"},
 buE:function buE(){},
 c4_(a){var s=a.a*60+a.b+60
 if(s>=1440)return B.ayc
@@ -42470,7 +42470,7 @@ HX(a,b,c){var s
 if(c==null)return a+"/"+b
 s=A.b([a+"/"+b],t.s)
 s.push("runtime=dart")
-return B.b.bs(s,"; ")},
+return B.b.br(s,"; ")},
 aIH:function aIH(a,b,c){this.a=a
 this.b=b
 this.c=c},
@@ -43606,7 +43606,7 @@ if(!r||a.dx!=null){p=A.b([],p)
 if(!r){r=t.N
 p.push(A.c("newActivity.childAgeYears",A.y(["age",A.q(s)],r,r)))}s=a.dx
 if(s!=null)p.push(A.I_(s))
-o.push(B.b.bs(p,", "))}return o.length===0?null:B.b.bs(o," \xb7 ")},
+o.push(B.b.br(p,", "))}return o.length===0?null:B.b.br(o," \xb7 ")},
 bJO(a){return a===B.d.nM(a)?B.d.aL(a,0):B.d.aL(a,1)},
 Ic(a){var s=0,r=A.n(t.N),q,p,o,n,m,l
 var $async$Ic=A.j(function(b,c){if(b===1)return A.k(c,r)
@@ -47883,7 +47883,7 @@ e.push(d)
 continue}o.push(d)
 f.G(0,d)}B.b.a9(c)
 f.aW(0,p.gal3())
-if(e!=null&&e.length!==0)$.f6().$1("Cannot render platform views: "+B.b.bs(e,", ")+". These views have not been created, or they have been deleted.")
+if(e!=null&&e.length!==0)$.f6().$1("Cannot render platform views: "+B.b.br(e,", ")+". These views have not been created, or they have been deleted.")
 case 1:return A.l(q,r)}})
 return A.m($async$KX,r)},
 al4(a){var s=this.e.G(0,a)
@@ -49366,7 +49366,7 @@ if(q)n.push(s)
 else{q=p.h(0,s)
 if((q==null?null:q.dy)!=null){q=p.h(0,s).dy
 q.toString
-B.b.H(l,q)}}}r=new A.W(n,new A.aPJ(),t.gn).bs(0," ")
+B.b.H(l,q)}}}r=new A.W(n,new A.aPJ(),t.gn).br(0," ")
 q=this.a
 q===$&&A.a()
 o=A.aJ(r)
@@ -49394,7 +49394,7 @@ if(q)n.push(s)
 else{q=p.h(0,s)
 if((q==null?null:q.dy)!=null){q=p.h(0,s).dy
 q.toString
-B.b.H(l,q)}}}r=new A.W(n,new A.aPF(),t.gn).bs(0," ")
+B.b.H(l,q)}}}r=new A.W(n,new A.aPF(),t.gn).br(0," ")
 q=this.a
 q===$&&A.a()
 o=A.aJ(r)
@@ -49816,7 +49816,7 @@ if(r==null)r=A.b([],t.s)
 r.push("flt-semantic-node-"+q.p2)
 q=s.y1.a
 q===$&&A.a()
-p=A.aJ(B.b.bs(r," "))
+p=A.aJ(B.b.br(r," "))
 p.toString
 q.setAttribute("aria-owns",p)}}else{p=q.to
 if(p!==-1){s=q.p3.e.h(0,p)
@@ -49827,7 +49827,7 @@ r=q==null?null:J.aqJ(q," ")
 if(r!=null){B.b.h9(r,new A.aPP(this))
 q=s.y1.a
 q===$&&A.a()
-p=A.aJ(B.b.bs(r," "))
+p=A.aJ(B.b.br(r," "))
 p.toString
 q.setAttribute("aria-owns",p)}}}}},
 a3Q(){var s=this.c,r=s.y1.a
@@ -49840,7 +49840,7 @@ A.aPO.prototype={
 $0(){var s,r,q,p,o,n,m=A.b([],t.s)
 for(s=this.a,r=s.c,q=r.RG,p=q.length,r=r.p3.f,o=0;o<q.length;q.length===p||(0,A.C)(q),++o){n=r.h(0,q[o])
 if(n==null)continue
-m.push("flt-semantic-node-"+A.q(n))}if(m.length!==0){r=B.b.bs(m," ")
+m.push("flt-semantic-node-"+A.q(n))}if(m.length!==0){r=B.b.br(m," ")
 s=s.a
 s===$&&A.a()
 r=A.aJ(r)
@@ -53986,10 +53986,10 @@ for(s=0;s<r;++s){b.$1(a[s])
 if(a.length!==r)throw A.r(A.d1(a))}},
 e3(a,b,c){return new A.W(a,b,A.a_(a).i("@<1>").dq(c).i("W<1,2>"))},
 l6(a,b){return this.e3(a,b,t.z)},
-bs(a,b){var s,r=A.bT(a.length,"",!1,t.N)
+br(a,b){var s,r=A.bT(a.length,"",!1,t.N)
 for(s=0;s<a.length;++s)r[s]=A.q(a[s])
 return r.join(b)},
-rn(a){return this.bs(a,"")},
+rn(a){return this.br(a,"")},
 lX(a,b){return A.ha(a,0,A.l6(b,"count",t.S),A.a_(a).c)},
 k7(a,b){return A.ha(a,b,null,A.a_(a).c)},
 kD(a,b){var s,r,q=a.length
@@ -54492,14 +54492,14 @@ return s.fh(0,s.gL(s)-1)},
 m(a,b){var s,r=this,q=r.gL(r)
 for(s=0;s<q;++s){if(J.h(r.fh(0,s),b))return!0
 if(q!==r.gL(r))throw A.r(A.d1(r))}return!1},
-bs(a,b){var s,r,q,p=this,o=p.gL(p)
+br(a,b){var s,r,q,p=this,o=p.gL(p)
 if(b.length!==0){if(o===0)return""
 s=A.q(p.fh(0,0))
 if(o!==p.gL(p))throw A.r(A.d1(p))
 for(r=s,q=1;q<o;++q){r=r+b+A.q(p.fh(0,q))
 if(o!==p.gL(p))throw A.r(A.d1(p))}return r.charCodeAt(0)==0?r:r}else{for(q=0,r="";q<o;++q){r+=A.q(p.fh(0,q))
 if(o!==p.gL(p))throw A.r(A.d1(p))}return r.charCodeAt(0)==0?r:r}},
-rn(a){return this.bs(0,"")},
+rn(a){return this.br(0,"")},
 ih(a,b){return this.Di(0,b)},
 e3(a,b,c){return new A.W(this,b,A.u(this).i("@<ac.E>").dq(c).i("W<1,2>"))},
 l6(a,b){return this.e3(0,b,t.z)},
@@ -54656,7 +54656,7 @@ gV(a){throw A.r(A.db())},
 gaF(a){throw A.r(A.db())},
 fh(a,b){throw A.r(A.dX(b,0,0,"index",null))},
 m(a,b){return!1},
-bs(a,b){return""},
+br(a,b){return""},
 ih(a,b){return this},
 e3(a,b,c){return new A.iU(c.i("iU<0>"))},
 l6(a,b){return this.e3(0,b,t.z)},
@@ -54948,7 +54948,7 @@ azu(a){if(false)A.bL8(0,0)},
 k(a,b){if(b==null)return!1
 return b instanceof A.mk&&this.a.k(0,b.a)&&A.bAT(this)===A.bAT(b)},
 gE(a){return A.a5(this.a,A.bAT(this),B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a)},
-j(a){var s=B.b.bs([A.d7(this.$ti.c)],", ")
+j(a){var s=B.b.br([A.d7(this.$ti.c)],", ")
 return this.a.j(0)+" with "+("<"+s+">")}}
 A.mk.prototype={
 $0(){return this.a.$1$0(this.$ti.y[0])},
@@ -57416,11 +57416,11 @@ for(s=0;s<q;++s){r=this.h(a,s)
 if(b.$1(r))return r
 if(q!==this.gL(a))throw A.r(A.d1(a))}throw A.r(A.db())},
 wX(a,b){return this.oo(a,b,null)},
-bs(a,b){var s
+br(a,b){var s
 if(this.gL(a)===0)return""
 s=A.aSe("",a,b)
 return s.charCodeAt(0)==0?s:s},
-rn(a){return this.bs(a,"")},
+rn(a){return this.br(a,"")},
 ih(a,b){return new A.aB(a,b,A.eD(a).i("aB<bo.E>"))},
 a43(a,b){return new A.cQ(a,b.i("cQ<0>"))},
 e3(a,b,c){return new A.W(a,b,A.eD(a).i("@<bo.E>").dq(c).i("W<1,2>"))},
@@ -58969,7 +58969,7 @@ r7(a,b,c){return this.HK(0,b,c,t.z)},
 eP(a,b){var s
 for(s=this.gad(this);s.t();)if(!b.$1(s.gO()))return!1
 return!0},
-bs(a,b){var s,r,q=this.gad(this)
+br(a,b){var s,r,q=this.gad(this)
 if(!q.t())return""
 s=J.dZ(q.gO())
 if(!q.t())return s
@@ -58978,7 +58978,7 @@ do r+=J.dZ(q.gO())
 while(q.t())}else{r=s
 do r=r+b+J.dZ(q.gO())
 while(q.t())}return r.charCodeAt(0)==0?r:r},
-rn(a){return this.bs(0,"")},
+rn(a){return this.br(0,"")},
 fe(a,b){var s
 for(s=this.gad(this);s.t();)if(b.$1(s.gO()))return!0
 return!1},
@@ -60239,7 +60239,7 @@ break A}s='"'+r+'"'
 break A}return s},
 aUA(){var s=this.f
 if(s==null)return""
-return" (0x"+new A.W(new A.ks(s),new A.aCc(),t.Hz.i("W<bo.E,o>")).bs(0," ")+")"},
+return" (0x"+new A.W(new A.ks(s),new A.aCc(),t.Hz.i("W<bo.E,o>")).br(0," ")+")"},
 j(a){var s=this,r=s.b.gdk(),q=B.e.uS(s.d,16),p=s.aPC(),o=s.aGK(),n=s.aUA(),m=s.r?", synthesized":""
 return"KeyData("+r+", physical: 0x"+q+", logical: "+p+", character: "+o+n+m+")"}}
 A.aCc.prototype={
@@ -60615,7 +60615,7 @@ if((r&1)!==0)s.push("underline")
 if((r&2)!==0)s.push("overline")
 if((r&4)!==0)s.push("lineThrough")
 if(s.length===1)return"TextDecoration."+s[0]
-return"TextDecoration.combine(["+B.b.bs(s,", ")+"])"}}
+return"TextDecoration.combine(["+B.b.br(s,", ")+"])"}}
 A.aaF.prototype={
 N(){return"TextDecorationStyle."+this.b}}
 A.aaN.prototype={
@@ -60969,7 +60969,7 @@ if(p===0)return 0
 s=new A.ne(q,p,0,240)
 for(r=0;s.mB()>=0;)++r
 return r},
-bs(a,b){var s
+br(a,b){var s
 if(b==="")return this.a
 s=this.a
 return A.c_E(s,0,s.length,b,"")},
@@ -63012,7 +63012,7 @@ if(s.gER()&&s.gES())q.push(r.$2("highContrastElevatedColor",s.y))
 if(s.gET()&&s.gER()&&s.gES())q.push(r.$2("darkHighContrastElevatedColor",s.z))
 r=s.b
 if(r==null)r="CupertinoDynamicColor"
-q=B.b.bs(q,", ")
+q=B.b.br(q,", ")
 return r+"("+q+", resolved by: UNRESOLVED)"},
 gp(){return this.a.gp()},
 gfZ(){return this.a.gfZ()},
@@ -64530,7 +64530,7 @@ if(p!=null)p.Z(a)}},
 M(a){var s,r,q,p
 for(s=this.a,r=s.length,q=0;q<s.length;s.length===r||(0,A.C)(s),++q){p=s[q]
 if(p!=null)p.M(a)}},
-j(a){return"Listenable.merge(["+B.b.bs(this.a,", ")+"])"}}
+j(a){return"Listenable.merge(["+B.b.br(this.a,", ")+"])"}}
 A.cs.prototype={
 gp(){return this.a},
 sp(a){if(J.h(this.a,a))return
@@ -64823,7 +64823,7 @@ A.CU.prototype={
 X(a){this.a.o2(this.b,this.c,a)}}
 A.Gt.prototype={
 j(a){var s=this,r=s.a
-r=r.length===0?"<empty>":new A.W(r,new A.b98(s),A.a_(r).i("W<1,o>")).bs(0,", ")
+r=r.length===0?"<empty>":new A.W(r,new A.b98(s),A.a_(r).i("W<1,o>")).br(0,", ")
 if(s.b)r+=" [open]"
 if(s.c)r+=" [held]"
 if(s.d)r+=" [hasPendingSweep]"
@@ -65371,7 +65371,7 @@ Sb(){var s=this.c
 if(s.length!==0)s.pop()
 else this.b.pop()},
 j(a){var s=this.a
-return"HitTestResult("+(s.length===0?"<empty path>":B.b.bs(s,", "))+")"}}
+return"HitTestResult("+(s.length===0?"<empty path>":B.b.br(s,", "))+")"}}
 A.Dn.prototype={}
 A.LQ.prototype={}
 A.Dm.prototype={}
@@ -75502,7 +75502,7 @@ q=s.aq
 if(q!=null)r.push("semanticCounterText: "+q)
 q=s.ae
 if(q!=null)r.push("alignLabelWithHint: "+A.q(q))
-return"InputDecoration("+B.b.bs(r,", ")+")"}}
+return"InputDecoration("+B.b.br(r,", ")+")"}}
 A.D8.prototype={
 giJ(){var s=this,r=null,q=s.w
 return q==null?A.byn(r,!1,s.to,r,s.db,r,r,s.ry,r,r,r,s.k4,s.k3,s.cx,s.CW,r,r,s.R8,r,r,r,r,r,r,r,r,!1,!1,r,r,r,r,r,r,r,r,r):q},
@@ -88169,7 +88169,7 @@ if(J.ae(b)!==A.O(this))return!1
 return b instanceof A.mS&&A.dM(b.a,this.a)},
 gE(a){return A.cn(this.a)},
 j(a){var s=this.a,r=A.a_(s).i("cu<1>")
-return new A.W(new A.cu(s,r),new A.b2z(),r.i("W<ac.E,o>")).bs(0," + ")}}
+return new A.W(new A.cu(s,r),new A.b2z(),r.i("W<ac.E,o>")).br(0," + ")}}
 A.b2w.prototype={
 $2(a,b){return a.C(0,b.gng())},
 $S:450}
@@ -88273,7 +88273,7 @@ r=q.c
 if(!r.k(0,B.B))s.push("bottom: "+r.j(0))
 r=q.d
 if(!r.k(0,B.B))s.push("left: "+r.j(0))
-return"Border("+B.b.bs(s,", ")+")"},
+return"Border("+B.b.br(s,", ")+")"},
 ga3D(){return this.a}}
 A.iO.prototype={
 gng(){var s=this
@@ -88356,7 +88356,7 @@ q=s.c
 if(!q.k(0,B.B))r.push("end: "+q.j(0))
 q=s.d
 if(!q.k(0,B.B))r.push("bottom: "+q.j(0))
-return"BorderDirectional("+B.b.bs(r,", ")+")"},
+return"BorderDirectional("+B.b.br(r,", ")+")"},
 ga3D(){return this.a}}
 A.bC.prototype={
 gdc(){var s=this.c
@@ -88623,7 +88623,7 @@ s.push(B.R.j(0))
 s.push("scale "+B.e.aL(1,1))
 s.push("opacity "+B.e.aL(1,1))
 s.push(B.dh.j(0))
-return"DecorationImage("+B.b.bs(s,", ")+")"},
+return"DecorationImage("+B.b.br(s,", ")+")"},
 gfw(){return this.a},
 gAa(){return null},
 gkZ(){return this.d},
@@ -88870,7 +88870,7 @@ return A.a5(s.d,s.e,s.f,s.c,r,q,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,
 j(a){var s=this,r=A.b(["begin: "+s.d.j(0),"end: "+s.e.j(0),"colors: "+A.q(s.a)],t.s),q=s.b
 if(q!=null)r.push("stops: "+A.q(q))
 r.push("tileMode: "+s.f.j(0))
-return"LinearGradient("+B.b.bs(r,", ")+")"}}
+return"LinearGradient("+B.b.br(r,", ")+")"}}
 A.aCI.prototype={
 $1(a){var s=A.Y(null,a,this.a)
 s.toString
@@ -97600,7 +97600,7 @@ r.push("crossAxisDirection: "+s.x.j(0))
 r.push("viewportMainAxisExtent: "+B.d.aL(s.y,1))
 r.push("remainingCacheExtent: "+B.d.aL(s.Q,1))
 r.push("cacheOrigin: "+B.d.aL(s.z,1))
-return"SliverConstraints("+B.b.bs(r,", ")+")"}}
+return"SliverConstraints("+B.b.br(r,", ")+")"}}
 A.a9T.prototype={
 fU(){return"SliverGeometry"}}
 A.ER.prototype={}
@@ -97802,7 +97802,7 @@ A.aRj.prototype={
 aqQ(a){var s=this.c
 return a.GC(this.d,s,s)},
 j(a){var s=this
-return"SliverGridGeometry("+B.b.bs(A.b(["scrollOffset: "+A.q(s.a),"crossAxisOffset: "+A.q(s.b),"mainAxisExtent: "+A.q(s.c),"crossAxisExtent: "+A.q(s.d)],t.s),", ")+")"}}
+return"SliverGridGeometry("+B.b.br(A.b(["scrollOffset: "+A.q(s.a),"crossAxisOffset: "+A.q(s.b),"mainAxisExtent: "+A.q(s.c),"crossAxisExtent: "+A.q(s.d)],t.s),", ")+")"}}
 A.aRk.prototype={}
 A.OZ.prototype={
 ard(a){var s=this.b
@@ -98525,7 +98525,7 @@ q=s.y
 if(q!=null)r.push("height="+A.lX(q))
 if(r.length===0)r.push("not positioned")
 r.push(s.Dg(0))
-return B.b.bs(r,"; ")}}
+return B.b.br(r,"; ")}}
 A.Pb.prototype={
 N(){return"StackFit."+this.b}}
 A.Eq.prototype={
@@ -99736,7 +99736,7 @@ r.push(A.O(s.w).j(0))
 r.push(s.r.j(0))
 r.push(A.q(s.fr))
 r.push(s.k4.j(0))
-return"<optimized out>#"+A.bR(s)+"("+B.b.bs(r,", ")+")"},
+return"<optimized out>#"+A.bR(s)+"("+B.b.br(r,", ")+")"},
 hM(a){var s=this.at
 if(s!=null)a.push("offset: "+B.d.aL(s,1))}}
 A.vB.prototype={
@@ -101224,7 +101224,7 @@ apO(){return this.SP(null)},
 j(a){var s,r,q=A.b([],t.s),p=this.y3(),o=p.ge2(),n=o.fK(o)
 B.b.m0(n)
 for(o=n.length,s=0;s<n.length;n.length===o||(0,A.C)(n),++s){r=n[s]
-q.push(r+": "+A.q(p.h(0,r)))}return"SemanticsEvent("+B.b.bs(q,", ")+")"}}
+q.push(r+": "+A.q(p.h(0,r)))}return"SemanticsEvent("+B.b.br(q,", ")+")"}}
 A.aro.prototype={
 y3(){var s,r=this,q=A.x(t.N,t.z)
 q.n(0,"viewId",r.b)
@@ -101290,7 +101290,7 @@ gE(a){var s=this
 return A.a5(s.a,s.b,A.cn(s.c),s.d,s.e,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a)},
 j(a){var s=this,r=A.b(["enabled: "+s.a,"uniqueIdentifier: "+s.b,"autofillHints: "+A.q(s.c),"currentEditingValue: "+s.d.j(0)],t.s),q=s.e
 if(q!=null)r.push("hintText: "+q)
-return"AutofillConfiguration("+B.b.bs(r,", ")+")"}}
+return"AutofillConfiguration("+B.b.br(r,", ")+")"}}
 A.as6.prototype={}
 A.OL.prototype={
 aOs(){var s,r,q=this,p=t.v3,o=new A.aAl(A.x(p,t.bd),A.as(t.SQ),A.b([],t.sA))
@@ -102605,7 +102605,7 @@ r.push("autofillConfiguration: "+s.f.j(0))
 r.push("enableIMEPersonalizedLearning: true")
 r.push("allowedMimeTypes: "+A.q(s.ay))
 r.push("enableDeltaModel: false")
-return"TextInputConfiguration("+B.b.bs(r,", ")+")"}}
+return"TextInputConfiguration("+B.b.br(r,", ")+")"}}
 A.Kz.prototype={
 N(){return"FloatingCursorDragState."+this.b}}
 A.Ej.prototype={}
@@ -111399,7 +111399,7 @@ gbo(){return"Move to the start"},
 gJ(){return"Look Up"},
 gU(){return"Search Web"},
 gR(){return"Share"},
-gbr(){return"Not selected"},
+gbs(){return"Not selected"},
 gcK(){return B.n},
 $iaO:1}
 A.Th.prototype={
@@ -111650,7 +111650,7 @@ return b instanceof A.Mf&&b.a.k(0,s.a)&&b.b===s.b&&b.gd2().gla()===s.gd2().gla()
 gE(a){var s=this
 return A.a5(s.a,s.b,s.gd2().gla(),s.e,s.r,s.w,s.f,!1,s.as,s.at,s.ax,s.Q,s.z,s.ay,s.CW,s.cx,A.cn(s.cy),!1,A.a5(s.dx,s.dy,s.fr,s.fx,s.fy,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a),B.a)},
 j(a){var s=this
-return"MediaQueryData("+B.b.bs(A.b(["size: "+s.a.j(0),"devicePixelRatio: "+B.d.aL(s.b,1),"textScaler: "+s.gd2().j(0),"platformBrightness: "+s.e.j(0),"padding: "+s.r.j(0),"viewPadding: "+s.w.j(0),"viewInsets: "+s.f.j(0),"systemGestureInsets: "+s.x.j(0),"alwaysUse24HourFormat: false","accessibleNavigation: "+s.z,"highContrast: "+s.as,"onOffSwitchLabels: "+s.at,"disableAnimations: "+s.ax,"invertColors: "+s.Q,"boldText: "+s.ay,"navigationMode: "+s.CW.b,"gestureSettings: "+s.cx.j(0),"displayFeatures: "+A.q(s.cy),"supportsShowingSystemContextMenu: false","lineHeightScaleFactorOverride: "+A.q(s.dx),"letterSpacingOverride: "+A.q(s.dy),"wordSpacingOverride: "+A.q(s.fr),"paragraphSpacingOverride: "+A.q(s.fx),"displayCornerRadii: "+A.q(s.fy)],t.s),", ")+")"}}
+return"MediaQueryData("+B.b.br(A.b(["size: "+s.a.j(0),"devicePixelRatio: "+B.d.aL(s.b,1),"textScaler: "+s.gd2().j(0),"platformBrightness: "+s.e.j(0),"padding: "+s.r.j(0),"viewPadding: "+s.w.j(0),"viewInsets: "+s.f.j(0),"systemGestureInsets: "+s.x.j(0),"alwaysUse24HourFormat: false","accessibleNavigation: "+s.z,"highContrast: "+s.as,"onOffSwitchLabels: "+s.at,"disableAnimations: "+s.ax,"invertColors: "+s.Q,"boldText: "+s.ay,"navigationMode: "+s.CW.b,"gestureSettings: "+s.cx.j(0),"displayFeatures: "+A.q(s.cy),"supportsShowingSystemContextMenu: false","lineHeightScaleFactorOverride: "+A.q(s.dx),"letterSpacingOverride: "+A.q(s.dy),"wordSpacingOverride: "+A.q(s.fr),"paragraphSpacingOverride: "+A.q(s.fx),"displayCornerRadii: "+A.q(s.fy)],t.s),", ")+")"}}
 A.aGc.prototype={
 $1(a){return this.a.jq(a.gA3())},
 $S:341}
@@ -112779,7 +112779,7 @@ A.aoI.prototype={}
 A.a6V.prototype={
 j(a){var s=A.b([],t.s)
 this.hM(s)
-return"Notification("+B.b.bs(s,", ")+")"},
+return"Notification("+B.b.br(s,", ")+")"},
 hM(a){}}
 A.ee.prototype={
 e6(){return new A.TO(this,B.b2,this.$ti.i("TO<1>"))}}
@@ -114146,7 +114146,7 @@ k(a,b){if(b==null)return!1
 if(J.ae(b)!==A.O(this))return!1
 return b instanceof A.W_&&A.dM(b.a,this.a)},
 gE(a){return A.cn(this.a)},
-j(a){return"StorageEntryIdentifier("+B.b.bs(this.a,":")+")"}}
+j(a){return"StorageEntryIdentifier("+B.b.br(this.a,":")+")"}}
 A.nI.prototype={
 a6T(a){var s=A.b([],t.g8)
 if(A.bG3(a,s))a.v1(new A.aIg(s))
@@ -114673,7 +114673,7 @@ case 2:case 4:m=o.gp()
 s=o.gp()
 if(!s){s=A.ca(a,B.kO,t.Uh)
 s.toString
-l=s.gbr()}break}s=o.gp()
+l=s.gbs()}break}s=o.gp()
 r=o.a
 q=r.f
 p=r.d
@@ -116673,12 +116673,12 @@ if(s===0)r.push("no clients")
 else if(s===1){q=B.b.gdn(q).at
 q.toString
 r.push("one client, offset "+B.d.aL(q,1))}else r.push(""+s+" clients")
-return"<optimized out>#"+A.bR(this)+"("+B.b.bs(r,", ")+")"}}
+return"<optimized out>#"+A.bR(this)+"("+B.b.br(r,", ")+")"}}
 A.aRf.prototype={
 gkW(){return null},
 j(a){var s=A.b([],t.s)
 this.hM(s)
-return"<optimized out>#"+A.bR(this)+"("+B.b.bs(s,", ")+")"},
+return"<optimized out>#"+A.bR(this)+"("+B.b.br(s,", ")+")"},
 hM(a){var s,r,q
 try{s=this.gkW()
 if(s!=null)a.push("estimated child count: "+A.q(s))}catch(q){r=A.U(q)
@@ -118227,7 +118227,7 @@ s=new A.aOI(q)
 s.$2("scroll controller: ",r.b)
 s.$2("scroll physics: ",null)
 s.$2("decorationClipBehavior: ",r.d)
-return"<optimized out>#"+A.bR(r)+"("+B.b.bs(q,", ")+")"},
+return"<optimized out>#"+A.bR(r)+"("+B.b.br(q,", ")+")"},
 gE(a){return A.a5(this.a,this.b,null,this.d,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a)},
 k(a,b){var s,r=this
 if(b==null)return!1
@@ -130025,7 +130025,7 @@ gbR(){return"Iminithi"},
 gbS(){return"Khetha amaminithi"}}
 A.abz.prototype={
 gJ(){return"Kyk op"},
-gbr(){return"Nie gekies nie"},
+gbs(){return"Nie gekies nie"},
 gcd(){return"Skuif af"},
 gbE(){return"Skuif na links"},
 gbF(){return"Skuif na regs"},
@@ -130036,7 +130036,7 @@ gU(){return"Deursoek web"},
 gR(){return"Deel"}}
 A.abA.prototype={
 gJ(){return"\u12ed\u1218\u120d\u12a8\u1271"},
-gbr(){return"\u12a0\u120d\u1270\u1218\u1228\u1320\u121d"},
+gbs(){return"\u12a0\u120d\u1270\u1218\u1228\u1320\u121d"},
 gcd(){return"\u12c8\u12f0 \u1273\u127d \u12cd\u1230\u12f5"},
 gbE(){return"\u12c8\u12f0 \u130d\u122b \u12cd\u1230\u12f5"},
 gbF(){return"\u12c8\u12f0 \u1240\u129d \u12cd\u1230\u12f5"},
@@ -130047,7 +130047,7 @@ gU(){return"\u12f5\u122d\u1295 \u1348\u120d\u130d"},
 gR(){return"\u12a0\u130b\u122b"}}
 A.abB.prototype={
 gJ(){return"\u0628\u062d\u062b \u0639\u0627\u0645"},
-gbr(){return"\u063a\u064a\u0631 \u0645\u062d\u062f\u0651\u062f"},
+gbs(){return"\u063a\u064a\u0631 \u0645\u062d\u062f\u0651\u062f"},
 gcd(){return"\u0646\u0642\u0644 \u0644\u0623\u0633\u0641\u0644"},
 gbE(){return"\u0646\u0642\u0644 \u0644\u0644\u064a\u0645\u064a\u0646"},
 gbF(){return"\u0646\u0642\u0644 \u0644\u0644\u064a\u0633\u0627\u0631"},
@@ -130058,7 +130058,7 @@ gU(){return"\u0627\u0644\u0628\u062d\u062b \u0639\u0644\u0649 \u0627\u0644\u0648
 gR(){return"\u0645\u0634\u0627\u0631\u0643\u0629"}}
 A.abC.prototype={
 gJ(){return"\u0993\u09aa\u09f0\u09b2\u09c8 \u099a\u09be\u0993\u0995"},
-gbr(){return"\u09ac\u09be\u099b\u09a8\u09bf \u0995\u09f0\u09be \u09b9\u09cb\u09f1\u09be \u09a8\u09be\u0987"},
+gbs(){return"\u09ac\u09be\u099b\u09a8\u09bf \u0995\u09f0\u09be \u09b9\u09cb\u09f1\u09be \u09a8\u09be\u0987"},
 gcd(){return"\u09a4\u09b2\u09b2\u09c8 \u09a8\u09bf\u09df\u0995"},
 gbE(){return"\u09ac\u09be\u0993\u0981\u09ab\u09be\u09b2\u09b2\u09c8 \u09b8\u09cd\u09a5\u09be\u09a8\u09be\u09a8\u09cd\u09a4\u09f0 \u0995\u09f0\u0995"},
 gbF(){return"\u09b8\u09cb\u0981\u09ab\u09be\u09b2\u09b2\u09c8 \u09a8\u09bf\u09df\u0995"},
@@ -130069,7 +130069,7 @@ gU(){return"\u09f1\u09c7\u09ac\u09a4 \u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u0995
 gR(){return"\u09b6\u09cd\u09ac\u09c7\u09df\u09be\u09f0 \u0995\u09f0\u0995"}}
 A.abD.prototype={
 gJ(){return"Axtar\u0131n"},
-gbr(){return"Se\xe7ilm\u0259di"},
+gbs(){return"Se\xe7ilm\u0259di"},
 gcd(){return"A\u015fa\u011f\u0131 k\xf6\xe7\xfcr\xfcn"},
 gbE(){return"Sola k\xf6\xe7\xfcr\xfcn"},
 gbF(){return"Sa\u011fa k\xf6\xe7\xfcr\xfcn"},
@@ -130080,7 +130080,7 @@ gU(){return"Vebd\u0259 axtar\u0131n"},
 gR(){return"Payla\u015f\u0131n"}}
 A.abE.prototype={
 gJ(){return"\u0417\u043d\u0430\u0439\u0441\u0446\u0456"},
-gbr(){return"\u041d\u0435 \u0432\u044b\u0431\u0440\u0430\u043d\u0430"},
+gbs(){return"\u041d\u0435 \u0432\u044b\u0431\u0440\u0430\u043d\u0430"},
 gcd(){return"\u041f\u0435\u0440\u0430\u043c\u044f\u0441\u0446\u0456\u0446\u044c \u0443\u043d\u0456\u0437"},
 gbE(){return"\u041f\u0435\u0440\u0430\u043c\u044f\u0441\u0446\u0456\u0446\u044c \u0443\u043b\u0435\u0432\u0430"},
 gbF(){return"\u041f\u0435\u0440\u0430\u043c\u044f\u0441\u0446\u0456\u0446\u044c \u0443\u043f\u0440\u0430\u0432\u0430"},
@@ -130091,7 +130091,7 @@ gU(){return"\u041f\u043e\u0448\u0443\u043a \u0443 \u0441\u0435\u0442\u0446\u044b
 gR(){return"\u0410\u0431\u0430\u0433\u0443\u043b\u0456\u0446\u044c"}}
 A.abF.prototype={
 gJ(){return"Look Up"},
-gbr(){return"\u041d\u0435 \u0435 \u0438\u0437\u0431\u0440\u0430\u043d"},
+gbs(){return"\u041d\u0435 \u0435 \u0438\u0437\u0431\u0440\u0430\u043d"},
 gcd(){return"\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0432\u0430\u043d\u0435 \u043d\u0430\u0434\u043e\u043b\u0443"},
 gbE(){return"\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0432\u0430\u043d\u0435 \u043d\u0430\u043b\u044f\u0432\u043e"},
 gbF(){return"\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0432\u0430\u043d\u0435 \u043d\u0430\u0434\u044f\u0441\u043d\u043e"},
@@ -130102,7 +130102,7 @@ gU(){return"\u0422\u044a\u0440\u0441\u0435\u043d\u0435 \u0432 \u043c\u0440\u0435
 gR(){return"\u0421\u043f\u043e\u0434\u0435\u043b\u044f\u043d\u0435"}}
 A.abG.prototype={
 gJ(){return"\u09b2\u09c1\u0995-\u0986\u09aa"},
-gbr(){return"\u09ac\u09c7\u099b\u09c7 \u09a8\u09c7\u0993\u09df\u09be \u09b9\u09df\u09a8\u09bf"},
+gbs(){return"\u09ac\u09c7\u099b\u09c7 \u09a8\u09c7\u0993\u09df\u09be \u09b9\u09df\u09a8\u09bf"},
 gcd(){return"\u09a8\u09bf\u099a\u09c7\u09b0 \u09a6\u09bf\u0995\u09c7 \u09b8\u09b0\u09be\u09a8"},
 gbE(){return"\u09ac\u09be\u0981\u09a6\u09bf\u0995\u09c7 \u09b8\u09b0\u09be\u09a8"},
 gbF(){return"\u09a1\u09be\u09a8\u09a6\u09bf\u0995\u09c7 \u09b8\u09b0\u09be\u09a8"},
@@ -130113,7 +130113,7 @@ gU(){return"\u0993\u09df\u09c7\u09ac\u09c7 \u09b8\u09be\u09b0\u09cd\u099a \u0995
 gR(){return"\u09b6\u09c7\u09df\u09be\u09b0 \u0995\u09b0\u09c1\u09a8"}}
 A.abH.prototype={
 gJ(){return"\u0f60\u0f5a\u0f7c\u0f63\u0f0b\u0f56\u0f0d"},
-gbr(){return"\u0f60\u0f51\u0f7a\u0f58\u0f0b\u0f66\u0f92\u0fb2\u0f74\u0f42\xb7\u0f58\u0f7a\u0f51"},
+gbs(){return"\u0f60\u0f51\u0f7a\u0f58\u0f0b\u0f66\u0f92\u0fb2\u0f74\u0f42\xb7\u0f58\u0f7a\u0f51"},
 gcd(){return"\u0f60\u0f7c\u0f42\u0f0b\u0f63\u0f0b\u0f60\u0f42\u0fb2\u0f7c\u0f0d"},
 gbE(){return"\u0f42\u0f61\u0f7c\u0f53\u0f0b\u0f63\u0f0b\u0f60\u0f42\u0fb2\u0f7c\u0f0d"},
 gbF(){return"\u0f42\u0f61\u0f66\u0f0b\u0f63\u0f0b\u0f60\u0f42\u0fb2\u0f7c\u0f0d"},
@@ -130124,7 +130124,7 @@ gU(){return"\u0f51\u0fb2\u0f0b\u0f50\u0f7c\u0f42\u0f0b\u0f60\u0f5a\u0f7c\u0f63\u
 gR(){return"\u0f58\u0f49\u0f58\u0f0b\u0f66\u0fa4\u0fb1\u0f7c\u0f51\u0f0d"}}
 A.abI.prototype={
 gJ(){return"Pogled nagore"},
-gbr(){return"Nije odabrano"},
+gbs(){return"Nije odabrano"},
 gcd(){return"Pomjeri nadolje"},
 gbE(){return"Pomjeri lijevo"},
 gbF(){return"Pomjeri desno"},
@@ -130135,7 +130135,7 @@ gU(){return"Pretra\u017ei Web"},
 gR(){return"Dijeli"}}
 A.abJ.prototype={
 gJ(){return"Mira amunt"},
-gbr(){return"No seleccionat"},
+gbs(){return"No seleccionat"},
 gcd(){return"Mou avall"},
 gbE(){return"Mou cap a l'esquerra"},
 gbF(){return"Mou cap a la dreta"},
@@ -130146,7 +130146,7 @@ gU(){return"Cerca al web"},
 gR(){return"Comparteix"}}
 A.abK.prototype={
 gJ(){return"Vyhledat"},
-gbr(){return"Nevybr\xe1no"},
+gbs(){return"Nevybr\xe1no"},
 gcd(){return"P\u0159esunout dol\u016f"},
 gbE(){return"P\u0159esunout doleva"},
 gbF(){return"P\u0159esunout doprava"},
@@ -130157,7 +130157,7 @@ gU(){return"Vyhled\xe1vat na webu"},
 gR(){return"Sd\xedlet"}}
 A.abL.prototype={
 gJ(){return"Chwilio"},
-gbr(){return"Heb ei dewis"},
+gbs(){return"Heb ei dewis"},
 gcd(){return"Symud i lawr"},
 gbE(){return"Symud i'r chwith"},
 gbF(){return"Symud i'r dde"},
@@ -130168,7 +130168,7 @@ gU(){return"Chwilio'r We"},
 gR(){return"Rhannu"}}
 A.abM.prototype={
 gJ(){return"Sl\xe5 op"},
-gbr(){return"Ikke valgt"},
+gbs(){return"Ikke valgt"},
 gcd(){return"Flyt ned"},
 gbE(){return"Flyt til venstre"},
 gbF(){return"Flyt til h\xf8jre"},
@@ -130179,7 +130179,7 @@ gU(){return"S\xf8g p\xe5 nettet"},
 gR(){return"Del"}}
 A.Qo.prototype={
 gJ(){return"Nachschlagen"},
-gbr(){return"Nicht ausgew\xe4hlt"},
+gbs(){return"Nicht ausgew\xe4hlt"},
 gcd(){return"Nach unten verschieben"},
 gbE(){return"Nach links verschieben"},
 gbF(){return"Nach rechts verschieben"},
@@ -130191,7 +130191,7 @@ gR(){return"Teilen"}}
 A.abN.prototype={}
 A.abO.prototype={
 gJ(){return"Look Up"},
-gbr(){return"\u0394\u03b5\u03bd \u03ad\u03c7\u03b5\u03b9 \u03b5\u03c0\u03b9\u03bb\u03b5\u03b3\u03b5\u03af"},
+gbs(){return"\u0394\u03b5\u03bd \u03ad\u03c7\u03b5\u03b9 \u03b5\u03c0\u03b9\u03bb\u03b5\u03b3\u03b5\u03af"},
 gcd(){return"\u039c\u03b5\u03c4\u03b1\u03ba\u03af\u03bd\u03b7\u03c3\u03b7 \u03c0\u03c1\u03bf\u03c2 \u03c4\u03b1 \u03ba\u03ac\u03c4\u03c9"},
 gbE(){return"\u039c\u03b5\u03c4\u03b1\u03ba\u03af\u03bd\u03b7\u03c3\u03b7 \u03b1\u03c1\u03b9\u03c3\u03c4\u03b5\u03c1\u03ac"},
 gbF(){return"\u039c\u03b5\u03c4\u03b1\u03ba\u03af\u03bd\u03b7\u03c3\u03b7 \u03b4\u03b5\u03be\u03b9\u03ac"},
@@ -130202,7 +130202,7 @@ gU(){return"\u0391\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7 \u03c3\u03c4\
 gR(){return"\u039a\u03bf\u03b9\u03bd\u03ae \u03c7\u03c1\u03ae\u03c3\u03b7"}}
 A.Qp.prototype={
 gJ(){return"Look Up"},
-gbr(){return"Not selected"},
+gbs(){return"Not selected"},
 gcd(){return"Move down"},
 gbE(){return"Move left"},
 gbF(){return"Move right"},
@@ -130244,7 +130244,7 @@ gbF(){return"Move to the right"},
 gJ(){return"Look up"}}
 A.Qq.prototype={
 gJ(){return"Buscador visual"},
-gbr(){return"No seleccionado"},
+gbs(){return"No seleccionado"},
 gcd(){return"Mover hacia abajo"},
 gbE(){return"Mover hacia la izquierda"},
 gbF(){return"Mover hacia la derecha"},
@@ -130256,86 +130256,86 @@ gR(){return"Compartir"}}
 A.abX.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.abY.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.abZ.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ac_.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ac0.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ac1.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ac2.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ac3.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ac4.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ac5.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ac6.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ac7.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ac8.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ac9.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.aca.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.acb.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.acc.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.acd.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.ace.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.acf.prototype={
 gbo(){return"Mover al inicio"},
 gJ(){return"Mirar hacia arriba"},
-gbr(){return"Sin seleccionar"}}
+gbs(){return"Sin seleccionar"}}
 A.acg.prototype={
 gJ(){return"Look Up"},
-gbr(){return"Pole valitud"},
+gbs(){return"Pole valitud"},
 gcd(){return"Teisalda alla"},
 gbE(){return"Teisalda vasakule"},
 gbF(){return"Teisalda paremale"},
@@ -130346,7 +130346,7 @@ gU(){return"Otsi veebist"},
 gR(){return"Jagamine"}}
 A.ach.prototype={
 gJ(){return"Bilatu"},
-gbr(){return"Hautatu gabe"},
+gbs(){return"Hautatu gabe"},
 gcd(){return"Eraman behera"},
 gbE(){return"Eraman ezkerrera"},
 gbF(){return"Eraman eskuinera"},
@@ -130357,7 +130357,7 @@ gU(){return"Bilatu sarean"},
 gR(){return"Partekatu"}}
 A.aci.prototype={
 gJ(){return"\u062c\u0633\u062a\u062c\u0648"},
-gbr(){return"\u0627\u0646\u062a\u062e\u0627\u0628\u200c\u0646\u0634\u062f\u0647"},
+gbs(){return"\u0627\u0646\u062a\u062e\u0627\u0628\u200c\u0646\u0634\u062f\u0647"},
 gcd(){return"\u0627\u0646\u062a\u0642\u0627\u0644 \u0628\u0647 \u067e\u0627\u06cc\u06cc\u0646"},
 gbE(){return"\u0627\u0646\u062a\u0642\u0627\u0644 \u0628\u0647 \u0631\u0627\u0633\u062a"},
 gbF(){return"\u0627\u0646\u062a\u0642\u0627\u0644 \u0628\u0647 \u0686\u067e"},
@@ -130368,7 +130368,7 @@ gU(){return"\u062c\u0633\u062a\u062c\u0648 \u062f\u0631 \u0648\u0628"},
 gR(){return"\u0647\u0645\u200c\u0631\u0633\u0627\u0646\u06cc \u06a9\u0631\u062f\u0646"}}
 A.acj.prototype={
 gJ(){return"Hae"},
-gbr(){return"Ei valittu"},
+gbs(){return"Ei valittu"},
 gcd(){return"Siirr\xe4 alas"},
 gbE(){return"Siirr\xe4 vasemmalle"},
 gbF(){return"Siirr\xe4 oikealle"},
@@ -130379,7 +130379,7 @@ gU(){return"Hae verkosta"},
 gR(){return"Jaa"}}
 A.ack.prototype={
 gJ(){return"Tumingin sa Itaas"},
-gbr(){return"Hindi napili"},
+gbs(){return"Hindi napili"},
 gcd(){return"Ilipat pababa"},
 gbE(){return"Ilipat pakaliwa"},
 gbF(){return"Ilipat pakanan"},
@@ -130390,7 +130390,7 @@ gU(){return"Maghanap sa Web"},
 gR(){return"I-share"}}
 A.Qr.prototype={
 gJ(){return"Recherche visuelle"},
-gbr(){return"Non s\xe9lectionn\xe9"},
+gbs(){return"Non s\xe9lectionn\xe9"},
 gcd(){return"D\xe9placer vers le bas"},
 gbE(){return"D\xe9placer vers la gauche"},
 gbF(){return"D\xe9placer vers la droite"},
@@ -130405,7 +130405,7 @@ gbO(){return"D\xe9placer \xe0 la fin"},
 gJ(){return"Regarder en haut"}}
 A.acm.prototype={
 gJ(){return"Cuardaigh"},
-gbr(){return"N\xedor roghna\xedodh \xe9"},
+gbs(){return"N\xedor roghna\xedodh \xe9"},
 gcd(){return"Bog s\xedos"},
 gbE(){return"Bog ar chl\xe9"},
 gbF(){return"Bog ar dheis"},
@@ -130416,7 +130416,7 @@ gU(){return"Cuardaigh an Gr\xe9as\xe1n"},
 gR(){return"Comhroinn"}}
 A.acn.prototype={
 gJ(){return"Mirar cara arriba"},
-gbr(){return"Bot\xf3n non seleccionado"},
+gbs(){return"Bot\xf3n non seleccionado"},
 gcd(){return"Mover cara abaixo"},
 gbE(){return"Mover cara \xe1 esquerda"},
 gbF(){return"Mover cara \xe1 dereita"},
@@ -130427,7 +130427,7 @@ gU(){return"Buscar na Web"},
 gR(){return"Compartir"}}
 A.aco.prototype={
 gJ(){return"Nachschlagen"},
-gbr(){return"Nicht ausgew\xe4hlt"},
+gbs(){return"Nicht ausgew\xe4hlt"},
 gcd(){return"Nach unten verschieben"},
 gbE(){return"Nach links verschieben"},
 gbF(){return"Nach rechts verschieben"},
@@ -130438,7 +130438,7 @@ gU(){return"Im Web suchen"},
 gR(){return"Teilen"}}
 A.acp.prototype={
 gJ(){return"\u0ab6\u0acb\u0aa7\u0acb"},
-gbr(){return"\u0aaa\u0ab8\u0a82\u0aa6\u0a97\u0ac0 \u0a95\u0ab0\u0ac0 \u0aa8\u0aa5\u0ac0"},
+gbs(){return"\u0aaa\u0ab8\u0a82\u0aa6\u0a97\u0ac0 \u0a95\u0ab0\u0ac0 \u0aa8\u0aa5\u0ac0"},
 gcd(){return"\u0aa8\u0ac0\u0a9a\u0ac7 \u0a96\u0ab8\u0ac7\u0aa1\u0acb"},
 gbE(){return"\u0aa1\u0abe\u0aac\u0ac7 \u0a96\u0ab8\u0ac7\u0aa1\u0acb"},
 gbF(){return"\u0a9c\u0aae\u0aa3\u0ac7 \u0a96\u0ab8\u0ac7\u0aa1\u0acb"},
@@ -130449,7 +130449,7 @@ gU(){return"\u0ab5\u0ac7\u0aac \u0aaa\u0ab0 \u0ab6\u0acb\u0aa7\u0acb"},
 gR(){return"\u0ab6\u0ac7\u0ab0 \u0a95\u0ab0\u0acb"}}
 A.acq.prototype={
 gJ(){return"\u05d7\u05d9\u05e4\u05d5\u05e9"},
-gbr(){return"\u05dc\u05d0 \u05e0\u05d1\u05d7\u05e8"},
+gbs(){return"\u05dc\u05d0 \u05e0\u05d1\u05d7\u05e8"},
 gcd(){return"\u05d4\u05e2\u05d1\u05e8\u05d4 \u05dc\u05de\u05d8\u05d4"},
 gbE(){return"\u05d4\u05e2\u05d1\u05e8\u05d4 \u05e9\u05de\u05d0\u05dc\u05d4"},
 gbF(){return"\u05d4\u05e2\u05d1\u05e8\u05d4 \u05d9\u05de\u05d9\u05e0\u05d4"},
@@ -130460,7 +130460,7 @@ gU(){return"\u05d7\u05d9\u05e4\u05d5\u05e9 \u05d1\u05d0\u05d9\u05e0\u05d8\u05e8\
 gR(){return"\u05e9\u05d9\u05ea\u05d5\u05e3"}}
 A.acr.prototype={
 gJ(){return"\u0932\u0941\u0915 \u0905\u092a \u092c\u091f\u0928"},
-gbr(){return"\u0928\u0939\u0940\u0902 \u091a\u0941\u0928\u093e \u0917\u092f\u093e"},
+gbs(){return"\u0928\u0939\u0940\u0902 \u091a\u0941\u0928\u093e \u0917\u092f\u093e"},
 gcd(){return"\u0928\u0940\u091a\u0947 \u0932\u0947 \u091c\u093e\u090f\u0902"},
 gbE(){return"\u092c\u093e\u090f\u0902 \u0932\u0947 \u091c\u093e\u090f\u0902"},
 gbF(){return"\u0926\u093e\u090f\u0902 \u0932\u0947 \u091c\u093e\u090f\u0902"},
@@ -130471,7 +130471,7 @@ gU(){return"\u0935\u0947\u092c \u092a\u0930 \u0916\u094b\u091c\u0947\u0902"},
 gR(){return"\u0936\u0947\u092f\u0930 \u0915\u0930\u0947\u0902"}}
 A.acs.prototype={
 gJ(){return"Pogled prema gore"},
-gbr(){return"Nije odabrano"},
+gbs(){return"Nije odabrano"},
 gcd(){return"Pomakni prema dolje"},
 gbE(){return"Pomakni ulijevo"},
 gbF(){return"Pomakni udesno"},
@@ -130482,7 +130482,7 @@ gU(){return"Pretra\u017ei web"},
 gR(){return"Dijeli"}}
 A.act.prototype={
 gJ(){return"Felfel\xe9 n\xe9z\xe9s"},
-gbr(){return"Nincs kiv\xe1lasztva"},
+gbs(){return"Nincs kiv\xe1lasztva"},
 gcd(){return"\xc1thelyez\xe9s lefel\xe9"},
 gbE(){return"\xc1thelyez\xe9s balra"},
 gbF(){return"\xc1thelyez\xe9s jobbra"},
@@ -130493,7 +130493,7 @@ gU(){return"Keres\xe9s az interneten"},
 gR(){return"Megoszt\xe1s"}}
 A.acu.prototype={
 gJ(){return"\u0553\u0576\u057f\u0580\u0565\u056c"},
-gbr(){return"\u0538\u0576\u057f\u0580\u057e\u0561\u056e \u0579\u0567"},
+gbs(){return"\u0538\u0576\u057f\u0580\u057e\u0561\u056e \u0579\u0567"},
 gcd(){return"\u054f\u0565\u0572\u0561\u0583\u0578\u056d\u0565\u056c \u0576\u0565\u0580\u0584\u0587"},
 gbE(){return"\u054f\u0565\u0572\u0561\u0583\u0578\u056d\u0565\u056c \u0571\u0561\u056d"},
 gbF(){return"\u054f\u0565\u0572\u0561\u0583\u0578\u056d\u0565\u056c \u0561\u057b"},
@@ -130504,7 +130504,7 @@ gU(){return"\u0548\u0580\u0578\u0576\u0565\u056c \u0570\u0561\u0574\u0561\u0581\
 gR(){return"\u053f\u056b\u057d\u057e\u0565\u056c"}}
 A.acv.prototype={
 gJ(){return"Cari"},
-gbr(){return"Tidak dipilih"},
+gbs(){return"Tidak dipilih"},
 gcd(){return"Turunkan"},
 gbE(){return"Pindahkan ke kiri"},
 gbF(){return"Pindahkan ke kanan"},
@@ -130515,7 +130515,7 @@ gU(){return"Telusuri di Web"},
 gR(){return"Bagikan"}}
 A.acw.prototype={
 gJ(){return"Look Up"},
-gbr(){return"Ekki vali\xf0"},
+gbs(){return"Ekki vali\xf0"},
 gcd(){return"F\xe6ra ni\xf0ur"},
 gbE(){return"F\xe6ra til vinstri"},
 gbF(){return"F\xe6ra til h\xe6gri"},
@@ -130526,7 +130526,7 @@ gU(){return"Leita \xe1 vefnum"},
 gR(){return"Deila"}}
 A.acx.prototype={
 gJ(){return"Cerca"},
-gbr(){return"Non selezionato"},
+gbs(){return"Non selezionato"},
 gcd(){return"Sposta gi\xf9"},
 gbE(){return"Sposta a sinistra"},
 gbF(){return"Sposta a destra"},
@@ -130537,7 +130537,7 @@ gU(){return"Cerca sul web"},
 gR(){return"Condividi"}}
 A.acy.prototype={
 gJ(){return"\u8abf\u3079\u308b"},
-gbr(){return"\u9078\u629e\u3055\u308c\u3066\u3044\u307e\u305b\u3093"},
+gbs(){return"\u9078\u629e\u3055\u308c\u3066\u3044\u307e\u305b\u3093"},
 gcd(){return"\u4e0b\u306b\u79fb\u52d5"},
 gbE(){return"\u5de6\u306b\u79fb\u52d5"},
 gbF(){return"\u53f3\u306b\u79fb\u52d5"},
@@ -130548,7 +130548,7 @@ gU(){return"\u30a6\u30a7\u30d6\u3092\u691c\u7d22"},
 gR(){return"\u5171\u6709"}}
 A.acz.prototype={
 gJ(){return"\u10d0\u10d8\u10ee\u10d4\u10d3\u10d4\u10d7 \u10d6\u10d4\u10db\u10dd\u10d7"},
-gbr(){return"\u10d0\u10e0 \u10d0\u10e0\u10d8\u10e1 \u10d0\u10e0\u10e9\u10d4\u10e3\u10da\u10d8"},
+gbs(){return"\u10d0\u10e0 \u10d0\u10e0\u10d8\u10e1 \u10d0\u10e0\u10e9\u10d4\u10e3\u10da\u10d8"},
 gcd(){return"\u10e5\u10d5\u10d4\u10db\u10dd\u10d7 \u10d2\u10d0\u10d3\u10d0\u10e2\u10d0\u10dc\u10d0"},
 gbE(){return"\u10db\u10d0\u10e0\u10ea\u10ee\u10dc\u10d8\u10d5 \u10d2\u10d0\u10d3\u10d0\u10e2\u10d0\u10dc\u10d0"},
 gbF(){return"\u10db\u10d0\u10e0\u10ef\u10d5\u10dc\u10d8\u10d5 \u10d2\u10d0\u10d3\u10d0\u10e2\u10d0\u10dc\u10d0"},
@@ -130559,7 +130559,7 @@ gU(){return"\u10d5\u10d4\u10d1\u10e8\u10d8 \u10eb\u10d8\u10d4\u10d1\u10d0"},
 gR(){return"\u10d2\u10d0\u10d6\u10d8\u10d0\u10e0\u10d4\u10d1\u10d0"}}
 A.acA.prototype={
 gJ(){return"\u0406\u0437\u0434\u0435\u0443"},
-gbr(){return"\u0422\u0430\u04a3\u0434\u0430\u043b\u043c\u0430\u0434\u044b"},
+gbs(){return"\u0422\u0430\u04a3\u0434\u0430\u043b\u043c\u0430\u0434\u044b"},
 gcd(){return"\u0422\u04e9\u043c\u0435\u043d\u0433\u0435 \u0436\u044b\u043b\u0436\u044b\u0442\u0443"},
 gbE(){return"\u0421\u043e\u043b\u0493\u0430 \u0436\u044b\u043b\u0436\u044b\u0442\u0443"},
 gbF(){return"\u041e\u04a3\u0493\u0430 \u0436\u044b\u043b\u0436\u044b\u0442\u0443"},
@@ -130570,7 +130570,7 @@ gU(){return"\u0418\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0442\u0435\u043d \
 gR(){return"\u0411\u04e9\u043b\u0456\u0441\u0443"}}
 A.acB.prototype={
 gJ(){return"\u179a\u1780\u1798\u17be\u179b"},
-gbr(){return"\u1798\u17b7\u1793\u1794\u17b6\u1793\u200b\u1787\u17d2\u179a\u17be\u179f\u179a\u17be\u179f\u1791\u17c1"},
+gbs(){return"\u1798\u17b7\u1793\u1794\u17b6\u1793\u200b\u1787\u17d2\u179a\u17be\u179f\u179a\u17be\u179f\u1791\u17c1"},
 gcd(){return"\u1795\u17d2\u179b\u17b6\u179f\u17cb\u1791\u17b8\u200b\u1785\u17bb\u17c7\u200b\u1780\u17d2\u179a\u17c4\u1798"},
 gbE(){return"\u1795\u17d2\u179b\u17b6\u179f\u17cb\u1791\u17b8\u200b\u1791\u17c5\u200b\u1786\u17d2\u179c\u17c1\u1784"},
 gbF(){return"\u1795\u17d2\u179b\u17b6\u179f\u17cb\u1791\u17b8\u1791\u17c5\u200b\u179f\u17d2\u178f\u17b6\u17c6"},
@@ -130581,7 +130581,7 @@ gU(){return"\u179f\u17d2\u179c\u17c2\u1784\u179a\u1780\u200b\u179b\u17be\u1794\u
 gR(){return"\u1785\u17c2\u1780\u179a\u17c6\u179b\u17c2\u1780"}}
 A.acC.prototype={
 gJ(){return"\u0cae\u0cc7\u0cb2\u0cc6 \u0ca8\u0ccb\u0ca1\u0cbf"},
-gbr(){return"\u0c86\u0caf\u0ccd\u0c95\u0cc6\u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0cb2\u0ccd\u0cb2"},
+gbs(){return"\u0c86\u0caf\u0ccd\u0c95\u0cc6\u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0cb2\u0ccd\u0cb2"},
 gcd(){return"\u0c95\u0cc6\u0cb3\u0c97\u0cc6 \u0cb8\u0cb0\u0cbf\u0cb8\u0cbf"},
 gbE(){return"\u0c8e\u0ca1\u0c95\u0ccd\u0c95\u0cc6 \u0cb8\u0cb0\u0cbf\u0cb8\u0cbf"},
 gbF(){return"\u0cac\u0cb2\u0c95\u0ccd\u0c95\u0cc6 \u0cb8\u0cb0\u0cbf\u0cb8\u0cbf"},
@@ -130592,7 +130592,7 @@ gU(){return"\u0cb5\u0cc6\u0cac\u0ccd\u200c\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\
 gR(){return"\u0cb9\u0c82\u0c9a\u0cbf\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cbf"}}
 A.acD.prototype={
 gJ(){return"\ucc3e\uae30"},
-gbr(){return"\uc120\ud0dd\ub418\uc9c0 \uc54a\uc74c"},
+gbs(){return"\uc120\ud0dd\ub418\uc9c0 \uc54a\uc74c"},
 gcd(){return"\uc544\ub798\ub85c \uc774\ub3d9"},
 gbE(){return"\uc67c\ucabd\uc73c\ub85c \uc774\ub3d9"},
 gbF(){return"\uc624\ub978\ucabd\uc73c\ub85c \uc774\ub3d9"},
@@ -130603,7 +130603,7 @@ gU(){return"\uc6f9 \uac80\uc0c9"},
 gR(){return"\uacf5\uc720"}}
 A.acE.prototype={
 gJ(){return"\u0418\u0437\u0434\u04e9\u04e9"},
-gbr(){return"\u0422\u0430\u043d\u0434\u0430\u043b\u0433\u0430\u043d \u0436\u043e\u043a"},
+gbs(){return"\u0422\u0430\u043d\u0434\u0430\u043b\u0433\u0430\u043d \u0436\u043e\u043a"},
 gcd(){return"\u0422\u04e9\u043c\u04e9\u043d \u0436\u044b\u043b\u0434\u044b\u0440\u0443\u0443"},
 gbE(){return"\u0421\u043e\u043b\u0433\u043e \u0436\u044b\u043b\u0434\u044b\u0440\u0443\u0443"},
 gbF(){return"\u041e\u04a3\u0433\u043e \u0436\u044b\u043b\u0434\u044b\u0440\u0443\u0443"},
@@ -130614,7 +130614,7 @@ gU(){return"\u0418\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0442\u0435\u043d \
 gR(){return"\u0411\u04e9\u043b\u04af\u0448\u04af\u04af"}}
 A.acF.prototype={
 gJ(){return"\u0e8a\u0ead\u0e81\u0eab\u0eb2\u0e82\u0ecd\u0ec9\u0ea1\u0eb9\u0e99"},
-gbr(){return"\u0e9a\u0ecd\u0ec8\u0ec4\u0e94\u0ec9\u0ec0\u0ea5\u0eb7\u0ead\u0e81"},
+gbs(){return"\u0e9a\u0ecd\u0ec8\u0ec4\u0e94\u0ec9\u0ec0\u0ea5\u0eb7\u0ead\u0e81"},
 gcd(){return"\u0e8d\u0ec9\u0eb2\u0e8d\u0ea5\u0ebb\u0e87"},
 gbE(){return"\u0e8d\u0ec9\u0eb2\u0e8d\u0ec4\u0e9b\u0e8a\u0ec9\u0eb2\u0e8d"},
 gbF(){return"\u0e8d\u0ec9\u0eb2\u0e8d\u0ec4\u0e9b\u0e82\u0ea7\u0eb2"},
@@ -130625,7 +130625,7 @@ gU(){return"\u0e8a\u0ead\u0e81\u0eab\u0eb2\u0ea2\u0eb9\u0ec8\u0ead\u0eb4\u0e99\u
 gR(){return"\u0ec1\u0e9a\u0ec8\u0e87\u0e9b\u0eb1\u0e99"}}
 A.acG.prototype={
 gJ(){return"Ie\u0161koti"},
-gbr(){return"Nepasirinkta"},
+gbs(){return"Nepasirinkta"},
 gcd(){return"Perkelti \u017eemyn"},
 gbE(){return"Perkelti kair\u0117n"},
 gbF(){return"Perkelti de\u0161in\u0117n"},
@@ -130636,7 +130636,7 @@ gU(){return"Ie\u0161koti \u017einiatinklyje"},
 gR(){return"Bendrinti"}}
 A.acH.prototype={
 gJ(){return"Mekl\u0113t"},
-gbr(){return"Nav atlas\u012bts"},
+gbs(){return"Nav atlas\u012bts"},
 gcd(){return"P\u0101rvietot uz leju"},
 gbE(){return"P\u0101rvietot pa kreisi"},
 gbF(){return"P\u0101rvietot pa labi"},
@@ -130647,7 +130647,7 @@ gU(){return"Mekl\u0113t t\u012bmekl\u012b"},
 gR(){return"Kop\u012bgot"}}
 A.acI.prototype={
 gJ(){return"\u041f\u043e\u0433\u043b\u0435\u0434\u043d\u0435\u0442\u0435 \u043d\u0430\u0433\u043e\u0440\u0435"},
-gbr(){return"\u041d\u0435 \u0435 \u0438\u0437\u0431\u0440\u0430\u043d\u043e"},
+gbs(){return"\u041d\u0435 \u0435 \u0438\u0437\u0431\u0440\u0430\u043d\u043e"},
 gcd(){return"\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0435\u0442\u0435 \u043d\u0430\u0434\u043e\u043b\u0443"},
 gbE(){return"\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0435\u0442\u0435 \u043d\u0430\u043b\u0435\u0432\u043e"},
 gbF(){return"\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0435\u0442\u0435 \u043d\u0430\u0434\u0435\u0441\u043d\u043e"},
@@ -130658,7 +130658,7 @@ gU(){return"\u041f\u0440\u0435\u0431\u0430\u0440\u0430\u0458\u0442\u0435 \u043d\
 gR(){return"\u0421\u043f\u043e\u0434\u0435\u043b\u0438"}}
 A.acJ.prototype={
 gJ(){return"\u0d2e\u0d41\u0d15\u0d33\u0d3f\u0d32\u0d47\u0d15\u0d4d\u0d15\u0d4d \u0d28\u0d4b\u0d15\u0d4d\u0d15\u0d41\u0d15"},
-gbr(){return"\u0d24\u0d3f\u0d30\u0d1e\u0d4d\u0d1e\u0d46\u0d1f\u0d41\u0d24\u0d4d\u0d24\u0d3f\u0d32\u0d4d\u0d32"},
+gbs(){return"\u0d24\u0d3f\u0d30\u0d1e\u0d4d\u0d1e\u0d46\u0d1f\u0d41\u0d24\u0d4d\u0d24\u0d3f\u0d32\u0d4d\u0d32"},
 gcd(){return"\u0d24\u0d3e\u0d34\u0d4b\u0d1f\u0d4d\u0d1f\u0d4d \u0d28\u0d40\u0d15\u0d4d\u0d15\u0d41\u0d15"},
 gbE(){return"\u0d07\u0d1f\u0d24\u0d4d\u0d24\u0d4b\u0d1f\u0d4d\u0d1f\u0d4d \u0d28\u0d40\u0d15\u0d4d\u0d15\u0d41\u0d15"},
 gbF(){return"\u0d35\u0d32\u0d24\u0d4d\u0d24\u0d4b\u0d1f\u0d4d\u0d1f\u0d4d \u0d28\u0d40\u0d15\u0d4d\u0d15\u0d41\u0d15"},
@@ -130669,7 +130669,7 @@ gU(){return"\u0d35\u0d46\u0d2c\u0d3f\u0d7d \u0d24\u0d3f\u0d30\u0d2f\u0d41\u0d15"
 gR(){return"\u0d2a\u0d19\u0d4d\u0d15\u0d3f\u0d1f\u0d41\u0d15"}}
 A.acK.prototype={
 gJ(){return"\u0414\u044d\u044d\u0448\u044d\u044d \u0445\u0430\u0440\u0430\u0445"},
-gbr(){return"\u0421\u043e\u043d\u0433\u043e\u043e\u0433\u04af\u0439"},
+gbs(){return"\u0421\u043e\u043d\u0433\u043e\u043e\u0433\u04af\u0439"},
 gcd(){return"\u0414\u043e\u043e\u0448 \u0437\u04e9\u04e9\u0445"},
 gbE(){return"\u0417\u04af\u04af\u043d \u0442\u0438\u0439\u0448 \u0437\u04e9\u04e9\u0445"},
 gbF(){return"\u0411\u0430\u0440\u0443\u0443\u043d \u0442\u0438\u0439\u0448 \u0437\u04e9\u04e9\u0445"},
@@ -130680,7 +130680,7 @@ gU(){return"\u0412\u0435\u0431\u044d\u044d\u0441 \u0445\u0430\u0439\u0445"},
 gR(){return"\u0425\u0443\u0432\u0430\u0430\u043b\u0446\u0430\u0445"}}
 A.acL.prototype={
 gJ(){return"\u0936\u094b\u0927 \u0918\u094d\u092f\u093e"},
-gbr(){return"\u0928\u093f\u0935\u0921\u0932\u0947\u0932\u0947 \u0928\u093e\u0939\u0940"},
+gbs(){return"\u0928\u093f\u0935\u0921\u0932\u0947\u0932\u0947 \u0928\u093e\u0939\u0940"},
 gcd(){return"\u0916\u093e\u0932\u0940 \u0939\u0932\u0935\u093e"},
 gbE(){return"\u0921\u093e\u0935\u0940\u0915\u0921\u0947 \u0939\u0932\u0935\u093e"},
 gbF(){return"\u0909\u091c\u0935\u0940\u0915\u0921\u0947 \u0939\u0932\u0935\u093e"},
@@ -130691,7 +130691,7 @@ gU(){return"\u0935\u0947\u092c\u0935\u0930 \u0936\u094b\u0927\u093e"},
 gR(){return"\u0936\u0947\u0905\u0930 \u0915\u0930\u093e"}}
 A.acM.prototype={
 gJ(){return"Lihat ke Atas"},
-gbr(){return"Tidak dipilih"},
+gbs(){return"Tidak dipilih"},
 gcd(){return"Alih ke bawah"},
 gbE(){return"Alih ke kiri"},
 gbF(){return"Alih ke kanan"},
@@ -130702,7 +130702,7 @@ gU(){return"Buat carian pada Web"},
 gR(){return"Kongsi"}}
 A.acN.prototype={
 gJ(){return"\u1021\u1015\u1031\u102b\u103a\u1000\u103c\u100a\u103a\u1037\u101b\u1014\u103a"},
-gbr(){return"\u101b\u103d\u1031\u1038\u1019\u1011\u102c\u1038\u1015\u102b"},
+gbs(){return"\u101b\u103d\u1031\u1038\u1019\u1011\u102c\u1038\u1015\u102b"},
 gcd(){return"\u1021\u1031\u102c\u1000\u103a\u101e\u102d\u102f\u1037\u101b\u103d\u103e\u1031\u1037\u101b\u1014\u103a"},
 gbE(){return"\u1018\u101a\u103a\u1018\u1000\u103a\u101e\u102d\u102f\u1037\u101b\u103d\u103e\u1031\u1037\u101b\u1014\u103a"},
 gbF(){return"\u100a\u102c\u1018\u1000\u103a\u101e\u102d\u102f\u1037\u101b\u103d\u103e\u1031\u1037\u101b\u1014\u103a"},
@@ -130713,7 +130713,7 @@ gU(){return"\u101d\u1018\u103a\u1010\u103d\u1004\u103a\u101b\u103e\u102c\u101b\u
 gR(){return"\u1019\u103b\u103e\u101d\u1031\u101b\u1014\u103a"}}
 A.acO.prototype={
 gJ(){return"Sl\xe5 opp"},
-gbr(){return"Ikke valgt"},
+gbs(){return"Ikke valgt"},
 gcd(){return"Flytt ned"},
 gbE(){return"Flytt til venstre"},
 gbF(){return"Flytt til h\xf8yre"},
@@ -130724,7 +130724,7 @@ gU(){return"S\xf8k p\xe5 nettet"},
 gR(){return"Del"}}
 A.acP.prototype={
 gJ(){return"\u092e\u093e\u0925\u093f\u0924\u093f\u0930 \u0939\u0947\u0930\u094d\u0928\u0941\u0939\u094b\u0938\u094d"},
-gbr(){return"\u091a\u092f\u0928 \u0917\u0930\u093f\u090f\u0915\u094b \u091b\u0948\u0928"},
+gbs(){return"\u091a\u092f\u0928 \u0917\u0930\u093f\u090f\u0915\u094b \u091b\u0948\u0928"},
 gcd(){return"\u0924\u0932 \u0938\u093e\u0930\u094d\u0928\u0941\u0939\u094b\u0938\u094d"},
 gbE(){return"\u092c\u093e\u092f\u093e\u0901 \u0938\u093e\u0930\u094d\u0928\u0941\u0939\u094b\u0938\u094d"},
 gbF(){return"\u0926\u093e\u092f\u093e\u0901 \u0938\u093e\u0930\u094d\u0928\u0941\u0939\u094b\u0938\u094d"},
@@ -130735,7 +130735,7 @@ gU(){return"\u0935\u0947\u092c\u092e\u093e \u0916\u094b\u091c\u094d\u0928\u0941\
 gR(){return"\u0938\u0947\u092f\u0930 \u0917\u0930\u094d\u0928\u0941\u0939\u094b\u0938\u094d"}}
 A.acQ.prototype={
 gJ(){return"Opzoeken"},
-gbr(){return"Niet geselecteerd"},
+gbs(){return"Niet geselecteerd"},
 gcd(){return"Omlaag verplaatsen"},
 gbE(){return"Naar links verplaatsen"},
 gbF(){return"Naar rechts verplaatsen"},
@@ -130746,7 +130746,7 @@ gU(){return"Op internet zoeken"},
 gR(){return"Delen"}}
 A.acR.prototype={
 gJ(){return"Sl\xe5 opp"},
-gbr(){return"Ikke valgt"},
+gbs(){return"Ikke valgt"},
 gcd(){return"Flytt ned"},
 gbE(){return"Flytt til venstre"},
 gbF(){return"Flytt til h\xf8yre"},
@@ -130757,7 +130757,7 @@ gU(){return"S\xf8k p\xe5 nettet"},
 gR(){return"Del"}}
 A.acS.prototype={
 gJ(){return"\u0b09\u0b2a\u0b30\u0b15\u0b41 \u0b26\u0b47\u0b16\u0b28\u0b4d\u0b24\u0b41"},
-gbr(){return"\u0b1a\u0b5f\u0b28 \u0b15\u0b30\u0b3e\u0b2f\u0b3e\u0b07\u0b28\u0b3e\u0b39\u0b3f\u0b01"},
+gbs(){return"\u0b1a\u0b5f\u0b28 \u0b15\u0b30\u0b3e\u0b2f\u0b3e\u0b07\u0b28\u0b3e\u0b39\u0b3f\u0b01"},
 gcd(){return"\u0b24\u0b33\u0b15\u0b41 \u0b2e\u0b41\u0b2d \u0b15\u0b30\u0b28\u0b4d\u0b24\u0b41"},
 gbE(){return"\u0b2c\u0b3e\u0b2e\u0b15\u0b41 \u0b2e\u0b41\u0b2d \u0b15\u0b30\u0b28\u0b4d\u0b24\u0b41"},
 gbF(){return"\u0b21\u0b3e\u0b39\u0b3e\u0b23\u0b15\u0b41 \u0b2e\u0b41\u0b2d \u0b15\u0b30\u0b28\u0b4d\u0b24\u0b41"},
@@ -130768,7 +130768,7 @@ gU(){return"\u0b71\u0b47\u0b2c \u0b38\u0b30\u0b4d\u0b1a\u0b4d\u0b1a \u0b15\u0b30
 gR(){return"\u0b38\u0b47\u0b5f\u0b3e\u0b30 \u0b15\u0b30\u0b28\u0b4d\u0b24\u0b41"}}
 A.acT.prototype={
 gJ(){return"\u0a16\u0a4b\u0a1c\u0a4b"},
-gbr(){return"\u0a1a\u0a41\u0a23\u0a3f\u0a06 \u0a28\u0a39\u0a40\u0a02 \u0a17\u0a3f\u0a06"},
+gbs(){return"\u0a1a\u0a41\u0a23\u0a3f\u0a06 \u0a28\u0a39\u0a40\u0a02 \u0a17\u0a3f\u0a06"},
 gcd(){return"\u0a39\u0a47\u0a20\u0a3e\u0a02 \u0a32\u0a3f\u0a1c\u0a3e\u0a13"},
 gbE(){return"\u0a16\u0a71\u0a2c\u0a47 \u0a32\u0a3f\u0a1c\u0a3e\u0a13"},
 gbF(){return"\u0a38\u0a71\u0a1c\u0a47 \u0a32\u0a3f\u0a1c\u0a3e\u0a13"},
@@ -130779,7 +130779,7 @@ gU(){return"\u0a35\u0a48\u0a71\u0a2c '\u0a24\u0a47 \u0a16\u0a4b\u0a1c\u0a4b"},
 gR(){return"\u0a38\u0a3e\u0a02\u0a1d\u0a3e \u0a15\u0a30\u0a4b"}}
 A.acU.prototype={
 gJ(){return"Sprawd\u017a"},
-gbr(){return"Nie wybrano"},
+gbs(){return"Nie wybrano"},
 gcd(){return"Przenie\u015b w d\xf3\u0142"},
 gbE(){return"Przenie\u015b w lewo"},
 gbF(){return"Przenie\u015b w prawo"},
@@ -130790,7 +130790,7 @@ gU(){return"Szukaj w\xa0internecie"},
 gR(){return"Udost\u0119pnij"}}
 A.acV.prototype={
 gJ(){return"Look Up"},
-gbr(){return"Not selected"},
+gbs(){return"Not selected"},
 gcd(){return"Move down"},
 gbE(){return"Move left"},
 gbF(){return"Move right"},
@@ -130801,7 +130801,7 @@ gU(){return"Search Web"},
 gR(){return"Share..."}}
 A.Qs.prototype={
 gJ(){return"Pesquisar"},
-gbr(){return"N\xe3o selecionado"},
+gbs(){return"N\xe3o selecionado"},
 gcd(){return"Mover para baixo"},
 gbE(){return"Mover para a esquerda"},
 gbF(){return"Mover para a direita"},
@@ -130816,7 +130816,7 @@ gJ(){return"Procurar"},
 gR(){return"Partilhar"}}
 A.acX.prototype={
 gJ(){return"Privire \xeen sus"},
-gbr(){return"Neselectat"},
+gbs(){return"Neselectat"},
 gcd(){return"Muta\u021bi \xeen jos"},
 gbE(){return"Muta\u021bi la st\xe2nga"},
 gbF(){return"Muta\u021bi la dreapta"},
@@ -130827,7 +130827,7 @@ gU(){return"C\u0103uta\u021bi pe web"},
 gR(){return"Trimite\u021bi"}}
 A.acY.prototype={
 gJ(){return"\u041d\u0430\u0439\u0442\u0438"},
-gbr(){return"\u041d\u0435 \u0432\u044b\u0431\u0440\u0430\u043d\u043e"},
+gbs(){return"\u041d\u0435 \u0432\u044b\u0431\u0440\u0430\u043d\u043e"},
 gcd(){return"\u041f\u0435\u0440\u0435\u043c\u0435\u0441\u0442\u0438\u0442\u044c \u0432\u043d\u0438\u0437"},
 gbE(){return"\u041f\u0435\u0440\u0435\u043c\u0435\u0441\u0442\u0438\u0442\u044c \u0432\u043b\u0435\u0432\u043e"},
 gbF(){return"\u041f\u0435\u0440\u0435\u043c\u0435\u0441\u0442\u0438\u0442\u044c \u0432\u043f\u0440\u0430\u0432\u043e"},
@@ -130838,7 +130838,7 @@ gU(){return"\u0418\u0441\u043a\u0430\u0442\u044c \u0432 \u0438\u043d\u0442\u0435
 gR(){return"\u041f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f"}}
 A.acZ.prototype={
 gJ(){return"\u0d8b\u0da9 \u0db6\u0dbd\u0db1\u0dca\u0db1"},
-gbr(){return"\u0dad\u0ddd\u0dbb\u0dcf \u0db1\u0ddc\u0db8\u0dd0\u0dad"},
+gbs(){return"\u0dad\u0ddd\u0dbb\u0dcf \u0db1\u0ddc\u0db8\u0dd0\u0dad"},
 gcd(){return"\u0db4\u0dc4\u0dc5\u0da7 \u0d9c\u0dd9\u0db1 \u0dba\u0db1\u0dca\u0db1"},
 gbE(){return"\u0dc0\u0db8\u0da7 \u0d9c\u0dd9\u0db1 \u0dba\u0db1\u0dca\u0db1"},
 gbF(){return"\u0daf\u0d9a\u0dd4\u0dab\u0da7 \u0d9c\u0dd9\u0db1 \u0dba\u0db1\u0dca\u0db1"},
@@ -130849,7 +130849,7 @@ gU(){return"\u0dc0\u0dd9\u0db6\u0dba \u0dc3\u0ddc\u0dba\u0db1\u0dca\u0db1"},
 gR(){return"\u0db6\u0dd9\u0daf\u0dcf \u0d9c\u0db1\u0dca\u0db1"}}
 A.ad_.prototype={
 gJ(){return"Poh\u013ead nahor"},
-gbr(){return"Nevybran\xe9"},
+gbs(){return"Nevybran\xe9"},
 gcd(){return"Presun\xfa\u0165 nadol"},
 gbE(){return"Presun\xfa\u0165 do\u013eava"},
 gbF(){return"Presun\xfa\u0165 doprava"},
@@ -130860,7 +130860,7 @@ gU(){return"H\u013eada\u0165 na webe"},
 gR(){return"Zdie\u013ea\u0165"}}
 A.ad0.prototype={
 gJ(){return"Pogled gor"},
-gbr(){return"Ni izbrano"},
+gbs(){return"Ni izbrano"},
 gcd(){return"Premakni navzdol"},
 gbE(){return"Premakni levo"},
 gbF(){return"Premakni desno"},
@@ -130871,7 +130871,7 @@ gU(){return"Iskanje v spletu"},
 gR(){return"Deli"}}
 A.ad1.prototype={
 gJ(){return"K\xebrko"},
-gbr(){return"Nuk \xebsht\xeb zgjedhur"},
+gbs(){return"Nuk \xebsht\xeb zgjedhur"},
 gcd(){return"L\xebvize posht\xeb"},
 gbE(){return"L\xebvize majtas"},
 gbF(){return"L\xebvize djathtas"},
@@ -130882,7 +130882,7 @@ gU(){return"K\xebrko n\xeb ueb"},
 gR(){return"Ndaj"}}
 A.Qt.prototype={
 gJ(){return"\u041f\u043e\u0433\u043b\u0435\u0434 \u043d\u0430\u0433\u043e\u0440\u0435"},
-gbr(){return"\u041d\u0438\u0458\u0435 \u0438\u0437\u0430\u0431\u0440\u0430\u043d\u043e"},
+gbs(){return"\u041d\u0438\u0458\u0435 \u0438\u0437\u0430\u0431\u0440\u0430\u043d\u043e"},
 gcd(){return"\u041f\u043e\u043c\u0435\u0440\u0438\u0442\u0435 \u043d\u0430\u0434\u043e\u043b\u0435"},
 gbE(){return"\u041f\u043e\u043c\u0435\u0440\u0438\u0442\u0435 \u0443\u043b\u0435\u0432\u043e"},
 gbF(){return"\u041f\u043e\u043c\u0435\u0440\u0438\u0442\u0435 \u0443\u0434\u0435\u0441\u043d\u043e"},
@@ -130894,7 +130894,7 @@ gR(){return"\u0414\u0435\u043b\u0438"}}
 A.ad2.prototype={}
 A.ad3.prototype={
 gJ(){return"Pogled nagore"},
-gbr(){return"Nije izabrano"},
+gbs(){return"Nije izabrano"},
 gcd(){return"Pomerite nadole"},
 gbE(){return"Pomerite ulevo"},
 gbF(){return"Pomerite udesno"},
@@ -130905,7 +130905,7 @@ gU(){return"Pretra\u017ei veb"},
 gR(){return"Deli"}}
 A.ad4.prototype={
 gJ(){return"Titta upp"},
-gbr(){return"Inte markerad"},
+gbs(){return"Inte markerad"},
 gcd(){return"Flytta ned\xe5t"},
 gbE(){return"Flytta \xe5t v\xe4nster"},
 gbF(){return"Flytta \xe5t h\xf6ger"},
@@ -130916,7 +130916,7 @@ gU(){return"S\xf6k p\xe5 webben"},
 gR(){return"Dela"}}
 A.ad5.prototype={
 gJ(){return"Tafuta"},
-gbr(){return"Hayajachaguliwa"},
+gbs(){return"Hayajachaguliwa"},
 gcd(){return"Sogeza chini"},
 gbE(){return"Sogeza kushoto"},
 gbF(){return"Sogeza kulia"},
@@ -130927,7 +130927,7 @@ gU(){return"Tafuta kwenye Wavuti"},
 gR(){return"Tuma"}}
 A.ad6.prototype={
 gJ(){return"\u0ba4\u0bc7\u0b9f\u0bc1"},
-gbr(){return"\u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bb5\u0bbf\u0bb2\u0bcd\u0bb2\u0bc8"},
+gbs(){return"\u0ba4\u0bc7\u0bb0\u0bcd\u0ba8\u0bcd\u0ba4\u0bc6\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bb5\u0bbf\u0bb2\u0bcd\u0bb2\u0bc8"},
 gcd(){return"\u0b95\u0bc0\u0bb4\u0bc7 \u0ba8\u0b95\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0bb5\u0bc1\u0bae\u0bcd"},
 gbE(){return"\u0b87\u0b9f\u0baa\u0bcd\u0baa\u0bc1\u0bb1\u0bae\u0bcd \u0ba8\u0b95\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0bb5\u0bc1\u0bae\u0bcd"},
 gbF(){return"\u0bb5\u0bb2\u0baa\u0bcd\u0baa\u0bc1\u0bb1\u0bae\u0bcd \u0ba8\u0b95\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0bb5\u0bc1\u0bae\u0bcd"},
@@ -130938,7 +130938,7 @@ gU(){return"\u0b87\u0ba3\u0bc8\u0baf\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd \u0ba4\
 gR(){return"\u0baa\u0b95\u0bbf\u0bb0\u0bcd"}}
 A.ad7.prototype={
 gJ(){return"\u0c35\u0c46\u0c24\u0c15\u0c02\u0c21\u0c3f"},
-gbr(){return"\u0c0e\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c2c\u0c21\u0c32\u0c47\u0c26\u0c41"},
+gbs(){return"\u0c0e\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c2c\u0c21\u0c32\u0c47\u0c26\u0c41"},
 gcd(){return"\u0c15\u0c3f\u0c02\u0c26\u0c3f\u0c15\u0c41 \u0c1c\u0c30\u0c41\u0c2a\u0c41"},
 gbE(){return"\u0c0e\u0c21\u0c2e\u0c35\u0c48\u0c2a\u0c41\u0c17\u0c3e \u0c1c\u0c30\u0c2a\u0c02\u0c21\u0c3f"},
 gbF(){return"\u0c15\u0c41\u0c21\u0c3f\u0c35\u0c48\u0c2a\u0c41\u0c17\u0c3e \u0c1c\u0c30\u0c2a\u0c02\u0c21\u0c3f"},
@@ -130949,7 +130949,7 @@ gU(){return"\u0c35\u0c46\u0c2c\u0c4d\u200c\u0c32\u0c4b \u0c38\u0c46\u0c30\u0c4d\
 gR(){return"\u0c37\u0c47\u0c30\u0c4d \u0c1a\u0c47\u0c2f\u0c02\u0c21\u0c3f"}}
 A.ad8.prototype={
 gJ(){return"\u0e04\u0e49\u0e19\u0e2b\u0e32"},
-gbr(){return"\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49\u0e40\u0e25\u0e37\u0e2d\u0e01"},
+gbs(){return"\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49\u0e40\u0e25\u0e37\u0e2d\u0e01"},
 gcd(){return"\u0e22\u0e49\u0e32\u0e22\u0e25\u0e07"},
 gbE(){return"\u0e22\u0e49\u0e32\u0e22\u0e44\u0e1b\u0e17\u0e32\u0e07\u0e0b\u0e49\u0e32\u0e22"},
 gbF(){return"\u0e22\u0e49\u0e32\u0e22\u0e44\u0e1b\u0e17\u0e32\u0e07\u0e02\u0e27\u0e32"},
@@ -130960,7 +130960,7 @@ gU(){return"\u0e04\u0e49\u0e19\u0e2b\u0e32\u0e1a\u0e19\u0e2d\u0e34\u0e19\u0e40\u
 gR(){return"\u0e41\u0e0a\u0e23\u0e4c"}}
 A.ad9.prototype={
 gJ(){return"Tumingin sa Itaas"},
-gbr(){return"Hindi napili"},
+gbs(){return"Hindi napili"},
 gcd(){return"Ilipat pababa"},
 gbE(){return"Ilipat pakaliwa"},
 gbF(){return"Ilipat pakanan"},
@@ -130971,7 +130971,7 @@ gU(){return"Maghanap sa Web"},
 gR(){return"I-share"}}
 A.ada.prototype={
 gJ(){return"Ara"},
-gbr(){return"Se\xe7ili de\u011fil"},
+gbs(){return"Se\xe7ili de\u011fil"},
 gcd(){return"A\u015fa\u011f\u0131 ta\u015f\u0131"},
 gbE(){return"Sola ta\u015f\u0131"},
 gbF(){return"Sa\u011fa ta\u015f\u0131"},
@@ -130982,7 +130982,7 @@ gU(){return"Web'de Ara"},
 gR(){return"Payla\u015f"}}
 A.adb.prototype={
 gJ(){return"\u0626\u0649\u0632\u062f\u06d5\u0634"},
-gbr(){return"\u062a\u0627\u0644\u0644\u0627\u0646\u0645\u0649\u062f\u0649"},
+gbs(){return"\u062a\u0627\u0644\u0644\u0627\u0646\u0645\u0649\u062f\u0649"},
 gcd(){return"\u0626\u0627\u0633\u062a\u0649\u063a\u0627 \u064a\u06c6\u062a\u0643\u06d5\u0634"},
 gbE(){return"\u0633\u0648\u0644\u063a\u0627 \u064a\u06c6\u062a\u0643\u06d5\u0634"},
 gbF(){return"\u0626\u0648\u06ad\u063a\u0627 \u064a\u06c6\u062a\u0643\u06d5\u0634"},
@@ -130993,7 +130993,7 @@ gU(){return"\u062a\u0648\u0631\u062f\u0627 \u0626\u0649\u0632\u062f\u06d5\u0634"
 gR(){return"\u06be\u06d5\u0645\u0628\u06d5\u06be\u0631\u0644\u06d5\u0634"}}
 A.adc.prototype={
 gJ(){return"\u0428\u0443\u043a\u0430\u0442\u0438"},
-gbr(){return"\u041d\u0435 \u0432\u0438\u0431\u0440\u0430\u043d\u043e"},
+gbs(){return"\u041d\u0435 \u0432\u0438\u0431\u0440\u0430\u043d\u043e"},
 gcd(){return"\u041f\u0435\u0440\u0435\u043c\u0456\u0441\u0442\u0438\u0442\u0438 \u0432\u043d\u0438\u0437"},
 gbE(){return"\u041f\u0435\u0440\u0435\u043c\u0456\u0441\u0442\u0438\u0442\u0438 \u043b\u0456\u0432\u043e\u0440\u0443\u0447"},
 gbF(){return"\u041f\u0435\u0440\u0435\u043c\u0456\u0441\u0442\u0438\u0442\u0438 \u043f\u0440\u0430\u0432\u043e\u0440\u0443\u0447"},
@@ -131004,7 +131004,7 @@ gU(){return"\u041f\u043e\u0448\u0443\u043a \u0432 \u0406\u043d\u0442\u0435\u0440
 gR(){return"\u041f\u043e\u0434\u0456\u043b\u0438\u0442\u0438\u0441\u044f"}}
 A.add.prototype={
 gJ(){return"\u062a\u0641\u0635\u06cc\u0644 \u062f\u06cc\u06a9\u06be\u06cc\u06ba"},
-gbr(){return"\u063a\u06cc\u0631 \u0645\u0646\u062a\u062e\u0628 \u06a9\u0631\u062f\u06c1"},
+gbs(){return"\u063a\u06cc\u0631 \u0645\u0646\u062a\u062e\u0628 \u06a9\u0631\u062f\u06c1"},
 gcd(){return"\u0646\u06cc\u0686\u06d2 \u0645\u0646\u062a\u0642\u0644 \u06a9\u0631\u06cc\u06ba"},
 gbE(){return"\u0628\u0627\u0626\u06cc\u06ba \u0645\u0646\u062a\u0642\u0644 \u06a9\u0631\u06cc\u06ba"},
 gbF(){return"\u062f\u0627\u0626\u06cc\u06ba \u0645\u0646\u062a\u0642\u0644 \u06a9\u0631\u06cc\u06ba"},
@@ -131015,7 +131015,7 @@ gU(){return"\u0648\u06cc\u0628 \u062a\u0644\u0627\u0634 \u06a9\u0631\u06cc\u06ba
 gR(){return"\u0627\u0634\u062a\u0631\u0627\u06a9 \u06a9\u0631\u06cc\u06ba"}}
 A.ade.prototype={
 gJ(){return"Tepaga qarang"},
-gbr(){return"Tanlanmagan"},
+gbs(){return"Tanlanmagan"},
 gcd(){return"Pastga siljitish"},
 gbE(){return"Chapga siljitish"},
 gbF(){return"O\u02bbngga siljitish"},
@@ -131026,7 +131026,7 @@ gU(){return"Internetdan qidirish"},
 gR(){return"Ulashish"}}
 A.adf.prototype={
 gJ(){return"Tra c\u1ee9u"},
-gbr(){return"Ch\u01b0a ch\u1ecdn"},
+gbs(){return"Ch\u01b0a ch\u1ecdn"},
 gcd(){return"Di chuy\xea\u0309n xu\xf4\u0301ng"},
 gbE(){return"Di chuy\u1ec3n sang tr\xe1i"},
 gbF(){return"Di chuy\u1ec3n sang ph\u1ea3i"},
@@ -131037,7 +131037,7 @@ gU(){return"T\xecm ki\u1ebfm tr\xean web"},
 gR(){return"Chia s\u1ebb"}}
 A.Qu.prototype={
 gJ(){return"\u67e5\u8be2"},
-gbr(){return"\u672a\u9009\u62e9"},
+gbs(){return"\u672a\u9009\u62e9"},
 gcd(){return"\u4e0b\u79fb"},
 gbE(){return"\u5de6\u79fb"},
 gbF(){return"\u53f3\u79fb"},
@@ -131049,7 +131049,7 @@ gR(){return"\u5206\u4eab"}}
 A.adg.prototype={}
 A.Qv.prototype={
 gJ(){return"\u67e5\u8a62"},
-gbr(){return"\u672a\u63c0\u9078"},
+gbs(){return"\u672a\u63c0\u9078"},
 gcd(){return"\u5411\u4e0b\u79fb"},
 gbE(){return"\u5411\u5de6\u79fb"},
 gbF(){return"\u5411\u53f3\u79fb"},
@@ -131061,10 +131061,10 @@ A.adh.prototype={}
 A.adi.prototype={
 gbo(){return"\u79fb\u81f3\u958b\u982d"},
 gbO(){return"\u79fb\u81f3\u7d50\u5c3e"},
-gbr(){return"\u672a\u9078\u53d6"}}
+gbs(){return"\u672a\u9078\u53d6"}}
 A.adj.prototype={
 gJ(){return"Bheka Phezulu"},
-gbr(){return"Ayikhethiwe"},
+gbs(){return"Ayikhethiwe"},
 gcd(){return"Iya phansi"},
 gbE(){return"Hambisa kwesokunxele"},
 gbF(){return"Yisa kwesokudla"},
@@ -133657,7 +133657,7 @@ o.j(0)}return r}catch(m){q=A.U(m)
 p=q instanceof A.f9?q:new A.f9("Exception during redirect: "+A.q(q))
 p.toString
 return new A.cy(B.bG,B.bO,b,null,p,A.jZ(B.bG))}},
-aa9(a){return new A.W(a,new A.aNx(),A.a_(a).i("W<1,o>")).bs(0," => ")},
+aa9(a){return new A.W(a,new A.aNx(),A.a_(a).i("W<1,o>")).br(0," => ")},
 af1(a,b){var s,r={}
 r.a=null
 r.b=!1
@@ -134231,7 +134231,7 @@ p=q.b
 r=p==null
 if(!r&&a.e!=null)return(r?t.Ah.a(p):p).$2(a,s)
 return s}return null},
-aHG(a){return new A.W(a,new A.bgV(),A.a_(a).i("W<1,o>")).bs(0," => ")}}
+aHG(a){return new A.W(a,new A.bgV(),A.a_(a).i("W<1,o>")).br(0," => ")}}
 A.bgW.prototype={
 $1(a){return this.aqz(a)},
 aqz(a){var s=0,r=A.n(t.LQ),q,p=2,o=[],n=this,m,l,k,j,i,h
@@ -137790,8 +137790,8 @@ RV(a,b){var s=this.a.a,r=A.cX(s.goD(),t.N,t.z)
 r.n(0,a,b)
 return s.nI(r)},
 LB(a){var s=J.cD(a)
-if(s.eP(a,new A.aJb()))return s.e3(a,new A.aJc(),t.N).bs(0,",")
-return s.e3(a,new A.aJd(),t.N).bs(0,",")},
+if(s.eP(a,new A.aJb()))return s.e3(a,new A.aJc(),t.N).br(0,",")
+return s.e3(a,new A.aJd(),t.N).br(0,",")},
 qG(a,b){return this.cG(new A.aJf(this),A.u(this).i("cS.T")).qG(a,b)},
 fQ(a){return this.qG(a,null)},
 dW(a,b,c){var s,r=b==null
@@ -137962,7 +137962,7 @@ return A.iB(this.aEb(s,B.a0r),A.u(this).i("pd.T"))},
 afI(a){var s,r,q=A.fR(a,!0,t.a),p=A.b([],t.s)
 for(s=q.length,r=0;r<s;++r)B.b.H(p,q[r].ge2())
 if(s!==0){p=A.ez(p,t.N)
-return this.h5("columns",new A.i4(p,new A.aJp(),A.u(p).i("i4<1,o>")).bs(0,","))}return this.a.a}}
+return this.h5("columns",new A.i4(p,new A.aJp(),A.u(p).i("i4<1,o>")).br(0,","))}return this.a.a}}
 A.aJq.prototype={
 $1(a){var s
 if(this.b.b.test(a)&&!this.a.a)return""
@@ -137989,7 +137989,7 @@ if(o==null||o.length===0)o=null
 r=A.b([],r)
 if(o!=null)r.push(o)
 r.push("return=representation")
-n.n(0,"Prefer",B.b.bs(r,","))
+n.n(0,"Prefer",B.b.br(r,","))
 r=t.b5
 return A.Na(this.aEg(n,p,r,r,r),r)},
 hS(a,b){var s=this,r=s.a.a.gfT().h(0,"order"),q=r==null?"":r+",",p=b?"asc":"desc"
@@ -138531,7 +138531,7 @@ aek(a){var s=null
 this.uB(A.wM(B.lc),new A.oA(s,s,s,s,s),new A.aKr(a))},
 aok(a,b,c,d,e){var s,r=A.b([],t.Uz)
 if(c!=null)B.b.H(r,c)
-s=r.length===0?null:B.b.bs(r,",")
+s=r.length===0?null:B.b.br(r,",")
 return this.uB("postgres_changes",new A.oA(A.bUY(b),d,e,s,null),new A.aKz(a))},
 RL(a,b,c,d){return this.aok(a,b,null,c,d)},
 baV(a){var s=null
@@ -138685,7 +138685,7 @@ A.aKG.prototype={
 $1(a){var s,r=this.a
 if(r!=null){t.a.a(a)
 if(a.gdA(a)){s=a.ghI()
-s=s.bs(s,", ")}else s="error"
+s=s.br(s,", ")}else s="error"
 r.$2(B.nV,new A.vP(B.aw.wM(s,null)))}},
 $S:27}
 A.aKH.prototype={
@@ -139389,7 +139389,7 @@ break A}if(B.OW===r||B.anJ===r||B.anN===r||B.anO===r||B.anP===r||B.anQ===r||B.an
 break A}s=null}return s}}
 A.yV.prototype={
 j(a){var s=this,r=s.a
-if(r===B.OX)return s.b+"=in.("+J.c6(t.JY.a(s.c),new A.aJa(),t.N).bs(0,",")+")"
+if(r===B.OX)return s.b+"=in.("+J.c6(t.JY.a(s.c),new A.aJa(),t.N).br(0,",")+")"
 return s.b+"="+r.gbdz()+"."+A.bGh(s.c)}}
 A.aJa.prototype={
 $1(a){return A.bGh(a)},
@@ -139551,7 +139551,7 @@ p=A.bS(A.aL(r),A.aD(r),A.b4(r),0,0,0,0).eV(A.dP(q,0,0,0,0,0).a).eV(A.dP(0,n.a,0,
 return q===0&&p.mv(r)?p.eV(6048e8):p},
 gU1(){var s=this,r=s.dy,q=A.em(s.e),p=A.em(s.f),o=r==null?"":""+A.aL(r)+"-"+A.aD(r)+"-"+A.b4(r),n=s.fr
 if(n==null)n=""
-return B.b.bs(A.b([s.c.b,s.d,q,p,o,n],t.jl),"|")},
+return B.b.br(A.b([s.c.b,s.d,q,p,o,n],t.jl),"|")},
 gber(){var s,r=this.ax
 A:{if("has_venue"===r){s=A.c("newActivity.hasVenueYes",null)
 break A}if("needs_venue"===r){s=A.c("newActivity.hasVenueNo",null)
@@ -139596,7 +139596,7 @@ ga1d(){var s=this.z
 return B.e.dG(s-this.at,0,s)}}
 A.is.prototype={
 gxx(){var s=this.y
-return new A.W(s,new A.atL(),A.a_(s).i("W<1,o>")).bs(0,", ")}}
+return new A.W(s,new A.atL(),A.a_(s).i("W<1,o>")).br(0,", ")}}
 A.atL.prototype={
 $1(a){return B.b.gV(B.c.au(a.b).split(" "))},
 $S:213}
@@ -140976,7 +140976,7 @@ A.aXD.prototype={
 $1(a){var s=A.b([],t.s),r=t.kc.a(a.h(0,"sports"))
 r=J.aK(r==null?B.dq:r)
 while(r.t())s.push(A.Bi(r.gO()))
-return B.b.bs(s,", ")},
+return B.b.br(s,", ")},
 $S:26}
 A.aXE.prototype={
 $1(a){return a.h(0,"activity_count")},
@@ -141007,7 +141007,7 @@ if(J.h(a.h(0,"is_admin"),!0))s.push("Admin")
 if(J.h(a.h(0,"is_verified"),!0))s.push("verifiziert")
 if(J.h(a.h(0,"is_suspended"),!0))s.push("gesperrt")
 if(a.h(0,"paused_at")!=null)s.push("pausiert")
-return B.b.bs(s,", ")},
+return B.b.br(s,", ")},
 $S:26}
 A.aXy.prototype={
 $1(a){var s=A.b([],t.p)
@@ -141172,7 +141172,7 @@ for(a1=k.$ti,a2=new A.bs(k,k.gL(0),a1.i("bs<bo.E>")),a1=a1.i("bo.E");a2.t();){a3
 if(a3==null)a3=a1.a(a3)
 a4=A.b([A.Bi(a3.h(0,"sport"))],a)
 if(a3.h(0,"level")!=null)a4.push("("+A.q(a3.h(0,"level"))+")")
-a0.push(B.b.bs(a4," "))}a0=j.$2("Sportarten",B.b.bs(a0,", "))
+a0.push(B.b.br(a4," "))}a0=j.$2("Sportarten",B.b.br(a0,", "))
 a1=j.$2("\xdcber mich",c5.h(0,"bio"))
 a2=j.$2("Meldungen gemacht",c6.h(0,"reports_by"))
 a3=A.b([],o)
@@ -141187,7 +141187,7 @@ a9=a6.h(0,"start_time")
 a9=typeof a9=="string"&&a9.length>=5?B.c.ab(a9,0,5):c1
 b0=a6.h(0,"end_time")
 b0=typeof b0=="string"&&b0.length>=5?B.c.ab(b0,0,5):c1
-b0=B.b.bs(A.b([a7,a8,a9+"-"+b0],a)," \xb7 ")
+b0=B.b.br(A.b([a7,a8,a9+"-"+b0],a)," \xb7 ")
 a9=a6.h(0,"location_name")
 a7=a9==null?"Ort flexibel":a9
 b1=a6.h(0,"discover_visibility")
@@ -141196,7 +141196,7 @@ break A}if("request"===b1){a8="Chat nur nach Anfrage"
 break A}a8="sichtbar in Entdecken"
 break A}a8=[a7,a8]
 if(!J.h(a6.h(0,"is_active"),!0))a8.push("inaktiv")
-a3.push(new A.GH(B.mm,b0,B.b.bs(a8," \xb7 "),b6))}a=i.$2("Sportzeiten",a3)
+a3.push(new A.GH(B.mm,b0,B.b.br(a8," \xb7 "),b6))}a=i.$2("Sportzeiten",a3)
 a3=A.b([],o)
 for(a4=m.$ti,a5=new A.bs(m,m.gL(0),a4.i("bs<bo.E>")),a4=a4.i("bo.E");a5.t();){a6=a5.d
 if(a6==null)a6=a4.a(a6)
@@ -141232,7 +141232,7 @@ b0=b0+" "+B.c.aO(B.e.j(A.eg(c6)),2,c2)+":"+B.c.aO(B.e.j(A.ib(c6)),2,c2)}b0=[b0,J
 b2=A.ay(a7.h(0,"details"))
 b2=b2==null?b6:b2.length!==0
 if(b2===!0)b0.push(a7.h(0,"details"))
-a4.push(new A.GH(B.mk,a8+" - von "+a9,B.b.bs(b0," \xb7 "),b6))}return A.ab(A.b([new A.V(B.a_s,c4,b6),new A.V(B.qu,p,b6),B.xs,A.ax(A.eA(A.b([h,g,f,e,d,c,b,a0,a1,a2,a,a3,i.$2("Meldungen \xfcber diese Person",a4),B.M,A.e("Nachrichtentexte sind bewusst nicht einsehbar - nur, wie viele es gibt und wann.",b6,b6,b6,b6,A.Z(b6,b6,$.aa(),b6,b6,b6,b6,b6,b6,b6,b6,12,b6,b6,b6,b6,b6,!0,b6,b6,b6,b6,b6,b6,b6,b6),b6,b6,b6)],o),B.xW,b6,B.H,!1),1)],o),B.i,B.f,B.h,0,B.l)}}
+a4.push(new A.GH(B.mk,a8+" - von "+a9,B.b.br(b0," \xb7 "),b6))}return A.ab(A.b([new A.V(B.a_s,c4,b6),new A.V(B.qu,p,b6),B.xs,A.ax(A.eA(A.b([h,g,f,e,d,c,b,a0,a1,a2,a,a3,i.$2("Meldungen \xfcber diese Person",a4),B.M,A.e("Nachrichtentexte sind bewusst nicht einsehbar - nur, wie viele es gibt und wann.",b6,b6,b6,b6,A.Z(b6,b6,$.aa(),b6,b6,b6,b6,b6,b6,b6,b6,12,b6,b6,b6,b6,b6,!0,b6,b6,b6,b6,b6,b6,b6,b6),b6,b6,b6)],o),B.xW,b6,B.H,!1),1)],o),B.i,B.f,B.h,0,B.l)}}
 A.aXk.prototype={
 $0(){return this.a.r=!0},
 $S:0}
@@ -141488,11 +141488,13 @@ s.K$=0
 this.am()},
 zn(a){return this.aSO(a)},
 aSN(){return this.zn(!1)},
-aSO(a){var s=0,r=A.n(t.H),q,p
+aSO(a){var s=0,r=A.n(t.H),q,p,o
 var $async$zn=A.j(function(b,c){if(b===1)return A.k(c,r)
 for(;;)switch(s){case 0:p=$.tr().a
-if(a)q="?video=trainer"
-else q=p===B.l_?"?lang=en":""
+o=A.b([],t.s)
+if(a)o.push("video=trainer")
+if(p===B.l_)o.push("lang=en")
+q=o.length===0?"":"?"+B.b.br(o,"&")
 s=2
 return A.d(A.or(A.zZ().X("video.html"+q),B.rK,"_self"),$async$zn)
 case 2:return A.l(null,r)}})
@@ -142421,7 +142423,7 @@ DT(a){return this.aFj(a)},
 aFj(a){var s=0,r=A.n(t.H),q,p=this,o,n,m
 var $async$DT=A.j(function(b,c){if(b===1)return A.k(c,r)
 for(;;)switch(s){case 0:o=a.ay
-n=new A.W(o,new A.b1F(),A.a_(o).i("W<1,o>")).bs(0,", ")
+n=new A.W(o,new A.b1F(),A.a_(o).i("W<1,o>")).br(0,", ")
 m=A.c("coach.deleteTitle",null)
 if(o.length===0)o=A.c("coach.deleteBody",null)
 else{o=t.N
@@ -142649,7 +142651,7 @@ if(s===1)s=A.c(n,o)
 else{r=t.N
 r=A.c(m,A.y(["n",""+s],r,r))
 s=r}return s}q=t.N
-p=A.c("coach.statusBookedBy",A.y(["names",new A.W(r,new A.atO(),A.a_(r).i("W<1,o>")).bs(0,", ")],q,q))
+p=A.c("coach.statusBookedBy",A.y(["names",new A.W(r,new A.atO(),A.a_(r).i("W<1,o>")).br(0,", ")],q,q))
 return s.at>=s.z?p:p+" \xb7 "+A.c(m,A.y(["n",""+s.ga1d()],q,q))}s=this.c
 if(s.ax)return A.c("coach.statusMine",o)
 if(s.at>=s.z)return A.c("coach.statusFull",o)
@@ -142675,7 +142677,7 @@ if(!l.d){m=t.N
 p.push(A.c("coach.withCoach",A.y(["coach",B.b.gV(B.c.au(r.d).split(" "))],m,m)))}m=r.w
 if((m==null?k:m.length!==0)===!0){m.toString
 p.push(m)}m=t.p
-p=A.b([n,A.e(B.b.bs(p," \xb7 "),2,B.V,k,k,A.Z(k,k,$.aa(),k,k,k,k,k,k,k,k,12,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k,k,k)],m)
+p=A.b([n,A.e(B.b.br(p," \xb7 "),2,B.V,k,k,A.Z(k,k,$.aa(),k,k,k,k,k,k,k,k,12,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k,k,k)],m)
 n=r.Q
 if((n==null?k:n.length!==0)===!0){n.toString
 p.push(A.e(n,2,B.V,k,k,A.Z(k,k,$.aa(),k,k,k,k,k,k,k,k,12,B.re,k,k,k,k,!0,k,k,k,k,k,k,k,k),k,k,k))}n=l.aYm()
@@ -142978,7 +142980,7 @@ if(s.length!==0){r=t.N
 o.push(p.x?A.c("coach.withClients",A.y(["names",p.gxx()],r,r)):A.c("coach.withCoach",A.y(["coach",p.gxx()],r,r)))}else if(p.x)o.push(A.c("coach.noBookingsYet",q))
 r=p.r
 if((r==null?q:r.length!==0)===!0){r.toString
-o.push(r)}o=A.e(B.b.bs(o," \xb7 "),1,B.V,q,q,q,q,q,q)
+o.push(r)}o=A.e(B.b.br(o," \xb7 "),1,B.V,q,q,q,q,q,q)
 r=s.length===0?A.e(A.c("coach.statusFree",q),q,q,q,q,A.Z(q,q,$.ct(),q,q,q,q,q,q,q,q,12,q,q,B.bD,q,q,!0,q,q,q,q,q,q,q,q),q,q,q):B.zc
 return A.cN(!1,B.r,!0,q,!0,q,q,q,!0,q,n,q,q,q,q,s.length===0?q:new A.b1z(this,a),!1,q,q,q,q,q,o,q,m,q,r,q)}}
 A.b1z.prototype={
@@ -143676,7 +143678,7 @@ o=A.b([B.b.gV(B.c.d3(B.c.au(e.b),A.aZ("\\s+",!0,!1)))],n)
 k=e.c
 if(k!=null)o.push(A.q(k))
 k=t.p
-o=A.b([new A.ep(1,B.b7,A.e(B.b.bs(o,", "),g,B.V,g,g,B.aE,g,g,g),g)],k)
+o=A.b([new A.ep(1,B.b7,A.e(B.b.br(o,", "),g,B.V,g,g,B.aE,g,g,g),g)],k)
 if(e.ax)B.b.H(o,A.b([B.bJ,B.RY],k))
 e=A.am(o,B.i,B.f,B.h,0,g)
 o=A.am(A.b([A.aw(q.ghC(),$.aW(),g,15),B.bJ,new A.ep(1,B.b7,A.e(A.em(f.e)+" - "+A.em(f.f),1,B.V,g,g,B.atJ,g,g,g),g)],k),B.i,B.f,B.h,0,g)
@@ -143687,7 +143689,7 @@ else{i=$.ji()
 i=i.b.test(j)
 if(i)j=A.c("location.pinOnMap",g)}q=A.b([q,j==null?A.c("matches.flexibleLocation",g):j],n)
 if(p!=null)q.push(p)
-e=A.b([e,B.bZ,o,A.e(B.b.bs(q," \xb7 "),1,B.V,g,g,A.Z(g,g,$.aa(),g,g,g,g,g,g,g,g,12,g,g,g,g,g,!0,g,g,g,g,g,g,g,g),g,g,g)],k)
+e=A.b([e,B.bZ,o,A.e(B.b.br(q," \xb7 "),1,B.V,g,g,A.Z(g,g,$.aa(),g,g,g,g,g,g,g,g,12,g,g,g,g,g,!0,g,g,g,g,g,g,g,g),g,g,g)],k)
 if(f.ax!=null)e.push(new A.V(B.jU,new A.Qe(f,g),g))
 return A.dG(A.cw(!1,s,!0,new A.V(B.ZT,A.am(A.b([l,B.b_,A.ax(A.ab(e,B.u,B.f,B.h,0,B.l),1),B.bt,m],k),B.i,B.f,B.h,0,g),g),g,!0,g,g,g,g,g,g,g,g,g,g,g,new A.b5d(h,a),g,g,g,g,g,g,g),g,g,g,g,B.bM,g)}}
 A.b5E.prototype={
@@ -144499,7 +144501,7 @@ else q=!1
 if(q){q=$.ji()
 q=q.b.test(s)
 o.push(q?A.c("location.pinOnMap",n):s)}if(!j){j=t.N
-o.push(A.c("chatList.participants",A.y(["count",""+a.z],j,j)))}return A.dG(A.cN(!1,n,n,n,!0,n,n,n,!0,n,new A.cr(B.au,n,B.ah,B.p,k,n),n,n,n,n,new A.b_6(this,a),!1,n,n,n,n,n,A.e(B.b.bs(o," \xb7 "),1,B.V,n,n,n,n,n,n),n,r,n,A.a7y(!0,B.a2c,new A.b_7(this,a,a.d===b),new A.b_8(this,a),n,t.N),n),n,n,n,n,B.cK,n)}}
+o.push(A.c("chatList.participants",A.y(["count",""+a.z],j,j)))}return A.dG(A.cN(!1,n,n,n,!0,n,n,n,!0,n,new A.cr(B.au,n,B.ah,B.p,k,n),n,n,n,n,new A.b_6(this,a),!1,n,n,n,n,n,A.e(B.b.br(o," \xb7 "),1,B.V,n,n,n,n,n,n),n,r,n,A.a7y(!0,B.a2c,new A.b_7(this,a,a.d===b),new A.b_8(this,a),n,t.N),n),n,n,n,n,B.cK,n)}}
 A.b_f.prototype={
 $1(a){return B.Wu},
 $S:920}
@@ -145658,7 +145660,7 @@ if(s)k.push(A.c("group.byYou",l))
 B.b.H(k,r)
 r=k.length
 if(r===0)return l
-n=r===1?B.b.gV(k):B.b.bs(B.b.eH(k,0,r-1),", ")+" "+A.c("common.and",l)+" "+B.b.gaF(k)
+n=r===1?B.b.gV(k):B.b.br(B.b.eH(k,0,r-1),", ")+" "+A.c("common.and",l)+" "+B.b.gaF(k)
 k=t.N
 return A.c("group.meetupConfirmedByNames",A.y(["names",n],k,k))},
 Fo(){var s=0,r=A.n(t.H),q,p=this,o,n,m,l
@@ -145787,7 +145789,7 @@ else{e=A.b(["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//SAMEPACE//DE","BEGIN:VEVE
 if(n!=null&&n.length!==0)e.push("LOCATION:"+A.bJK(n))
 e.push("END:VEVENT")
 e.push("END:VCALENDAR")
-g=A.cC("data:text/calendar;charset=utf-8,"+A.n_(2,B.b.bs(e,"\r\n"),B.aj,!1),0,null)}s=4
+g=A.cC("data:text/calendar;charset=utf-8,"+A.n_(2,B.b.br(e,"\r\n"),B.aj,!1),0,null)}s=4
 return A.d(A.or(g,B.he,null),$async$t8)
 case 4:case 1:return A.l(q,r)}})
 return A.m($async$t8,r)},
@@ -145809,7 +145811,7 @@ if(p)i.push(A.bKZ(r))
 B.b.H(n,i)}else{i=t.N
 n.push(A.c("chatList.participants",A.y(["count",""+a.z],i,i)))}if(b&&o!=null){i=$.ji()
 i=i.b.test(o)
-n.push(i?A.c("location.pinOnMap",j):o)}m=B.b.bs(n," \xb7 ")
+n.push(i?A.c("location.pinOnMap",j):o)}m=B.b.br(n," \xb7 ")
 i=t.p
 l=A.am(A.b([A.aw(s.ghC(),$.aW(),j,18),B.bQ,A.ax(A.e(m,1,B.V,j,j,A.Z(j,j,$.aa(),j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),1)],i),B.i,B.f,B.h,0,j)
 if(q<2)return l
@@ -147194,7 +147196,7 @@ break
 case 2:p.f.$1(o)
 break}case 1:return A.l(q,r)}})
 return A.m($async$Oc,r)},
-B(a){var s=null,r=A.c("buddies.title",s),q=this.c,p=q.length,o=new A.W(q,new A.asr(),A.a_(q).i("W<1,o>")).bs(0,", "),n=A.hb(s,s,s,s,s,s,s,s,s,s,s,B.eS,s,s,s,s,s,s,s,s)
+B(a){var s=null,r=A.c("buddies.title",s),q=this.c,p=q.length,o=new A.W(q,new A.asr(),A.a_(q).i("W<1,o>")).br(0,", "),n=A.hb(s,s,s,s,s,s,s,s,s,s,s,B.eS,s,s,s,s,s,s,s,s)
 return A.Jq(A.bF(A.e(A.c("buddies.showAll",s),s,s,s,s,s,s,s,s),s,s,new A.ass(this,a),s,n),A.ab(A.b([A.e(A.c("buddies.tapToChat",s),s,s,s,s,A.Z(s,s,$.aa(),s,s,s,s,s,s,s,s,12,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s,s),B.kF,A.bp(A.bFl(new A.ast(this),q.length,s,B.aW,new A.asu(),!1),80,s)],t.p),B.u,B.f,B.h,0,B.l),p,B.a1y,"buddies",o,r)}}
 A.asp.prototype={
 $1(a){var s=this.a
@@ -147659,7 +147661,7 @@ a9=b8.length
 if(a9!==0){a9=a8.gl7()
 a8=a8.c
 b7=a8.gdk()
-b9=A.c("week.with",A.y(["names",new A.W(b8,new A.bdy(),A.a_(b8).i("W<1,o>")).bs(0,", ")],o,o))
+b9=A.c("week.with",A.y(["names",new A.W(b8,new A.bdy(),A.a_(b8).i("W<1,o>")).br(0,", ")],o,o))
 a3.push(new A.tg(a9,a8,b7,b9,b8.length>1&&a6.d!=null?"/group/"+A.q(a6.d):"/group/"+A.q(a2.h(0,B.b.gV(b8).a)),!1))}}}for(l=k.length,b4=0;b4<k.length;k.length===l||(0,A.C)(k),++b4){c0=k[b4]
 a3.push(new A.tg(c0.w.ig(),c0.c,c0.gwJ(),A.c("week.meetup",null),"/group/"+c0.a,c0.x))}B.b.e5(a3,new A.bdq())
 s=14
@@ -147927,7 +147929,7 @@ case 3:if(c!==!0){s=1
 break}n=B.c.au(h.a.a)
 o=A.b([],t.s)
 for(m=a.length,l=0;l<a.length;a.length===m||(0,A.C)(a),++l){k=a[l].a
-if(g.m(0,k.a))o.push(B.b.gV(B.c.d3(B.c.au(k.b),A.aZ("\\s+",!0,!1))))}j=B.b.bs(o,", ")
+if(g.m(0,k.a))o.push(B.b.gV(B.c.d3(B.c.au(k.b),A.aZ("\\s+",!0,!1))))}j=B.b.br(o,", ")
 o=n.length!==0?n:j
 m=A.N(g,g.$ti.c)
 s=4
@@ -148885,7 +148887,7 @@ j=t.s
 q=A.b([B.b.gV(B.c.d3(B.c.au(k.b),A.aZ("\\s+",!0,!1)))],j)
 p=k.c
 if(p!=null)q.push(A.q(p))
-q=A.b([new A.ep(1,B.b7,A.fB(m,A.e(B.b.bs(q,", "),m,B.V,m,m,B.b5,m,m,m),B.v,!1,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,new A.bd8(a,k),m,m,m,m,m,m),m)],r)
+q=A.b([new A.ep(1,B.b7,A.fB(m,A.e(B.b.br(q,", "),m,B.V,m,m,B.b5,m,m,m),B.v,!1,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,new A.bd8(a,k),m,m,m,m,m,m),m)],r)
 if(k.ax)B.b.H(q,A.b([B.bJ,B.v9],r))
 q.push(B.dZ)
 if(l.e)B.b.H(q,A.b([B.Su,B.bQ],r))
@@ -148905,7 +148907,7 @@ l=l.ga0K()
 if(l!=null)j.push(l)
 l=p.fy
 if(l>1){o=t.N
-j.push(A.c("matches.lookingFor",A.y(["count",""+l],o,o)))}l=A.b([q,B.ad,A.e(B.b.bs(j," \xb7 "),m,m,m,m,A.Z(m,m,$.aa(),m,m,m,m,m,m,m,m,m,m,m,m,m,m,!0,m,m,m,m,m,m,m,m),m,m,m)],r)
+j.push(A.c("matches.lookingFor",A.y(["count",""+l],o,o)))}l=A.b([q,B.ad,A.e(B.b.br(j," \xb7 "),m,m,m,m,A.Z(m,m,$.aa(),m,m,m,m,m,m,m,m,m,m,m,m,m,m,!0,m,m,m,m,m,m,m,m),m,m,m)],r)
 j=k.r
 if(j!=null&&j.length!==0)B.b.H(l,A.b([B.bH,A.e(j,2,B.V,m,m,m,m,m,m)],r))
 l.push(B.bH)
@@ -148940,7 +148942,7 @@ h=A.b([B.b.gV(B.c.d3(B.c.au(l.b),A.aZ("\\s+",!0,!1)))],g)
 s=l.c
 if(s!=null)h.push(A.q(s))
 s=t.p
-h=A.b([new A.ep(1,B.b7,A.e(B.b.bs(h,", "),n,B.V,n,n,B.b1,n,n,n),n)],s)
+h=A.b([new A.ep(1,B.b7,A.e(B.b.br(h,", "),n,B.V,n,n,B.b1,n,n,n),n)],s)
 if(l.ax)B.b.H(h,A.b([B.bJ,B.RY],s))
 h.push(B.dZ)
 if(m.e)B.b.H(h,A.b([B.Su,B.bQ],s))
@@ -148958,7 +148960,7 @@ m=m.ga0K()
 if(m!=null)g.push(m)
 m=k.fy
 if(m>1){k=t.N
-g.push(A.c("matches.lookingFor",A.y(["count",""+m],k,k)))}m=A.b([h,B.bZ,A.e(B.b.bs(g," \xb7 "),n,n,n,n,A.Z(n,n,$.aa(),n,n,n,n,n,n,n,n,13,n,n,n,n,n,!0,n,n,n,n,n,n,n,n),n,n,n)],s)
+g.push(A.c("matches.lookingFor",A.y(["count",""+m],k,k)))}m=A.b([h,B.bZ,A.e(B.b.br(g," \xb7 "),n,n,n,n,A.Z(n,n,$.aa(),n,n,n,n,n,n,n,n,13,n,n,n,n,n,!0,n,n,n,n,n,n,n,n),n,n,n)],s)
 if(j!=null)B.b.H(m,A.b([B.bZ,A.e(j,n,n,n,n,A.Z(n,n,$.aW(),n,n,n,n,n,n,n,n,12,n,n,B.bD,n,n,!0,n,n,n,n,n,n,n,n),n,n,n)],s))
 m=A.ax(A.ab(m,B.u,B.f,B.h,0,B.l),1)
 k=A.c("matches.likeButton",n)
@@ -149157,7 +149159,7 @@ j=A.a_(k).i("W<1,o>")
 k=new A.W(k,new A.bgK(),j)
 i=new A.k3(k,0,3,j.i("k3<ac.E>"))
 i.Dr(k,0,3,j.i("ac.E"))
-i=A.e(i.bs(0,", "),1,B.V,g,g,g,g,g,g)
+i=A.e(i.br(0,", "),1,B.V,g,g,g,g,g,g)
 k=h.r
 if(k===o)o=B.fz
 else{o=k==null?new A.bgL(h,o):g
@@ -149175,7 +149177,7 @@ n=n.f
 n=A.b([B.c.aO(B.e.j(m.a),2,"0")+":"+B.c.aO(B.e.j(m.b),2,"0")+" - "+(B.c.aO(B.e.j(n.a),2,"0")+":"+B.c.aO(B.e.j(n.b),2,"0"))],q)
 m=p.ga0K()
 if(m!=null)n.push(m)
-s.push(new A.hk(l,l,l,l,B.bM,A.cN(!1,l,l,l,!0,l,l,l,!0,l,new A.QT(p,20,l),l,l,l,l,new A.bgM(this,p),!1,l,l,l,l,l,A.e(B.b.bs(n," \xb7 "),l,l,l,l,l,l,l,l),l,o,l,B.c5,l),l))}return s},
+s.push(new A.hk(l,l,l,l,B.bM,A.cN(!1,l,l,l,!0,l,l,l,!0,l,new A.QT(p,20,l),l,l,l,l,new A.bgM(this,p),!1,l,l,l,l,l,A.e(B.b.br(n," \xb7 "),l,l,l,l,l,l,l,l),l,o,l,B.c5,l),l))}return s},
 aGN(){var s,r,q,p,o=null,n=A.b([new A.V(B.qx,A.e(A.c("noMatches.eventsTitle",o),o,o,o,o,B.b1,o,o,o),o)],t.p)
 for(s=J.aK(this.e);s.t();){r=s.gO()
 q=A.aw(B.dl,$.aW(),o,o)
@@ -151292,7 +151294,7 @@ s=A.c("admin.reportTitle",A.y(["reporter",q,"reported",s],r,r))
 r=A.b([A.c("admin.reportCount",A.y(["count",""+a.w],r,r))],t.s)
 if(a.x)r.push(A.c("admin.suspended",null))
 if(a.y)r.push(A.c("admin.chatKept",null))
-return A.bzS(a.c,a.d,a.e,B.b.bs(r," \xb7 "),new A.aWJ(this.a,a),a.b,s)},
+return A.bzS(a.c,a.d,a.e,B.b.br(r," \xb7 "),new A.aWJ(this.a,a),a.b,s)},
 $S:1014}
 A.aWJ.prototype={
 $1(a){return this.a.zM("reports",this.b.a,a)},
@@ -152049,7 +152051,7 @@ q.push(A.c("profile.ageYears",A.y(["age",A.q(p)],o,o)))}p=m.e.d
 if(p!=null)q.push(A.I_(p))
 p=m.e.e
 if(p!=null)q.push(p)
-s=A.b([A.am(A.b([s,B.j2,A.ax(A.ab(A.b([r,A.e(B.b.bs(q," \xb7 "),l,l,l,l,A.Z(l,l,$.aa(),l,l,l,l,l,l,l,l,l,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),l,l,l)],j),B.u,B.f,B.h,0,B.l),1),A.c2(l,l,l,B.rG,l,l,m.gaGl(),l,l,l,A.c("profile.editProfile",l),l)],j),B.i,B.f,B.h,0,l)],j)
+s=A.b([A.am(A.b([s,B.j2,A.ax(A.ab(A.b([r,A.e(B.b.br(q," \xb7 "),l,l,l,l,A.Z(l,l,$.aa(),l,l,l,l,l,l,l,l,l,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),l,l,l)],j),B.u,B.f,B.h,0,B.l),1),A.c2(l,l,l,B.rG,l,l,m.gaGl(),l,l,l,A.c("profile.editProfile",l),l)],j),B.i,B.f,B.h,0,l)],j)
 r=m.e.r
 if(r!=null&&r.length!==0)B.b.H(s,A.b([B.aC,A.e(r,l,l,l,l,l,l,l,l)],j))
 s.push(B.bY)
@@ -152313,7 +152315,7 @@ p.push(A.c("profile.ageYears",A.y(["age",A.q(o)],n,n)))}o=j.d
 if(o!=null)p.push(A.I_(o))
 o=j.e
 if(o!=null)p.push(o)
-s=A.b([A.am(A.b([q,B.j2,A.ax(A.ab(A.b([s,A.e(B.b.bs(p," \xb7 "),k,k,k,k,A.Z(k,k,$.aa(),k,k,k,k,k,k,k,k,k,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k,k,k)],r),B.u,B.f,B.h,0,B.l),1)],r),B.i,B.f,B.h,0,k)],r)
+s=A.b([A.am(A.b([q,B.j2,A.ax(A.ab(A.b([s,A.e(B.b.br(p," \xb7 "),k,k,k,k,A.Z(k,k,$.aa(),k,k,k,k,k,k,k,k,k,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k,k,k)],r),B.u,B.f,B.h,0,B.l),1)],r),B.i,B.f,B.h,0,k)],r)
 q=j.r
 if(q!=null&&q.length!==0)B.b.H(s,A.b([B.aC,A.e(q,k,k,k,k,k,k,k,k)],r))
 q=j.w
@@ -157898,7 +157900,7 @@ p=A.c2D(o.gep(),10)
 o=A.aRC(s,A.aa5(r,A.bIu(o.gep()),p,q),o.gep(),o.gep())}return A.bYp(A.bYr(A.bYq(o)))},
 $S:1113}
 A.oe.prototype={
-j(a){return""+this.b+': "'+this.a+'" ('+B.b.bs(this.d,", ")+")"}}
+j(a){return""+this.b+': "'+this.a+'" ('+B.b.br(this.d,", ")+")"}}
 A.nW.prototype={
 a0J(a){var s=this.a
 if(!J.h(s,a.gfN()))throw A.r(A.bO('Source URLs "'+A.q(s)+'" and "'+A.q(a.gfN())+"\" don't match.",null))
@@ -167070,13 +167072,13 @@ B.alH={Abort:0,Again:1,AltLeft:2,AltRight:3,ArrowDown:4,ArrowLeft:5,ArrowRight:6
 B.ajo=new A.az(B.alH,[458907,458873,458978,458982,458833,458832,458831,458834,458881,458879,458880,458805,458801,458794,458799,458800,786544,786543,786980,786986,786981,786979,786983,786977,786982,458809,458806,458853,458976,458980,458890,458876,458875,458828,458791,458782,458783,458784,458785,458786,458787,458788,458789,458790,65717,786616,458829,458792,458798,458793,458793,458810,458819,458820,458821,458856,458857,458858,458859,458860,458861,458862,458811,458863,458864,458865,458866,458867,458812,458813,458814,458815,458816,458817,458818,458878,18,19,392961,392970,392971,392972,392973,392974,392975,392976,392962,392963,392964,392965,392966,392967,392968,392969,392977,392978,392979,392980,392981,392982,392983,392984,392985,392986,392987,392988,392989,392990,392991,458869,458826,16,458825,458852,458887,458889,458888,458756,458757,458758,458759,458760,458761,458762,458763,458764,458765,458766,458767,458768,458769,458770,458771,458772,458773,458774,458775,458776,458777,458778,458779,458780,458781,787101,458896,458897,458898,458899,458900,786836,786834,786891,786847,786826,786865,787083,787081,787084,786611,786609,786608,786637,786610,786612,786819,786615,786613,786614,458979,458983,24,458797,458891,458835,458850,458841,458842,458843,458844,458845,458846,458847,458848,458849,458839,458939,458968,458969,458885,458851,458836,458840,458855,458963,458962,458961,458960,458964,458837,458934,458935,458838,458868,458830,458827,458877,458824,458807,458854,458822,23,458915,458804,21,458823,458871,786850,458803,458977,458981,787103,458808,65666,458796,17,20,458795,22,458874,65667,786994],t.eL)
 B.ajp=new A.dw([B.vh,"Alle",B.Sg,"Gemeldet",B.Sh,"Gesperrt",B.Si,"Pausiert",B.Sj,"Admins",B.Sk,"Ohne Sportzeit"],A.aE("dw<kc,o>"))
 B.alM={"app.tagline":0,"login.howItWorks":1,"login.watchVideo":2,"login.watchTrainerVideo":3,"login.email":4,"login.emailInvalid":5,"login.password":6,"login.passwordTooShort":7,"login.rememberMe":8,"login.forgotPassword":9,"login.signInFailed":10,"login.signIn":11,"login.noAccount":12,"login.accountReactivated":13,"register.backToLogin":14,"register.haveAccount":15,"register.title":16,"register.name":17,"register.nameRequired":18,"register.language":19,"register.signUpFailed":20,"register.submit":21,"forgotPassword.title":22,"forgotPassword.sentMessage":23,"forgotPassword.instructions":24,"forgotPassword.sendFailed":25,"forgotPassword.send":26,"common.cancel":27,"common.save":28,"common.close":29,"common.and":30,"common.tookTooLong":31,"resetPassword.title":32,"resetPassword.instructions":33,"resetPassword.newPassword":34,"resetPassword.confirmPassword":35,"resetPassword.mismatch":36,"resetPassword.changeFailed":37,"resetPassword.changed":38,"resetPassword.submit":39,"resetPassword.checking":40,"resetPassword.linkInvalid":41,"resetPassword.requestNew":42,"settings.title":43,"settings.help":44,"settings.howItWorks":45,"settings.tutorialSubtitle":46,"settings.whatsNew":47,"settings.whatsNewSubtitle":48,"settings.privacy":49,"settings.blockedUsers":50,"settings.blockedUsersSubtitle":51,"settings.blockOnDecline":52,"settings.blockOnDeclineDesc":53,"settings.visibilityTitle":54,"settings.setGenderFirst":55,"settings.visibilityDesc":56,"settings.visibilityOpen":57,"settings.visibilityOpenDesc":58,"settings.visibilityRequest":59,"settings.visibilityRequestDesc":60,"settings.visibilityHidden":61,"settings.visibilityHiddenDesc":62,"settings.visibilitySaved":63,"settings.visibilityError":64,"settings.chats":65,"settings.autoArchiveDesc":66,"settings.autoArchive":67,"settings.notifications":68,"settings.notificationsDescSupported":69,"settings.notificationsDescUnsupported":70,"settings.browserNotifications":71,"push.title":72,"push.desc":73,"push.enabled":74,"push.denied":75,"push.failed":76,"push.unsupported":77,"push.iosDesc":78,"push.iosTitle":79,"push.iosSteps":80,"push.iosButton":81,"push.promptTitle":82,"push.promptBody":83,"push.promptAction":84,"push.quietTitle":85,"push.quietAdd":86,"push.quietRemove":87,"push.quietDesc":88,"group.menu":89,"group.reply":90,"group.replyTo":91,"group.replyGone":92,"group.you":93,"group.copy":94,"group.copied":95,"group.removeReaction":96,"group.reactFailed":97,"likes.likedYou":98,"likes.likedYouLong":99,"likes.cardOne":100,"likes.cardMany":101,"likes.cardSubtitle":102,"likes.sheetTitle":103,"likes.sheetSubtitle":104,"likes.likeBack":105,"likes.decline":106,"likes.receivedEmpty":107,"likes.pendingCardOne":108,"likes.pendingCard":109,"likes.undoTooLate":110,"likes.pendingCardSubtitle":111,"likes.pendingTitle":112,"likes.pendingSubtitle":113,"likes.pendingEmpty":114,"likes.undo":115,"likes.matchTitle":116,"likes.matchBody":117,"like.like":118,"like.liked":119,"like.waiting":120,"like.pending":121,"like.failed":122,"editProfile.strava":123,"editProfile.stravaHelp":124,"editProfile.stravaInvalid":125,"profile.stravaButton":126,"coach.title":127,"coach.summary":128,"coach.offer":129,"coach.empty":130,"coach.emptyAdmin":131,"coach.book":132,"coach.cancel":133,"coach.bookTitle":134,"coach.bookBody":135,"coach.booked":136,"coach.cancelTitle":137,"coach.cancelBody":138,"coach.cancelConfirm":139,"coach.cancelled":140,"coach.deleteTitle":141,"coach.deleteBody":142,"coach.deleteBodyBooked":143,"coach.statusFree":144,"coach.noBookingsYet":145,"coach.statusFreeMany":146,"coach.statusMine":147,"coach.statusFull":148,"coach.statusBookedBy":149,"coach.withCoach":150,"coach.withClients":151,"coach.offerTitle":152,"coach.offerCard":153,"coach.emptyDayAdmin":154,"coach.offerIntro":155,"coach.sport":156,"coach.weekdays":157,"coach.timeAndLength":158,"coach.addTime":159,"coach.minutes":160,"coach.weeks":161,"coach.weekOne":162,"coach.weekMany":163,"coach.spots":164,"coach.spotsOne":165,"coach.spotsMany":166,"coach.place":167,"coach.pickPlace":168,"coach.note":169,"coach.noteHint":170,"coach.previewNone":171,"coach.previewOne":172,"coach.previewMany":173,"coach.create":174,"coach.created":175,"coach.sessionsTitle":176,"coach.showAll":177,"coach.msgBooked":178,"coach.msgCancelled":179,"coach.msgSlotDeleted":180,"coach.errFull":181,"coach.errPast":182,"coach.errNotReady":183,"coach.errGeneric":184,"buddies.title":185,"buddies.showAll":186,"buddies.tapToChat":187,"buddies.chatWith":188,"buddies.since":189,"buddies.chat":190,"buddies.search":191,"buddies.noResults":192,"buddies.more":193,"buddies.viewProfile":194,"buddies.newGroup":195,"buddies.newGroupButton":196,"unmatch.menu":197,"unmatch.title":198,"unmatch.body":199,"unmatch.alsoBlock":200,"unmatch.alsoBlockHint":201,"unmatch.confirm":202,"unmatch.done":203,"unmatch.doneBlocked":204,"unmatch.failed":205,"unmatch.notReady":206,"week.title":207,"week.next":208,"section.expand":209,"section.collapse":210,"matchesHub.sportTimes":211,"matchesHub.newSuggestions":212,"matchesHub.newSuggestionsOne":213,"week.with":214,"week.meetup":215,"week.confirmed":216,"group.mute":217,"group.mutedBanner":218,"group.unmuteShort":219,"group.unmute":220,"group.mutedOn":221,"group.mutedOff":222,"settings.permissionDenied":223,"settings.design":224,"settings.designDesc":225,"settings.language":226,"settings.languageDesc":227,"home.question":228,"home.questionToday":229,"home.modePlan":230,"home.modeToday":231,"home.tutorialTooltip":232,"home.configureTooltip":233,"homeLayout.title":234,"homeLayout.subtitle":235,"homeLayout.save":236,"homeLayout.saveFailed":237,"homeLayout.saved":238,"nav.discover":239,"nav.plan":240,"nav.add":241,"nav.buddies":242,"nav.chat":243,"nav.profile":244,"appbar.home":245,"appbar.settings":246,"sportPicker.mine":247,"sportPicker.all":248,"sportPicker.title":249,"sport.laufen":250,"sport.radfahren":251,"sport.schwimmen":252,"sport.wandern":253,"sport.tennis":254,"sport.padel":255,"sport.schwangerschaftssport":256,"sport.hundeGassi":257,"sport.kinderSpielen":258,"sport.bouldern":259,"sport.badminton":260,"sport.tischtennis":261,"sport.beachvolleyball":262,"sport.fitness":263,"sport.sonstige":264,"bikeType.rennrad":265,"bikeType.mountainbike":266,"bikeType.gravel":267,"bikeType.trekking":268,"bikeType.ebike":269,"weekday.mo":270,"weekday.tu":271,"weekday.we":272,"weekday.th":273,"weekday.fr":274,"weekday.sa":275,"weekday.su":276,"weekdayFull.mo":277,"weekdayFull.tu":278,"weekdayFull.we":279,"weekdayFull.th":280,"weekdayFull.fr":281,"weekdayFull.sa":282,"weekdayFull.su":283,"level.beginner":284,"level.advanced":285,"level.pro":286,"gender.female":287,"gender.male":288,"gender.diverse":289,"common.next":290,"common.from":291,"common.to":292,"common.saveFailed":293,"tutorial.skip":294,"tutorial.done":295,"tutorial.dontShowAgain":296,"tutorial.step":297,"tutorial.welcome.title":298,"tutorial.welcome.description":299,"tutorial.plan.title":300,"tutorial.plan.description":301,"tutorial.buddies.title":302,"tutorial.buddies.description":303,"tutorial.discover.title":304,"tutorial.discover.description":305,"tutorial.chat.title":306,"tutorial.chat.description":307,"tutorial.profile.title":308,"tutorial.profile.description":309,"onboarding.title":310,"onboarding.later":311,"onboarding.back":312,"onboarding.step1.title":313,"onboarding.step1.subtitle":314,"onboarding.step2.title":315,"onboarding.step2.subtitle":316,"onboarding.step2.noSports":317,"onboarding.step2.paceRange":318,"onboarding.step2.level":319,"onboarding.step2.noPace":320,"onboarding.step3.title":321,"onboarding.step3.subtitle":322,"onboarding.step3.age":323,"onboarding.step3.photo":324,"onboarding.step3.photoChange":325,"onboarding.step3.photoHint":326,"city.hint":327,"city.pickFromList":328,"onboarding.step3.city":329,"onboarding.step3.gender":330,"onboarding.step4.title":331,"onboarding.step4.subtitle":332,"onboarding.step4.visibilityHint":333,"onboarding.step4.anyone":334,"onboarding.step4.sameGenderOnly":335,"onboarding.step4.setGenderFirst":336,"onboarding.step4.ageRange":337,"onboarding.step4.unlimited":338,"common.delete":339,"common.edit":340,"plan.title":341,"plan.timeColumn":342,"plan.hourRange.title":343,"plan.hourRange.subtitle":344,"plan.hourRange.value":345,"plan.weekView":346,"plan.listView":347,"plan.addActivity":348,"plan.deleteTitle":349,"plan.deleteConfirm":350,"plan.emptyDay":351,"plan.noFixedLocation":352,"plan.oneOffLocation":353,"plan.showMatches":354,"plan.openChat":355,"plan.emptyWeek":356,"plan.goToThisWeek":357,"plan.emptyWeekShort":358,"plan.suggestions":359,"newActivity.title":360,"newActivity.editTitle":361,"newActivity.publishPublic":362,"newActivity.publishInCircle":363,"newActivity.sport":364,"newActivity.hasVenue":365,"newActivity.hasVenueYes":366,"newActivity.hasVenueNo":367,"newActivity.bikeType":368,"newActivity.level":369,"newActivity.when":370,"newActivity.everyWeek":371,"newActivity.oneOffOn":372,"newActivity.pickDate":373,"newActivity.weekdays":374,"newActivity.weekend":375,"newActivity.everyDay":376,"newActivity.today":377,"newActivity.tomorrow":378,"newActivity.alreadyThere":379,"newActivity.playersWanted":380,"newActivity.playersHint":381,"team.hint":382,"newActivity.playersOne":383,"newActivity.playersMany":384,"matches.lookingFor":385,"newActivity.addDate":386,"newActivity.multiDateHint":387,"newActivity.where":388,"newActivity.pickLocation":389,"newActivity.radius":390,"newActivity.radiusHelp":391,"newActivity.distance":392,"newActivity.save":393,"newActivity.publish":394,"newActivity.publishMultiple":395,"newActivity.added":396,"locationPicker.title":397,"locationPicker.nameThisPlace":398,"location.pinOnMap":399,"locationPicker.search":400,"locationPicker.confirm":401,"locationPicker.saveFavorite":402,"locationPicker.favoriteSaved":403,"locationPicker.favoriteSaveFailed":404,"discover.contactFailed":405,"discover.groupNameWith":406,"discover.joinFailed":407,"discover.filters.title":408,"discover.filters.showNearbyEvents":409,"discover.filters.time":410,"discover.filters.timeAny":411,"discover.filters.reset":412,"discover.filters.radius":413,"discover.filters.pickCenter":414,"discover.filters.clearCenter":415,"discover.filters.radiusKm":416,"discover.hostEvent":417,"discover.retry":418,"discover.emptyDay":419,"discover.emptyFiltered":420,"discover.adjustFilters":421,"discover.eventsNearby":422,"discover.openEvents":423,"discover.starEvents":424,"discover.allEventsView":425,"discover.dayView":426,"discover.timelineTitle":427,"discover.timelineEmpty":428,"discover.matchingPeople":429,"discover.moreInfo":430,"discover.participants":431,"discover.participantsMax":432,"discover.openChat":433,"discover.full":434,"discover.join":435,"discover.contact":436,"discover.editEventTitle":437,"discover.editEventLockedHint":438,"discover.editEventFailed":439,"discover.deleteEventTitle":440,"discover.deleteEventBody":441,"discover.deleteEventConfirm":442,"discover.deleteEventFailed":443,"month.jan":444,"month.feb":445,"month.mar":446,"month.apr":447,"month.may":448,"month.jun":449,"month.jul":450,"month.aug":451,"month.sep":452,"month.oct":453,"month.nov":454,"month.dec":455,"hostEvent.title":456,"hostEvent.createFailed":457,"hostEvent.eventTitle":458,"hostEvent.eventTitleHint":459,"hostEvent.untilOptional":460,"hostEvent.descriptionOptional":461,"hostEvent.descriptionHint":462,"hostEvent.maxParticipantsOptional":463,"hostEvent.publish":464,"matchesHub.title":465,"matchesHub.pickForNewChat":466,"matchesHub.pickForExistingChat":467,"matchesHub.createGroupChat":468,"matchesHub.chatCreateFailed":469,"matchesHub.invitesSent":470,"matchesHub.alreadyMember":471,"matchesHub.invitePending":472,"matchesHub.sportbuddyChatName":473,"matchesHub.empty":474,"matchesHub.addActivity":475,"matchesHub.startChat":476,"matchesHub.buddyCountOne":477,"matchesHub.buddyCountMany":478,"matchesHub.groupChat":479,"matchesHub.message":480,"matchesHub.groupChatAll":481,"matchesHub.moreSuggestions":482,"matchesHub.moreSuggestionsOne":483,"matchesHub.view":484,"matches.loadFailed":485,"matches.somethingWentWrong":486,"matches.title":487,"matches.flexibleLocation":488,"matches.noneFoundYet":489,"matches.swipePrompt":490,"matches.savedMany":491,"matches.savedOne":492,"matches.savedNone":493,"matches.listPrompt":494,"matches.allDoneForToday":495,"noMatches.title":496,"noMatches.pushOn":497,"noMatches.pushOff":498,"noMatches.noPush":499,"noMatches.enablePush":500,"noMatches.otherDaysTitle":501,"noMatches.peopleOnDay":502,"noMatches.peopleOnDayNear":503,"noMatches.peopleOnDayOne":504,"noMatches.peopleOnDayNearOne":505,"noMatches.addDay":506,"noMatches.dayAdded":507,"noMatches.otherTimesTitle":508,"noMatches.eventsTitle":509,"noMatches.allEvents":510,"noMatches.inviteTitle":511,"noMatches.inviteBody":512,"noMatches.inviteMore":513,"noMatches.inviteCopied":514,"noMatches.inviteMessage":515,"matches.emptyHint":516,"matches.noMoreSuggestions":517,"matches.filterSameTime":518,"matches.filterSamePace":519,"matches.noneMatchFilters":520,"matches.noneMatchFiltersHint":521,"matches.clearFilters":522,"matches.undoLast":523,"matches.like":524,"matches.nope":525,"matches.likeButton":526,"matches.viewToggleList":527,"matches.viewToggleSwipe":528,"matches.celebration.openChat":529,"matches.celebration.goToBuddies":530,"matches.celebration.keepSwiping":531,"common.done":532,"circles.tooltipPublic":533,"circles.tooltipCircle":534,"circles.leaveFailed":535,"circles.createFailed":536,"circles.joined":537,"circles.switchTitle":538,"circles.switchSubtitle":539,"circles.public":540,"circles.publicSubtitle":541,"circles.leaveCircle":542,"circles.code":543,"circles.createCircle":544,"circles.join":545,"circles.createHint":546,"circles.create":547,"circles.joinTitle":548,"circles.inviteCode":549,"circles.createdTitle":550,"circles.coachTip":551,"circles.shareCode":552,"circles.membersLoadFailed":553,"circles.memberCount":554,"circles.details":555,"circles.descriptionOptional":556,"circles.notifyAll":557,"circles.notifyAllSubtitle":558,"circles.notifyAllHint":559,"circles.notifyAllSend":560,"circles.notifyAllSent":561,"circles.notifyAllFailed":562,"circles.noDescription":563,"coachArchive.open":564,"coachArchive.title":565,"coachArchive.empty":566,"coachArchive.byPerson":567,"coachArchive.lastOn":568,"coachArchive.count":569,"coachArchive.withCoach":570,"circles.updateFailed":571,"circles.inviteTitle":572,"circles.tapToCopy":573,"circles.codeCopied":574,"circles.inviteWhatsApp":575,"circles.inviteSms":576,"circles.showQr":577,"circles.qrHint":578,"circles.inviteFailed":579,"circles.inviteMessage":580,"circles.meLabel":581,"circles.adminBadge":582,"circles.makeAdmin":583,"circles.revokeAdmin":584,"circles.removeMember":585,"circles.removeMemberTitle":586,"circles.removeMemberConfirm":587,"circles.leaveConfirm":588,"circles.deleteCircle":589,"circles.deleteCircleTitle":590,"circles.deleteConfirm":591,"circles.deleteFailed":592,"chatList.leaveTitle":593,"chatList.leaveConfirm":594,"chatList.leave":595,"chatList.deleteTitle":596,"chatList.deleteConfirm":597,"chatList.deleteDirectConfirm":598,"chatList.archivedTitle":599,"chatList.title":600,"chatList.directChat":601,"chatList.directSection":602,"chatList.groupSection":603,"chatList.showActive":604,"chatList.showArchived":605,"chatList.emptyArchived":606,"chatList.emptyActive":607,"chatList.participants":608,"chatList.archive":609,"chatList.unarchive":610,"group.checkinThanks":611,"group.checkinFailed":612,"group.meetingPoint":613,"group.openInOsm":614,"group.reportUser":615,"group.setMeetingPoint":616,"group.addMember":617,"group.addMemberSheetTitle":618,"group.sendInvites":619,"group.inviteSent":620,"group.noMoreBuddiesToInvite":621,"group.removeMember":622,"group.removeMemberTitle":623,"group.removeMemberConfirm":624,"group.invitePending":625,"group.withdrawInvite":626,"group.withdrawInviteTitle":627,"group.withdrawInviteConfirm":628,"groupCreate.title":629,"groupCreate.subtitle":630,"groupCreate.nameHint":631,"groupCreate.create":632,"groupCreate.minTwo":633,"groupInvites.sectionTitle":634,"groupInvites.cardTitle":635,"chatRequests.sectionTitle":636,"group.addToCalendar":637,"group.addToCalendarGoogle":638,"group.addToCalendarIcs":639,"group.didMeetingHappen":640,"group.checkinHint":641,"group.review.notMet":642,"group.review.start":643,"group.review.title":644,"group.review.hint":645,"group.review.showedUp":646,"group.review.detailsMatched":647,"group.review.whatDidntMatch":648,"group.review.yes":649,"group.review.no":650,"group.review.submit":651,"group.review.thanks":652,"group.review.mismatch.pace":653,"group.review.mismatch.level":654,"group.review.mismatch.distance":655,"group.review.mismatch.punctuality":656,"group.review.mismatch.meetingPoint":657,"group.review.mismatch.other":658,"group.noMessages":659,"group.gifSearch":660,"group.gifNoResults":661,"group.gifLoadFailed":662,"group.gifSendFailed":663,"group.sendGif":664,"group.previousSportTime":665,"group.nextSportTime":666,"group.otherSportTimeHint":667,"group.useAsMeetup":668,"group.byYou":669,"group.meetupConfirmedBoth":670,"group.meetupConfirmedAll":671,"group.meetupConfirmedByNames":672,"group.withdrawConfirmation":673,"group.meetupConfirmedMsgMe":674,"group.meetupConfirmedMsgOther":675,"group.meetupWithdrawnMsgMe":676,"group.meetupWithdrawnMsgOther":677,"group.setMeetupFailed":678,"group.chatGone":679,"group.sendFailed":680,"group.messagePlaceholder":681,"group.today":682,"group.yesterday":683,"report.harassment":684,"report.inappropriateBehavior":685,"report.noShow":686,"report.fakeProfile":687,"report.other":688,"report.submitFailed":689,"report.thanks":690,"report.noOtherMembers":691,"report.whoToReport":692,"report.reason":693,"report.detailsOptional":694,"report.alsoBlock":695,"report.alsoBlockSubtitle":696,"report.submit":697,"language.de":698,"language.en":699,"language.other":700,"interest.travel":701,"interest.music":702,"interest.cooking":703,"interest.reading":704,"interest.photography":705,"interest.moviesSeries":706,"interest.artCulture":707,"interest.gaming":708,"interest.natureOutdoors":709,"interest.yogaMeditation":710,"interest.nutrition":711,"interest.animals":712,"interest.cafeBrunch":713,"interest.festivalsConcerts":714,"interest.sustainability":715,"profile.avatarUploadFailed":716,"profile.title":717,"profile.signOut":718,"profile.ageYears":719,"profile.editProfile":720,"profile.verifyTitle":721,"profile.verifyBody":722,"profile.okay":723,"profile.verifyProfile":724,"profile.sportsAndLevel":725,"profile.add":726,"profile.noSports":727,"profile.interestsAndLanguages":728,"profile.myPrompts":729,"profile.reliability":730,"profile.noReviewsYet":731,"profile.attendanceScore":732,"profile.accuracyScore":733,"profile.outOf":734,"profile.mismatchesTitle":735,"profile.mismatchesOnlyYou":736,"profile.activeLast7Days":737,"profile.activeLast7DaysHint":738,"publicProfile.chatWith":739,"publicProfile.title":740,"publicProfile.sportsAndLevel":741,"publicProfile.sendMessage":742,"publicProfile.block":743,"publicProfile.blockTitle":744,"publicProfile.blockBody":745,"publicProfile.blockConfirm":746,"publicProfile.blocked":747,"publicProfile.blockFailed":748,"blockedUsers.title":749,"blockedUsers.empty":750,"blockedUsers.unblock":751,"blockedUsers.unblockFailed":752,"prompt.favoriteSpot":753,"prompt.youllFindMe":754,"prompt.afterSport":755,"prompt.craziestExperience":756,"prompt.trainingFocus":757,"prompt.wantToTry":758,"prompt.motivationTrick":759,"prompt.perfectSportDate":760,"editProfile.aboutMe":761,"editProfile.aboutMeHint":762,"editProfile.setGenderFirst":763,"editProfile.languages":764,"editProfile.interestsMax":765,"editProfile.promptsMax":766,"editProfile.promptsHint":767,"editSport.title":768,"venue.hasVenue":769,"venue.needsVenue":770,"verifiedBadge.tooltip":771,"pacePicker.minutes":772,"pacePicker.seconds":773,"newActivity.runType":774,"runType.normal":775,"runType.longRun":776,"runType.speedRun":777,"newActivity.fitnessType":778,"fitnessType.krafttraining":779,"fitnessType.yoga":780,"fitnessType.pilates":781,"fitnessType.hiit":782,"fitnessType.functional":783,"fitnessType.bootcamp":784,"fitnessType.mobility":785,"newActivity.hasDog":786,"newActivity.hasDogYes":787,"newActivity.hasDogNo":788,"newActivity.childInfo":789,"newActivity.childAge":790,"newActivity.childAgeYears":791,"safety.childMeetupNotice":792,"settings.legal":793,"settings.faq":794,"settings.faqSubtitle":795,"settings.privacyPolicy":796,"settings.privacyPolicySubtitle":797,"settings.imprint":798,"settings.imprintSubtitle":799,"feedback.title":800,"feedback.subtitle":801,"feedback.category.idea":802,"feedback.category.bug":803,"feedback.category.praise":804,"feedback.category.other":805,"feedback.category.test":806,"feedback.hint":807,"feedback.send":808,"feedback.thanks":809,"feedback.failed":810,"admin.admins":811,"admin.adminsHint":812,"admin.addButton":813,"admin.addTitle":814,"admin.addConfirm":815,"admin.add":816,"admin.removeTitle":817,"admin.removeConfirm":818,"admin.remove":819,"admin.lastAdmin":820,"admin.changeFailed":821,"admin.searchHint":822,"admin.you":823,"admin.title":824,"admin.subtitle":825,"admin.console":826,"admin.consoleSubtitle":827,"admin.refresh":828,"admin.export":829,"admin.exportUnavailable":830,"admin.reports":831,"admin.feedback":832,"admin.accounts":833,"admin.loadFailed":834,"admin.reportTitle":835,"admin.reportCount":836,"admin.suspended":837,"admin.chatKept":838,"admin.deletedAccount":839,"admin.deleted":840,"admin.paused":841,"admin.noReason":842,"admin.empty":843,"admin.done":844,"admin.new":845,"settings.feedback":846,"settings.feedbackSubtitle":847,"settings.contact":848,"settings.contactSubtitle":849,"settings.mailFailed":850,"settings.account":851,"settings.pauseAccount":852,"settings.pauseAccountSubtitle":853,"settings.deleteAccount":854,"settings.deleteAccountSubtitle":855,"settings.pauseAccountTitle":856,"settings.pauseAccountBody":857,"settings.pauseAccountConfirm":858,"settings.pauseAccountDoneTitle":859,"settings.pauseAccountDoneBody":860,"settings.deleteAccountTitle":861,"settings.deleteAccountBody":862,"settings.deleteAccountConfirm":863,"settings.deleteAccountDoneTitle":864,"settings.deleteAccountDoneBody":865,"settings.accountReasonLabel":866,"settings.accountReasonHint":867,"settings.accountActionFailed":868,"settings.pauseReason1":869,"settings.pauseReason2":870,"settings.pauseReason3":871,"settings.deleteReason1":872,"settings.deleteReason2":873,"settings.deleteReason3":874,"settings.reasonOther":875,"settings.reasonOtherHint":876,"faq.title":877,"faq.q1":878,"faq.a1":879,"faq.q2":880,"faq.a2":881,"faq.q3":882,"faq.a3":883,"faq.q4":884,"faq.a4":885,"faq.q5":886,"faq.a5":887,"faq.q6":888,"faq.a6":889,"faq.q7":890,"faq.a7":891,"faq.q8":892,"faq.a8":893,"privacy.title":894,"imprint.title":895,"newActivity.visibility":896,"newActivity.moreDetails":897,"newActivity.firstTitle":898,"newActivity.firstBody":899,"newActivity.moreDetailsHint":900,"newActivity.visibilityOpen":901,"newActivity.visibilityRequest":902,"newActivity.visibilityHidden":903,"newActivity.visibilityChange":904,"whatsNew.title":905,"whatsNew.close":906,"whatsNew.skipFirstTime.title":907,"whatsNew.skipFirstTime.body":908,"whatsNew.realFirstMessage.title":909,"whatsNew.realFirstMessage.body":910,"whatsNew.coachArchive.title":911,"whatsNew.coachArchive.body":912,"whatsNew.circleQr.title":913,"whatsNew.circleQr.body":914,"whatsNew.declineHighFive.title":915,"whatsNew.declineHighFive.body":916,"whatsNew.chatRequests.title":917,"whatsNew.chatRequests.body":918,"whatsNew.groupChats.title":919,"whatsNew.groupChats.body":920,"whatsNew.meetupCheckmark.title":921,"whatsNew.meetupCheckmark.body":922,"whatsNew.reviewReminder.title":923,"whatsNew.reviewReminder.body":924,"whatsNew.meetupWhoConfirmed.title":925,"whatsNew.meetupWhoConfirmed.body":926,"discover.sendRequest":927,"discover.requestSent":928,"discover.requestFailed":929,"discover.firstMessageTitle":930,"discover.firstMessageHint":931,"discover.firstMessagePlaceholder":932,"chatRequests.title":933,"chatRequests.empty":934,"chatRequests.bannerOne":935,"chatRequests.bannerMany":936,"chatRequests.accept":937,"chatRequests.decline":938,"chatRequests.respondFailed":939,"chatList.chatRequests":940}
-B.KR=new A.az(B.alM,["Gemeinsam Sport machen, wenn es zeitlich passt.","Wie funktioniert's?","Video ansehen \xb7 46 Sek.","Video f\xfcr Trainer:innen ansehen","E-Mail","G\xfcltige E-Mail eingeben","Passwort","Mind. 6 Zeichen","Eingeloggt bleiben","Passwort vergessen?","Anmeldung fehlgeschlagen: {error}","Anmelden","Noch kein Konto? Jetzt registrieren","Willkommen zur\xfcck! Dein Konto wurde reaktiviert.","Zur\xfcck zum Login","Schon ein Konto? Anmelden","Konto erstellen","Name","Name eingeben","Sprache","Registrierung fehlgeschlagen: {error}","Registrieren","Passwort vergessen?","Falls ein Konto mit dieser E-Mail existiert, haben wir dir einen Link zum Zur\xfccksetzen des Passworts geschickt. Schau auch im Spam-Ordner nach.","Gib deine E-Mail-Adresse ein. Wir schicken dir einen Link, mit dem du ein neues Passwort festlegen kannst.","Konnte nicht gesendet werden: {error}","Link senden","Abbrechen","Speichern","Schlie\xdfen","und","Das hat zu lange gedauert - bitte nochmal versuchen.","Neues Passwort","Bitte lege ein neues Passwort fest.","Neues Passwort","Passwort best\xe4tigen","Passw\xf6rter stimmen nicht \xfcberein","\xc4nderung fehlgeschlagen: {error}","Passwort ge\xe4ndert.","Passwort \xe4ndern","Link wird gepr\xfcft \u2026","Dieser Link ist abgelaufen oder wurde schon benutzt. Fordere einfach einen neuen an: auf der Anmeldeseite unter \u201ePasswort vergessen?\u201c.","Neuen Link anfordern","Einstellungen","Hilfe","So funktioniert SAMEPACE","Kurzes Tutorial ansehen","Neu in SAMEPACE","Alle Neuigkeiten noch einmal ansehen","Privatsph\xe4re & Sicherheit","Blockierte Nutzer","Blockierungen verwalten","Abgelehnte dauerhaft ausblenden","Lehnst du ein High Five ab oder swipest jemanden weg, seht ihr euch danach gegenseitig nie wieder, so wie beim Blockieren. Standardm\xe4\xdfig aus: Abgelehnte k\xf6nnen sonst sp\xe4ter wieder vorgeschlagen werden.","Wer findet deine Sportzeiten?","Trag dein Geschlecht unter \u201eProfil bearbeiten\u201c ein, um das einzuschr\xe4nken.","Gilt f\xfcr alle deine Sportzeiten. Einzelne kannst du beim Bearbeiten trotzdem anders einstellen.","Alle in Entdecken","Alle sehen deine Zeiten in Entdecken und k\xf6nnen dir ein High Five geben.","Entdecken mit Chat-Anfrage","Sichtbar in Entdecken - wer schreibt, schickt gleich eine erste Nachricht. Du entscheidest, ob ihr weiterschreibt.","Nur passende Leute","Nicht in Entdecken. Dich sieht nur, wer dieselbe Sportart zur selben Zeit eingetragen hat.","Gilt jetzt f\xfcr alle deine Sportzeiten.","Konnte nicht gespeichert werden. Bitte versuch es sp\xe4ter nochmal.","Chats","Chats ohne neue Nachricht seit 7 Tagen automatisch archivieren.","Automatisch archivieren","Benachrichtigungen","Erhalte eine Browser-Benachrichtigung f\xfcr neue Nachrichten und Buddys, solange SAMEPACE in einem Tab offen ist.","Dein Browser unterst\xfctzt keine Benachrichtigungen.","Browser-Benachrichtigungen","Push-Benachrichtigungen","Bekomme eine Nachricht aufs Handy bei neuen Chat-Nachrichten, Buddys und Chat-Anfragen - auch wenn SAMEPACE geschlossen ist.","Push ist an \ud83d\udd14","Benachrichtigungen sind blockiert. Du kannst sie in den Einstellungen deines Browsers bzw. Handys erlauben.","Push konnte gerade nicht eingeschaltet werden. Bitte versuch es sp\xe4ter noch einmal.","Dein Browser unterst\xfctzt keine Push-Nachrichten. Am iPhone braucht es iOS 16.4 oder neuer.","Am iPhone gehen Push-Nachrichten, sobald SAMEPACE auf deinem Home-Bildschirm ist.","Push am iPhone","1. Tippe in Safari unten auf \u201eTeilen\u201c (Quadrat mit Pfeil).\n2. W\xe4hle \u201eZum Home-Bildschirm\u201c.\n3. \xd6ffne SAMEPACE \xfcber das neue Icon.\n4. Schalte unter Einstellungen die Push-Benachrichtigungen ein.\n\nDas geht ab iOS 16.4.","So geht's am iPhone","Keine Nachricht mehr verpassen","Schalte Push ein, dann meldet sich SAMEPACE auf deinem Handy, wenn dir jemand schreibt.","Einschalten","Ruhezeiten","Ruhezeit hinzuf\xfcgen","Ruhezeit entfernen","In diesen Zeiten kommen keine Push-Nachrichten - z. B. nachts, beim Mittagsschlaf oder im Nachtdienst.","Mehr","Antworten","Antwort an {name}","Nachricht nicht mehr verf\xfcgbar","Du","Kopieren","Nachricht kopiert.","Reaktion entfernen","Reaktion ging gerade nicht - bitte nochmal versuchen.","\ud83d\ude4c f\xfcr dich","Hat dir schon ein High Five gegeben - gib eins zur\xfcck, und ihr seid Buddys.","{name} hat dir ein High Five gegeben","{count} Leute haben dir ein High Five gegeben","Gib eins zur\xfcck - dann seid ihr Buddys.","High Fives f\xfcr dich","Ein High Five zur\xfcck, und ihr seid sofort Buddys. Tippe auf eine Person, um das Profil zu sehen.","Auch High Five","Ablehnen","Keine offenen High Fives mehr.","Du wartest auf eine Antwort","Du wartest auf {count} Antworten","{name} hat dir inzwischen auch ein High Five gegeben - ihr seid jetzt Buddys.","Deine High Fives ohne Antwort - hier kannst du sie zur\xfccknehmen.","Du wartest auf Antwort","Diesen Leuten hast du ein High Five gegeben, sie dir (noch) nicht. Sie werden dir nicht mehr vorgeschlagen. Nimmst du ein High Five zur\xfcck, tauchen sie wieder als Vorschlag auf.","Keine offenen High Fives mehr.","Zur\xfccknehmen","Ihr seid Buddys! \ud83c\udf89","Du und {name} seid jetzt Buddys.","High Five","High Five gegeben","High Five gegeben - wartet auf Antwort","High Five gegeben! Gibt {name} dir auch eins, seid ihr Buddys und k\xf6nnt schreiben.","High Five hat nicht geklappt: {error}","Strava-Profil (optional)","Andere sehen einen Knopf zu deinem Strava - so ist deine Pace nachvollziehbar.","Das ist kein Strava-Link. Kopiere ihn aus Strava: Profil \u2192 Teilen.","Strava-Profil ansehen","Trainingstermine","{free} frei","Termine anlegen","Gerade keine Termine. Schau sp\xe4ter nochmal rein.","Noch keine Termine. Leg deine freien Trainingszeiten an, dann k\xf6nnen deine Leute hier buchen.","Buchen","Absagen","Termin buchen?","{when} bei {coach}. {coach} bekommt eine Nachricht im Chat.","Gebucht! {coach} wei\xdf Bescheid, der Termin steht in deinem Plan.","Termin absagen?","{when} bei {coach}. Der Platz wird wieder frei und {coach} bekommt eine Nachricht.","Absagen","Abgesagt. Der Platz ist wieder frei.","Termin l\xf6schen","Diesen Termin wirklich l\xf6schen?","Gebucht von {names}. Beim L\xf6schen bekommen sie eine Nachricht, dass der Termin ausf\xe4llt.","Frei","Noch niemand gebucht","{n} Pl\xe4tze frei","\u2713 Von dir gebucht","Ausgebucht","Gebucht von {names}","mit {coach}","mit {names}","Trainingstermine anlegen","F\xfcr alle in {circle}: freie Zeiten eintragen, deine Leute buchen direkt.","An diesem Tag noch keine Termine.","Deine freien Zeiten erscheinen f\xfcr alle in diesem Kreis. Wer bucht, belegt einen Platz, und du bekommst eine Nachricht.","Sportart","An welchen Tagen?","Uhrzeiten und Dauer","Weitere Uhrzeit","{n} Min.","F\xfcr wie lange im Voraus?","1 Woche","{n} Wochen","Pl\xe4tze pro Termin","Personal Training (1 Person)","Kleingruppe","Ort (optional)","Ort auf der Karte w\xe4hlen","Hinweis (optional)","z. B. Treffpunkt beim Eingang, bitte Matte mitbringen","W\xe4hle mindestens einen Tag.","Es wird 1 Termin angelegt.","Es werden {n} Termine angelegt.","Termine anlegen","{n} Termine angelegt.","Trainingstermine","Alle ansehen","\u2705 Ich habe den Termin {when} gebucht.","\u274c Ich muss den Termin {when} leider absagen.","\u274c Der Termin {when} f\xe4llt leider aus.","Da war jemand schneller: Der Termin ist schon ausgebucht.","Dieser Termin hat schon angefangen.","Trainingstermine gehen erst, wenn das Datenbank-Update 0063 eingespielt ist.","Hat nicht geklappt: {error}","Deine Buddys","Alle ansehen","Antippen, um direkt zu schreiben.","Chat mit {name}","Buddys seit {date}","Chat","Buddy suchen","Niemand gefunden.","Mehr","Profil ansehen","Neue Gruppe","Neue Gruppe erstellen","Match aufl\xf6sen","Match mit {name} aufl\xf6sen?","Ihr seid dann keine Buddys mehr und euer privater Chat verschwindet bei dir. {name} bekommt keine Nachricht dar\xfcber. Ihr k\xf6nnt euch sp\xe4ter wieder vorgeschlagen werden.","Auch blockieren","Ihr seht euch dann nirgends mehr in der App.","Aufl\xf6sen","Match mit {name} aufgel\xf6st.","Match mit {name} aufgel\xf6st und blockiert.","Hat nicht geklappt: {error}","Das geht erst, wenn das Update 0062 in der Datenbank eingespielt ist.","Deine Woche","Als N\xe4chstes: {what}","Aufklappen","Zuklappen","Deine Sportzeiten","{count} neue Vorschl\xe4ge","1 neuer Vorschlag","mit {names}","Treffen aus dem Chat","Best\xe4tigtes Treffen","Chat stummschalten","Dieser Chat ist stumm - keine Push-Nachrichten.","Einschalten","Stummschaltung aufheben","Chat stummgeschaltet - keine Push-Nachrichten mehr.","Push-Nachrichten f\xfcr diesen Chat sind wieder an.","Berechtigung nicht erteilt. Du kannst sie in den Browser-Einstellungen \xe4ndern.","Design","W\xe4hle den Look, der am besten zu dir passt.","Sprache","In welcher Sprache soll SAMEPACE angezeigt werden?","Was m\xf6chtest du diese Woche machen?","Worauf hast du heute spontan Lust?","Planen","Heute spontan","Tutorial","Startbildschirm anpassen","Startbildschirm anpassen","Ziehen zum Anordnen, Haken zum Ein-/Ausblenden.","Speichern","Speichern fehlgeschlagen: {error}","Gespeichert.","Entdecken","Plan","Eintragen","Buddys","Chat","Profil","Home","Einstellungen","Deine Sportarten","Alle Sportarten","Sportart w\xe4hlen","Laufen","Radfahren","Schwimmen","Wandern","Tennis","Padeltennis","Schwangerschafts-/R\xfcckbildungssport","Hunde spazieren","Kinder spielen","Bouldern","Badminton","Tischtennis","Beachvolleyball","Fitness","Weitere","Rennrad","Mountainbike","Gravelbike","Trekkingrad","E-Bike","Mo","Di","Mi","Do","Fr","Sa","So","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag","Anf\xe4nger","Fortgeschritten","Profi","weiblich","m\xe4nnlich","divers","Weiter","von","bis","Speichern fehlgeschlagen: {error}","\xdcberspringen","Los geht's","Nicht mehr anzeigen","Schritt {current}/{total}","Willkommen bei SAMEPACE","Finde Leute, die im gleichen Tempo und zur gleichen Zeit Sport machen wie du.","Mein Sportplan","Trag deine Sportzeiten ein - jede Woche oder nur einmal. Dazu dein Tempo oder Level.","Buddys","Passt jemand zu deiner Zeit und deinem Tempo, schlagen wir euch gegenseitig vor. Gebt ihr euch beide ein High Five \ud83d\ude4c, seid ihr Buddys.","Entdecken","Entdecke Sportzeiten und Events in deiner N\xe4he - filterbar nach Sportart, Datum und Uhrzeit.","Chat","Chattet in der Gruppe und legt euren Treffpunkt auf der Karte fest.","Profil","Zeig deine Sportarten, dein Level und deine Interessen - so sehen andere, ob ihr zusammenpasst.","Los geht's","Sp\xe4ter","Zur\xfcck","Welche Sportarten machst du?","W\xe4hl aus, wonach wir f\xfcr dich Ausschau halten sollen. Du kannst sp\xe4ter jederzeit mehr hinzuf\xfcgen.","Wie fit bist du dabei?","Hilft uns, dich mit Leuten auf \xe4hnlichem Niveau zusammenzubringen.","Du hast noch keine Sportart ausgew\xe4hlt - das holst du im Profil jederzeit nach.","Dein Tempo beim {sport} ({unit})","Level","Beim {sport} z\xe4hlt nur das Level - ein Tempo brauchst du hier nicht.","Ein paar Basisdaten","Alles optional - hilft anderen aber, dich besser einzusch\xe4tzen.","Alter","Profilfoto hinzuf\xfcgen","Foto \xe4ndern","Mit Foto wissen andere gleich, mit wem sie sich treffen.","Stadt suchen, z. B. Wien","Bitte w\xe4hle deine Stadt aus der Liste.","Stadt","Geschlecht","Wer soll dir vorgeschlagen werden?","Kannst du sp\xe4ter jederzeit im Profil anpassen.","Du kannst das sp\xe4ter in den Einstellungen jederzeit \xe4ndern.","Egal","Nur mein Geschlecht","Leg auf der vorigen Seite dein Geschlecht fest, um dies einzuschr\xe4nken.","Altersbereich: {min} - {max} Jahre{unlimited}"," (unbegrenzt)","L\xf6schen","Bearbeiten","Mein Sportplan","Uhr","Sichtbarer Zeitraum","Welchen Teil des Tages soll der Kalender anzeigen?","{start} - {end} Uhr","Wochen-Kalender-Ansicht","Listen-Ansicht","Sportzeit hinzuf\xfcgen","Sportzeit l\xf6schen?","{sport} am {day}, {time} wirklich l\xf6schen?","Noch keine Sportzeit an diesem Tag.\nTippe unten, um eine hinzuzuf\xfcgen.","Ohne festen Ort","Einmalig, {date}  \xb7  {location}","Passende Leute anzeigen","Chat \xf6ffnen","Noch keine Sportzeiten eingetragen.\nTippe unten, um eine hinzuzuf\xfcgen.","Zu dieser Woche","Keine Sportzeiten in dieser Woche.","Vorschl\xe4ge","Neue Sportzeit","Sportzeit bearbeiten","Wird ver\xf6ffentlicht: \xd6ffentlich","Wird ver\xf6ffentlicht in: {circle}","Sportart","Hast du schon einen Platz?","Hab schon einen Platz","Suche noch einen Platz","Rad-Typ","Level","Wann?","Jede Woche","Einmalig am...","Datum ausw\xe4hlen","Werktags","Wochenende","Jeden Tag","Heute","Morgen","Diese Sportzeit hast du schon - hier sind deine Leute.","Wie viele Leute fehlen dir noch?","Du hast schon jemanden? Dann z\xe4hl nur die, die noch fehlen - z. B. 2 f\xfcr ein Doppel, wenn ihr schon zu zweit seid.","Du suchst {count} Leute. Sobald ihr euch gegenseitig ein High Five gegeben habt, kannst du im Buddys-Tab einen Gruppenchat mit allen starten.","1 Person","{count} Leute","sucht {count} Leute","+ Weiteres Datum","Du kannst mehrere Tage w\xe4hlen - z. B. deine freien Tage laut Dienstplan.","Wo?","Ort auf der Karte ausw\xe4hlen","Wie weit w\xfcrdest du fahren?","Vom Treffpunkt aus. Ihr passt zusammen, wenn sich eure beiden Umkreise ber\xfchren.","Distanz (km)","Speichern","Ver\xf6ffentlichen","Ver\xf6ffentlichen ({count} Tage)","{count} Sportzeiten hinzugef\xfcgt.","Ort ausw\xe4hlen","Namen f\xfcr den Treffpunkt eingeben (z. B. Parkplatz Hohe Wand)","Punkt auf der Karte","Ort suchen, z.B. Prater","Diesen Ort \xfcbernehmen","Als Favorit merken","Als Favorit gespeichert.","Fehlgeschlagen: {error}","Kontakt fehlgeschlagen: {error}","{sport} mit {name}","Beitreten fehlgeschlagen: {error}","Filter","Events in der N\xe4he anzeigen","Uhrzeit: {start} - {end}{any}"," (egal)","Filter zur\xfccksetzen","Nur im Umkreis","Standort festlegen","Umkreis-Filter entfernen","{km} km","Event hosten","Erneut versuchen","An diesem Tag hat noch niemand eine Sportzeit eingetragen.","Nichts passt zu deinen Filtern.","Filter anpassen","Events in der N\xe4he","Offene Events","Community-Events","Alle Events","Tagesansicht","Events","Keine Events in den n\xe4chsten Monaten gefunden.","Passende Leute","Mehr Infos","{count} dabei","{count}/{max} dabei","Chat \xf6ffnen","Voll","Teilnehmen","Kontaktieren","Event bearbeiten","Sportart, Datum/Uhrzeit und Ort k\xf6nnen nach der Ver\xf6ffentlichung nicht mehr ge\xe4ndert werden.","Bearbeiten fehlgeschlagen: {error}","Event l\xf6schen?","Das Event wird aus Entdecken entfernt. Der Gruppenchat bleibt bestehen, falls ihr euch schon ausgetauscht habt.","L\xf6schen","L\xf6schen fehlgeschlagen: {error}","Jan","Feb","M\xe4r","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez","Event hosten","Erstellen fehlgeschlagen: {error}","Titel","z.B. Sonntags-Lauftreff am Donaukanal","Bis (optional)","Beschreibung (optional)","F\xfcr wen ist das Event, was sollte man mitbringen...","Max. Teilnehmer (optional)","Event ver\xf6ffentlichen","Buddys","W\xe4hl aus, wen du zum Gruppenchat einladen willst.","W\xe4hl aus, wen du zum bestehenden Chat einladen willst.","Gruppenchat erstellen","Chat konnte nicht erstellt werden: {error}","Einladung verschickt - sobald sie best\xe4tigt wird, seid ihr gemeinsam im Chat.","Schon dabei","Einladung ausstehend","Buddy: {name}","Aktuell gibt es noch keine passenden Leute zu deinen Sportzeiten. Trag weitere Zeiten ein oder schau sp\xe4ter nochmal vorbei.","Sportzeit eintragen","Chat starten","1 Buddy","{count} Buddys","Gruppenchat","Nachricht","Gruppenchat mit allen","{count} weitere Vorschl\xe4ge","1 weiterer Vorschlag","Ansehen","Buddys konnten nicht geladen werden.","Da ging etwas schief: {error}","Passende Leute","Ort flexibel","Noch keine passenden Leute gefunden.","Wisch durch, wer zu dir passt.","Gespeichert! {count} Leute passen schon zu deiner Sportzeit \ud83c\udf89","Gespeichert! 1 Person passt schon zu deiner Sportzeit \ud83c\udf89","Gespeichert! Deine Sportzeit ist eingetragen.","Alle, die noch zu dir passen.","Das waren alle f\xfcr heute.","Noch niemand zur gleichen Zeit","Sobald jemand dazukommt, der passt, bekommst du eine Push-Nachricht.","Schalte Push ein, dann sagen wir dir Bescheid, sobald jemand passt.","Neue Leute kommen laufend dazu - schau bald wieder vorbei.","Push einschalten","Fast passend: an anderen Tagen","{day}: {count} Leute","{day}: {count} in deiner N\xe4he","{day}: 1 Person","{day}: 1 Person in deiner N\xe4he","+ {day}","{day} hinzugef\xfcgt - hier sind deine Leute.","Fast passend: {day} zu anderer Zeit","Events & Treffs in deiner Stadt","Alle in Entdecken","Kennst du jemanden, der mitmachen w\xfcrde?","Je mehr Leute dabei sind, desto schneller findest du Buddys.","Signal & mehr","Einladung kopiert - f\xfcge sie jetzt in Signal oder eine andere App ein.","Hey! Ich suche \xfcber SAMEPACE Leute f\xfcr {sport} am {day}. Magst du mitmachen? {url}","Sobald jemand eine \xe4hnliche Sportzeit eintr\xe4gt, erscheint er oder sie hier.","Keine weiteren Vorschl\xe4ge - schau sp\xe4ter nochmal vorbei.","Gleiche Zeit","Gleiche Pace","Niemand passt zu diesen Filtern.","Mit diesen Filtern passt gerade niemand. Versuch es mit weniger Filtern.","Filter zur\xfccksetzen","Letztes r\xfcckg\xe4ngig machen","HIGH FIVE","WEITER","High Five","Als Liste anzeigen","Zum Swipen wechseln","Chat \xf6ffnen","Zu deinen Buddys","Weiter swipen","Fertig","Bereich: \xd6ffentlich (antippen zum Wechseln)","Bereich: {circle} (antippen zum Wechseln)","Verlassen fehlgeschlagen: {error}","Kreis konnte nicht erstellt werden: {error}",'Kreis "{circle}" beigetreten.',"Bereich wechseln","Sportplan, Entdecken und Buddys zeigen dann nur noch diesen Bereich.","\xd6ffentlich","F\xfcr alle sichtbar, wie bisher","Kreis verlassen","Code: {code}","Kreis erstellen","Beitreten","z.B. Laufgruppe Wien","Erstellen","Kreis beitreten","Einladungscode",'"{circle}" erstellt',"Du bist Trainer:in? \xdcber das + unten legst du Trainingstermine an, die deine Leute hier buchen k\xf6nnen.","Teile diesen Code, damit andere beitreten k\xf6nnen:","Mitglieder konnten nicht geladen werden: {error}","{count} Mitglieder","Details & Verwaltung","Beschreibung (optional)","Nachricht an alle senden","Als Push-Nachricht an alle anderen Mitglieder dieses Kreises, auch wenn SAMEPACE gerade geschlossen ist.","z. B. Training heute f\xe4llt aus","Senden","Nachricht verschickt.","Hat nicht geklappt: {error}","Noch keine Beschreibung.","Trainingsarchiv","Trainingsarchiv","Noch keine vergangenen Trainings.","Nach Person","Zuletzt am {date}","{count}x","mit {name}","\xc4nderung fehlgeschlagen: {error}","Einladen","Antippen zum Kopieren","Code kopiert.","WhatsApp","SMS","QR-Code anzeigen","Scannen und sofort beitreten - ohne Code abtippen.","Einladen konnte nicht ge\xf6ffnet werden.",'Tritt meinem SAMEPACE-Kreis "{circle}" bei! \xd6ffne die App, geh auf den Bereich-Button und gib bei "Beitreten" diesen Code ein: {code}',"{name} (Du)","Admin","Zum Admin machen","Admin-Rechte entfernen","Aus Kreis entfernen","Mitglied entfernen","{name} wirklich aus dem Kreis entfernen?",'Du verl\xe4sst den Kreis "{circle}". \xdcber den Einladungscode kannst du sp\xe4ter wieder beitreten.',"Kreis l\xf6schen","Kreis l\xf6schen?",'Der Kreis "{circle}" wird f\xfcr alle Mitglieder endg\xfcltig gel\xf6scht. Sportzeiten, die nur diesem Kreis zugeordnet waren, werden mitgel\xf6scht. Das kann nicht r\xfcckg\xe4ngig gemacht werden.',"L\xf6schen fehlgeschlagen: {error}","Chat verlassen?",'Du verl\xe4sst den Chat "{name}".',"Verlassen","Chat l\xf6schen?",'Der Chat "{name}" wird f\xfcr alle Teilnehmer unwiderruflich gel\xf6scht.',"Der Chat mit {name} wird f\xfcr euch beide gel\xf6scht, inklusive aller Nachrichten.","Archivierte Chats","Chats","Privater Chat","Private Chats","Gruppen & Events","Aktive Chats anzeigen","Archivierte Chats anzeigen","Keine archivierten Chats.","Noch keine Chats. Schreib jemandem \xfcber Entdecken oder deine Buddys.","{count} Teilnehmer","Archivieren","Wiederherstellen","Danke f\xfcr die R\xfcckmeldung.","Check-in fehlgeschlagen: {error}","Treffpunkt","In OpenStreetMap \xf6ffnen","Person melden","Treffpunkt auf der Karte festlegen","Mitglied hinzuf\xfcgen","Buddy einladen","Einladung senden","Einladung verschickt.","Du hast schon alle deine Buddys eingeladen, oder sie sind schon dabei.","Entfernen","Mitglied entfernen?","{name} wird aus der Gruppe entfernt und kann nicht mehr mitlesen.","{name}: Einladung ausstehend - zum Zur\xfcckziehen antippen","Zur\xfcckziehen","Einladung zur\xfcckziehen?","Die Einladung an {name} wird zur\xfcckgezogen.","Neue Gruppe","W\xe4hl aus, wen du einladen m\xf6chtest.","Gruppenname (optional)","Gruppe erstellen","W\xe4hl mindestens 2 Buddys - f\xfcr eine Person gibt's schon den Direktchat.","Gruppeneinladungen",'{name} l\xe4dt dich zur Gruppe \u201e{group}" ein',"Chat-Anfragen","Zum Kalender hinzuf\xfcgen","Google Kalender","Andere Kalender-App (.ics)","Hat das Treffen stattgefunden?","Bewerte kurz die anderen - anonym, es z\xe4hlt nur f\xfcr den Zuverl\xe4ssigkeits-Score.","Nicht getroffen","Ja, bewerten","Wie war das Treffen?","Anonym - niemand sieht, wie du bewertet hast. Es z\xe4hlt nur f\xfcr den Zuverl\xe4ssigkeits-Score.","War da?","Haben die Angaben gestimmt?","Was hat nicht gestimmt?","Ja","Nein","Absenden","Danke! Deine Bewertung ist anonym.","Pace","Level","Distanz","P\xfcnktlichkeit","Treffpunkt","Sonstiges","Noch keine Nachrichten. Sag hallo!","GIFs suchen","Keine GIFs gefunden.","GIFs konnten gerade nicht geladen werden.","GIF konnte nicht gesendet werden: {error}","GIF senden","Vorherige gemeinsame Sportzeit","N\xe4chste gemeinsame Sportzeit","Weitere gemeinsame Sportzeit von euch","Als Treffen festlegen","dir","Von euch beiden best\xe4tigt","Von allen best\xe4tigt","Von {names} best\xe4tigt","Best\xe4tigung zur\xfcckziehen","Du hast das Treffen best\xe4tigt.","{name} hat das Treffen best\xe4tigt.","Du hast deine Best\xe4tigung zur\xfcckgezogen.","{name} hat die Best\xe4tigung zur\xfcckgezogen.","Treffen konnte nicht festgelegt werden: {error}","Diesen Chat gibt es nicht mehr.","Nachricht konnte nicht gesendet werden. Bitte versuch es nochmal.","Nachricht schreiben...","Heute","Gestern","Bel\xe4stigung","Unangemessenes Verhalten","Nicht erschienen","Fake-Profil","Sonstiges","Melden fehlgeschlagen: {error}","Danke, deine Meldung wurde \xfcbermittelt. Wir schauen uns das an.","Keine anderen Mitglieder in dieser Gruppe.","Wen m\xf6chtest du melden?","Grund","Details (optional)","Diese Person auch blockieren","Kein Kontakt/Matching mehr m\xf6glich. Die Person wird nicht benachrichtigt.","Melden","Deutsch","English","Andere","Reisen","Musik","Kochen & Backen","Lesen","Fotografie","Filme & Serien","Kunst & Kultur","Gaming","Natur & Outdoor","Yoga & Meditation","Ern\xe4hrung","Tiere","Caf\xe9 & Brunch","Festivals & Konzerte","Nachhaltigkeit","Foto konnte nicht hochgeladen werden: {error}","Mein Profil","Abmelden","{age} Jahre","Profil bearbeiten","Profil verifizieren","Die Verifizierung ist bald verf\xfcgbar. Damit kannst du anderen zeigen, dass dein Profil echt ist.","Okay","Profil verifizieren","Meine Sportarten & Level","Hinzuf\xfcgen","Noch keine Sportart hinterlegt.","Interessen & Sprachen","Meine Prompts","Zuverl\xe4ssigkeit","Noch keine Bewertungen nach Treffen.","Erscheint zu Treffen","Angaben stimmen","{count} von {total}","Was nicht gepasst hat","Nur f\xfcr dich sichtbar - anonym aus allen Bewertungen.","Sport in den letzten 7 Tagen","Ein H\xe4kchen f\xfcr jeden Tag mit einem Treffen, das du im Chat best\xe4tigt hast.","Chat mit {name}","Profil","Sportarten & Level","Nachricht senden","Blockieren","Nutzer blockieren?","{name} kann dich danach nicht mehr kontaktieren und wird dir nicht mehr als Vorschlag angezeigt. {name} wird nicht benachrichtigt.","Blockieren","Nutzer blockiert.","Blockieren fehlgeschlagen: {error}","Blockierte Nutzer","Du hast noch niemanden blockiert.","Entsperren","Entsperren fehlgeschlagen: {error}","Mein Lieblings-Trainingsort ist...","Du findest mich garantiert beim...","Nach dem Sport brauche ich unbedingt...","Mein verr\xfccktestes Sport-Erlebnis...",u.E,"Das w\xfcrde ich gerne mal ausprobieren...","Mein Trick, wenn ich keine Lust habe...","Perfektes Sport-Date f\xfcr mich...","\xdcber mich","Erz\xe4hl kurz, wer du bist und worauf du Lust hast...","Lege oben dein Geschlecht fest, um dies einzuschr\xe4nken.","Sprachen","Interessen (max. {max})","Prompts (max. {max})","W\xe4hl ein paar Fragen und beantworte sie kurz - zeigt mehr von dir als nur Zahlen.","Sportart & Level","Platz da","Sucht Platz","Verifiziertes Profil","{m} min","{s} sek","Lauf-Typ","Normaler Lauf","Long Run","Speed Run","Welches Training?","Krafttraining","Yoga","Pilates","HIIT","Functional Training","Outdoor-Bootcamp","Stretching & Mobility","Hast du einen Hund dabei?","Habe einen Hund","Habe keinen Hund","Dein Kind","Alter","{age} Jahre","Sicherheitshinweis: Trefft euch nur an \xf6ffentlichen, belebten Orten wie Spielpl\xe4tzen oder Parks - nie privat oder abgelegen.","Rechtliches & Support","H\xe4ufige Fragen","Antworten auf die wichtigsten Fragen","Datenschutzerkl\xe4rung","Wie wir mit deinen Daten umgehen","Impressum","Anbieterkennzeichnung","Feedback geben","Was gef\xe4llt dir, was fehlt, was klemmt? Jede Nachricht wird gelesen.","Idee","Fehler","Lob","Sonstiges","Testprotokoll","Deine Nachricht \u2026","Absenden","Danke f\xfcr dein Feedback! \ud83d\udc9a","Feedback konnte nicht gesendet werden: {error}","Admins","Admins sehen diese Ansicht mit allen Meldungen und allem Feedback. Ernenne nur Personen, denen du vertraust.","Admin hinzuf\xfcgen","Admin hinzuf\xfcgen","{name} kann danach alle Meldungen, Feedbacks und Konto-Gr\xfcnde sehen und selbst Admins ernennen. Fortfahren?","Ernennen","Admin entfernen?","{name} ist danach kein Admin mehr.","Entfernen","Es muss immer mindestens einen Admin geben.","Konnte nicht ge\xe4ndert werden: {error}","Name suchen \u2026","{name} (du)","Meldungen & Feedback","Nur f\xfcr dich sichtbar \xb7 als Excel exportierbar","Admin-Konsole","Nutzer, Chats, Events, Einstellungen - am besten am Laptop: samepace.github.io/#/admin","Aktualisieren","Als Excel (CSV) herunterladen","Download geht nur in der Web-App.","Meldungen","Feedback","Pausiert/Gel\xf6scht","Konnte nicht geladen werden: {error}","{reporter} meldet {reported}","{count}\xd7 gemeldet insgesamt","automatisch gesperrt","Chat gespeichert","Gel\xf6schtes Konto","Konto gel\xf6scht","Konto pausiert","Kein Grund angegeben","Noch nichts da.","Erledigt","Neu","Feedback geben","Sag uns, was wir besser machen k\xf6nnen","Kontakt","Frage oder Problem? Schreib uns","E-Mail-App konnte nicht ge\xf6ffnet werden.","Konto","Konto pausieren","Vor\xfcbergehend unsichtbar machen","Konto l\xf6schen","Endg\xfcltig und unwiderruflich","Konto pausieren?","Dein Profil wird f\xfcr andere unsichtbar und taucht nicht mehr als Vorschlag oder in Entdecken auf. Melde dich einfach jederzeit wieder an, um dein Konto zu reaktivieren.","Pausieren","Konto pausiert","Dein Konto ist jetzt pausiert. Melde dich jederzeit wieder an, um es zu reaktivieren.","Konto endg\xfcltig l\xf6schen?","Dein Profil, deine Sportzeiten, Buddys und Chats werden unwiderruflich gel\xf6scht. Das kann nicht r\xfcckg\xe4ngig gemacht werden.","L\xf6schen","Konto gel\xf6scht","Dein Konto und alle Daten wurden gel\xf6scht. Schade, dass du gehst!","Grund (optional)","Magst du uns sagen, warum?","Das hat leider nicht geklappt: {error}","Ich mache gerade eine Sportpause","Ich habe schon eine feste Trainingsgruppe gefunden","Ich m\xf6chte f\xfcr eine Weile nicht gefunden werden","Ich habe nicht gefunden, was ich gesucht habe","Datenschutz- oder Sicherheitsbedenken","Ich nutze eine andere App","Sonstiges","Magst du uns sagen, warum?","H\xe4ufige Fragen","Ist SAMEPACE eine Dating-App?","Nein. SAMEPACE matcht dich ausschlie\xdflich nach Trainingszeit, Tempo und Sportart mit anderen - es geht um Trainingspartner, nicht um Dating.","Wie funktioniert das Matching?","Du tr\xe4gst deine geplanten Trainingszeiten ein. SAMEPACE zeigt dir Leute mit \xfcberschneidendem Zeitfenster und \xe4hnlichem Tempo f\xfcr dieselbe Sportart. Gebt ihr euch gegenseitig ein High Five, seid ihr Buddys und k\xf6nnt chatten.","Wie sicher ist ein Treffen mit einer fremden Person?","Du kannst jederzeit ein Profil blockieren oder melden. Nach mehreren Meldungen wird ein Konto automatisch gesperrt. Trotzdem gilt: Trefft euch beim ersten Mal an einem \xf6ffentlichen Ort und gebt keine sensiblen Daten weiter.","Was ist der Zuverl\xe4ssigkeits-Score?","Nach einem Treffen bewerten sich die Teilnehmer:innen gegenseitig und anonym: War die Person da, und haben ihre Angaben (Pace, Level \u2026) gestimmt? Daraus ergeben sich zwei Werte, die alle sehen: wie oft jemand erscheint und wie oft die Angaben stimmen. Was genau nicht gepasst hat, siehst nur du selbst in deinem Profil.","Was sind Circles?","Circles sind private Trainingsgruppen, z. B. f\xfcr Freunde oder eine feste Laufgruppe - getrennt vom offenen Matching.","Warum sehe ich nur den Vornamen von anderen?","Aus Datenschutz- und Sicherheitsgr\xfcnden zeigen wir anderen Nutzer:innen nur deinen Vornamen. Deinen vollst\xe4ndigen Namen siehst nur du selbst in deinem Profil.","Wie l\xf6sche ich mein Konto?","Schreib uns eine E-Mail \xfcber den Kontakt-Button in den Einstellungen - wir l\xf6schen dein Konto und alle zugeh\xf6rigen Daten.","Ist SAMEPACE kostenlos?","Ja, die App ist aktuell komplett kostenlos nutzbar.","Datenschutzerkl\xe4rung","Impressum","Sichtbarkeit in Entdecken","Mehr Details (optional)","Jetzt deine erste Sportzeit \ud83d\ude4c","Wann h\xe4ttest du Zeit? Wir zeigen dir sofort, wer zur gleichen Zeit kann - und melden uns, sobald jemand dazukommt.","Tempo, Level, Umkreis, Sichtbarkeit - schon aus deinem Profil vorausgef\xfcllt","Sichtbar in Entdecken","Sichtbar, Chat nur nach Anfrage","Nur passende Leute (nicht in Entdecken)","\xc4ndern","Neu in SAMEPACE","Los geht's","Erste Sportzeit \xfcberspringbar",'Nach der Registrierung musst du nicht mehr sofort eine Sportzeit anlegen - "Sp\xe4ter" oben rechts \xfcberspringt den Schritt.',"Chat-Anfragen mit echter Nachricht","Eine Chat-Anfrage schreibt jetzt gleich eine erste Nachricht statt nur anzuklopfen.","Trainingsarchiv","Vergangene Trainings mit Report pro Person und Monat - zu finden auf dem Plan-Screen und im Kreis.","QR-Code f\xfcr deinen Kreis","Trainer k\xf6nnen jetzt einen QR-Code zeigen, der direkt in ihren Kreis f\xfchrt - ohne Einladungscode abtippen.","High Fives ablehnen","Ein High Five musst du nicht mehr nur ignorieren - ein Klick lehnt es sichtbar ab.","Chat-Anfragen im Blick","Neue Anfragen zeigen jetzt ein Banner und ein Badge in der Navigation, und eine eigene Anfrage kannst du wieder zur\xfcckziehen.","Gruppenchats mit mehreren Leuten","Lade mehrere Buddys gleichzeitig in einen Chat ein, erstelle freie Gruppen und entferne Mitglieder wieder, wenn du den Chat erstellt hast.","Haken f\xfcr best\xe4tigte Treffen","In deiner Woche siehst du jetzt einen Haken bei Terminen, die wirklich best\xe4tigt wurden - nicht nur vorgeschlagen.","Erinnerung zum Bewerten","Rund eine Stunde nach einem best\xe4tigten Treffen fragt dich ein Pop-up, wie es war - statt dass du es im Chat suchen musst.","Wer hat das Treffen best\xe4tigt?","Im Chat steht jetzt, wer schon zugesagt hat - von dir, von euch beiden oder von allen in der Gruppe.","Anfrage senden","Anfrage gesendet","Anfrage fehlgeschlagen: {error}","Nachricht an {name}","Kommt als Anfrage an - erst wenn sie oder er annimmt, geht euer Chat los.","Deine Nachricht...","Anfragen","Keine offenen Anfragen.","\ud83d\udce9 1 neue Anfrage","\ud83d\udce9 {count} neue Anfragen","Annehmen","Ablehnen","Das hat leider nicht geklappt: {error}","Anfragen"],t.w)
+B.KR=new A.az(B.alM,["Gemeinsam Sport machen, wenn es zeitlich passt.","Wie funktioniert's?","Video ansehen \xb7 50 Sek.","Video f\xfcr Trainer:innen ansehen","E-Mail","G\xfcltige E-Mail eingeben","Passwort","Mind. 6 Zeichen","Eingeloggt bleiben","Passwort vergessen?","Anmeldung fehlgeschlagen: {error}","Anmelden","Noch kein Konto? Jetzt registrieren","Willkommen zur\xfcck! Dein Konto wurde reaktiviert.","Zur\xfcck zum Login","Schon ein Konto? Anmelden","Konto erstellen","Name","Name eingeben","Sprache","Registrierung fehlgeschlagen: {error}","Registrieren","Passwort vergessen?","Falls ein Konto mit dieser E-Mail existiert, haben wir dir einen Link zum Zur\xfccksetzen des Passworts geschickt. Schau auch im Spam-Ordner nach.","Gib deine E-Mail-Adresse ein. Wir schicken dir einen Link, mit dem du ein neues Passwort festlegen kannst.","Konnte nicht gesendet werden: {error}","Link senden","Abbrechen","Speichern","Schlie\xdfen","und","Das hat zu lange gedauert - bitte nochmal versuchen.","Neues Passwort","Bitte lege ein neues Passwort fest.","Neues Passwort","Passwort best\xe4tigen","Passw\xf6rter stimmen nicht \xfcberein","\xc4nderung fehlgeschlagen: {error}","Passwort ge\xe4ndert.","Passwort \xe4ndern","Link wird gepr\xfcft \u2026","Dieser Link ist abgelaufen oder wurde schon benutzt. Fordere einfach einen neuen an: auf der Anmeldeseite unter \u201ePasswort vergessen?\u201c.","Neuen Link anfordern","Einstellungen","Hilfe","So funktioniert SAMEPACE","Kurzes Tutorial ansehen","Neu in SAMEPACE","Alle Neuigkeiten noch einmal ansehen","Privatsph\xe4re & Sicherheit","Blockierte Nutzer","Blockierungen verwalten","Abgelehnte dauerhaft ausblenden","Lehnst du ein High Five ab oder swipest jemanden weg, seht ihr euch danach gegenseitig nie wieder, so wie beim Blockieren. Standardm\xe4\xdfig aus: Abgelehnte k\xf6nnen sonst sp\xe4ter wieder vorgeschlagen werden.","Wer findet deine Sportzeiten?","Trag dein Geschlecht unter \u201eProfil bearbeiten\u201c ein, um das einzuschr\xe4nken.","Gilt f\xfcr alle deine Sportzeiten. Einzelne kannst du beim Bearbeiten trotzdem anders einstellen.","Alle in Entdecken","Alle sehen deine Zeiten in Entdecken und k\xf6nnen dir ein High Five geben.","Entdecken mit Chat-Anfrage","Sichtbar in Entdecken - wer schreibt, schickt gleich eine erste Nachricht. Du entscheidest, ob ihr weiterschreibt.","Nur passende Leute","Nicht in Entdecken. Dich sieht nur, wer dieselbe Sportart zur selben Zeit eingetragen hat.","Gilt jetzt f\xfcr alle deine Sportzeiten.","Konnte nicht gespeichert werden. Bitte versuch es sp\xe4ter nochmal.","Chats","Chats ohne neue Nachricht seit 7 Tagen automatisch archivieren.","Automatisch archivieren","Benachrichtigungen","Erhalte eine Browser-Benachrichtigung f\xfcr neue Nachrichten und Buddys, solange SAMEPACE in einem Tab offen ist.","Dein Browser unterst\xfctzt keine Benachrichtigungen.","Browser-Benachrichtigungen","Push-Benachrichtigungen","Bekomme eine Nachricht aufs Handy bei neuen Chat-Nachrichten, Buddys und Chat-Anfragen - auch wenn SAMEPACE geschlossen ist.","Push ist an \ud83d\udd14","Benachrichtigungen sind blockiert. Du kannst sie in den Einstellungen deines Browsers bzw. Handys erlauben.","Push konnte gerade nicht eingeschaltet werden. Bitte versuch es sp\xe4ter noch einmal.","Dein Browser unterst\xfctzt keine Push-Nachrichten. Am iPhone braucht es iOS 16.4 oder neuer.","Am iPhone gehen Push-Nachrichten, sobald SAMEPACE auf deinem Home-Bildschirm ist.","Push am iPhone","1. Tippe in Safari unten auf \u201eTeilen\u201c (Quadrat mit Pfeil).\n2. W\xe4hle \u201eZum Home-Bildschirm\u201c.\n3. \xd6ffne SAMEPACE \xfcber das neue Icon.\n4. Schalte unter Einstellungen die Push-Benachrichtigungen ein.\n\nDas geht ab iOS 16.4.","So geht's am iPhone","Keine Nachricht mehr verpassen","Schalte Push ein, dann meldet sich SAMEPACE auf deinem Handy, wenn dir jemand schreibt.","Einschalten","Ruhezeiten","Ruhezeit hinzuf\xfcgen","Ruhezeit entfernen","In diesen Zeiten kommen keine Push-Nachrichten - z. B. nachts, beim Mittagsschlaf oder im Nachtdienst.","Mehr","Antworten","Antwort an {name}","Nachricht nicht mehr verf\xfcgbar","Du","Kopieren","Nachricht kopiert.","Reaktion entfernen","Reaktion ging gerade nicht - bitte nochmal versuchen.","\ud83d\ude4c f\xfcr dich","Hat dir schon ein High Five gegeben - gib eins zur\xfcck, und ihr seid Buddys.","{name} hat dir ein High Five gegeben","{count} Leute haben dir ein High Five gegeben","Gib eins zur\xfcck - dann seid ihr Buddys.","High Fives f\xfcr dich","Ein High Five zur\xfcck, und ihr seid sofort Buddys. Tippe auf eine Person, um das Profil zu sehen.","Auch High Five","Ablehnen","Keine offenen High Fives mehr.","Du wartest auf eine Antwort","Du wartest auf {count} Antworten","{name} hat dir inzwischen auch ein High Five gegeben - ihr seid jetzt Buddys.","Deine High Fives ohne Antwort - hier kannst du sie zur\xfccknehmen.","Du wartest auf Antwort","Diesen Leuten hast du ein High Five gegeben, sie dir (noch) nicht. Sie werden dir nicht mehr vorgeschlagen. Nimmst du ein High Five zur\xfcck, tauchen sie wieder als Vorschlag auf.","Keine offenen High Fives mehr.","Zur\xfccknehmen","Ihr seid Buddys! \ud83c\udf89","Du und {name} seid jetzt Buddys.","High Five","High Five gegeben","High Five gegeben - wartet auf Antwort","High Five gegeben! Gibt {name} dir auch eins, seid ihr Buddys und k\xf6nnt schreiben.","High Five hat nicht geklappt: {error}","Strava-Profil (optional)","Andere sehen einen Knopf zu deinem Strava - so ist deine Pace nachvollziehbar.","Das ist kein Strava-Link. Kopiere ihn aus Strava: Profil \u2192 Teilen.","Strava-Profil ansehen","Trainingstermine","{free} frei","Termine anlegen","Gerade keine Termine. Schau sp\xe4ter nochmal rein.","Noch keine Termine. Leg deine freien Trainingszeiten an, dann k\xf6nnen deine Leute hier buchen.","Buchen","Absagen","Termin buchen?","{when} bei {coach}. {coach} bekommt eine Nachricht im Chat.","Gebucht! {coach} wei\xdf Bescheid, der Termin steht in deinem Plan.","Termin absagen?","{when} bei {coach}. Der Platz wird wieder frei und {coach} bekommt eine Nachricht.","Absagen","Abgesagt. Der Platz ist wieder frei.","Termin l\xf6schen","Diesen Termin wirklich l\xf6schen?","Gebucht von {names}. Beim L\xf6schen bekommen sie eine Nachricht, dass der Termin ausf\xe4llt.","Frei","Noch niemand gebucht","{n} Pl\xe4tze frei","\u2713 Von dir gebucht","Ausgebucht","Gebucht von {names}","mit {coach}","mit {names}","Trainingstermine anlegen","F\xfcr alle in {circle}: freie Zeiten eintragen, deine Leute buchen direkt.","An diesem Tag noch keine Termine.","Deine freien Zeiten erscheinen f\xfcr alle in diesem Kreis. Wer bucht, belegt einen Platz, und du bekommst eine Nachricht.","Sportart","An welchen Tagen?","Uhrzeiten und Dauer","Weitere Uhrzeit","{n} Min.","F\xfcr wie lange im Voraus?","1 Woche","{n} Wochen","Pl\xe4tze pro Termin","Personal Training (1 Person)","Kleingruppe","Ort (optional)","Ort auf der Karte w\xe4hlen","Hinweis (optional)","z. B. Treffpunkt beim Eingang, bitte Matte mitbringen","W\xe4hle mindestens einen Tag.","Es wird 1 Termin angelegt.","Es werden {n} Termine angelegt.","Termine anlegen","{n} Termine angelegt.","Trainingstermine","Alle ansehen","\u2705 Ich habe den Termin {when} gebucht.","\u274c Ich muss den Termin {when} leider absagen.","\u274c Der Termin {when} f\xe4llt leider aus.","Da war jemand schneller: Der Termin ist schon ausgebucht.","Dieser Termin hat schon angefangen.","Trainingstermine gehen erst, wenn das Datenbank-Update 0063 eingespielt ist.","Hat nicht geklappt: {error}","Deine Buddys","Alle ansehen","Antippen, um direkt zu schreiben.","Chat mit {name}","Buddys seit {date}","Chat","Buddy suchen","Niemand gefunden.","Mehr","Profil ansehen","Neue Gruppe","Neue Gruppe erstellen","Match aufl\xf6sen","Match mit {name} aufl\xf6sen?","Ihr seid dann keine Buddys mehr und euer privater Chat verschwindet bei dir. {name} bekommt keine Nachricht dar\xfcber. Ihr k\xf6nnt euch sp\xe4ter wieder vorgeschlagen werden.","Auch blockieren","Ihr seht euch dann nirgends mehr in der App.","Aufl\xf6sen","Match mit {name} aufgel\xf6st.","Match mit {name} aufgel\xf6st und blockiert.","Hat nicht geklappt: {error}","Das geht erst, wenn das Update 0062 in der Datenbank eingespielt ist.","Deine Woche","Als N\xe4chstes: {what}","Aufklappen","Zuklappen","Deine Sportzeiten","{count} neue Vorschl\xe4ge","1 neuer Vorschlag","mit {names}","Treffen aus dem Chat","Best\xe4tigtes Treffen","Chat stummschalten","Dieser Chat ist stumm - keine Push-Nachrichten.","Einschalten","Stummschaltung aufheben","Chat stummgeschaltet - keine Push-Nachrichten mehr.","Push-Nachrichten f\xfcr diesen Chat sind wieder an.","Berechtigung nicht erteilt. Du kannst sie in den Browser-Einstellungen \xe4ndern.","Design","W\xe4hle den Look, der am besten zu dir passt.","Sprache","In welcher Sprache soll SAMEPACE angezeigt werden?","Was m\xf6chtest du diese Woche machen?","Worauf hast du heute spontan Lust?","Planen","Heute spontan","Tutorial","Startbildschirm anpassen","Startbildschirm anpassen","Ziehen zum Anordnen, Haken zum Ein-/Ausblenden.","Speichern","Speichern fehlgeschlagen: {error}","Gespeichert.","Entdecken","Plan","Eintragen","Buddys","Chat","Profil","Home","Einstellungen","Deine Sportarten","Alle Sportarten","Sportart w\xe4hlen","Laufen","Radfahren","Schwimmen","Wandern","Tennis","Padeltennis","Schwangerschafts-/R\xfcckbildungssport","Hunde spazieren","Kinder spielen","Bouldern","Badminton","Tischtennis","Beachvolleyball","Fitness","Weitere","Rennrad","Mountainbike","Gravelbike","Trekkingrad","E-Bike","Mo","Di","Mi","Do","Fr","Sa","So","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag","Anf\xe4nger","Fortgeschritten","Profi","weiblich","m\xe4nnlich","divers","Weiter","von","bis","Speichern fehlgeschlagen: {error}","\xdcberspringen","Los geht's","Nicht mehr anzeigen","Schritt {current}/{total}","Willkommen bei SAMEPACE","Finde Leute, die im gleichen Tempo und zur gleichen Zeit Sport machen wie du.","Mein Sportplan","Trag deine Sportzeiten ein - jede Woche oder nur einmal. Dazu dein Tempo oder Level.","Buddys","Passt jemand zu deiner Zeit und deinem Tempo, schlagen wir euch gegenseitig vor. Gebt ihr euch beide ein High Five \ud83d\ude4c, seid ihr Buddys.","Entdecken","Entdecke Sportzeiten und Events in deiner N\xe4he - filterbar nach Sportart, Datum und Uhrzeit.","Chat","Chattet in der Gruppe und legt euren Treffpunkt auf der Karte fest.","Profil","Zeig deine Sportarten, dein Level und deine Interessen - so sehen andere, ob ihr zusammenpasst.","Los geht's","Sp\xe4ter","Zur\xfcck","Welche Sportarten machst du?","W\xe4hl aus, wonach wir f\xfcr dich Ausschau halten sollen. Du kannst sp\xe4ter jederzeit mehr hinzuf\xfcgen.","Wie fit bist du dabei?","Hilft uns, dich mit Leuten auf \xe4hnlichem Niveau zusammenzubringen.","Du hast noch keine Sportart ausgew\xe4hlt - das holst du im Profil jederzeit nach.","Dein Tempo beim {sport} ({unit})","Level","Beim {sport} z\xe4hlt nur das Level - ein Tempo brauchst du hier nicht.","Ein paar Basisdaten","Alles optional - hilft anderen aber, dich besser einzusch\xe4tzen.","Alter","Profilfoto hinzuf\xfcgen","Foto \xe4ndern","Mit Foto wissen andere gleich, mit wem sie sich treffen.","Stadt suchen, z. B. Wien","Bitte w\xe4hle deine Stadt aus der Liste.","Stadt","Geschlecht","Wer soll dir vorgeschlagen werden?","Kannst du sp\xe4ter jederzeit im Profil anpassen.","Du kannst das sp\xe4ter in den Einstellungen jederzeit \xe4ndern.","Egal","Nur mein Geschlecht","Leg auf der vorigen Seite dein Geschlecht fest, um dies einzuschr\xe4nken.","Altersbereich: {min} - {max} Jahre{unlimited}"," (unbegrenzt)","L\xf6schen","Bearbeiten","Mein Sportplan","Uhr","Sichtbarer Zeitraum","Welchen Teil des Tages soll der Kalender anzeigen?","{start} - {end} Uhr","Wochen-Kalender-Ansicht","Listen-Ansicht","Sportzeit hinzuf\xfcgen","Sportzeit l\xf6schen?","{sport} am {day}, {time} wirklich l\xf6schen?","Noch keine Sportzeit an diesem Tag.\nTippe unten, um eine hinzuzuf\xfcgen.","Ohne festen Ort","Einmalig, {date}  \xb7  {location}","Passende Leute anzeigen","Chat \xf6ffnen","Noch keine Sportzeiten eingetragen.\nTippe unten, um eine hinzuzuf\xfcgen.","Zu dieser Woche","Keine Sportzeiten in dieser Woche.","Vorschl\xe4ge","Neue Sportzeit","Sportzeit bearbeiten","Wird ver\xf6ffentlicht: \xd6ffentlich","Wird ver\xf6ffentlicht in: {circle}","Sportart","Hast du schon einen Platz?","Hab schon einen Platz","Suche noch einen Platz","Rad-Typ","Level","Wann?","Jede Woche","Einmalig am...","Datum ausw\xe4hlen","Werktags","Wochenende","Jeden Tag","Heute","Morgen","Diese Sportzeit hast du schon - hier sind deine Leute.","Wie viele Leute fehlen dir noch?","Du hast schon jemanden? Dann z\xe4hl nur die, die noch fehlen - z. B. 2 f\xfcr ein Doppel, wenn ihr schon zu zweit seid.","Du suchst {count} Leute. Sobald ihr euch gegenseitig ein High Five gegeben habt, kannst du im Buddys-Tab einen Gruppenchat mit allen starten.","1 Person","{count} Leute","sucht {count} Leute","+ Weiteres Datum","Du kannst mehrere Tage w\xe4hlen - z. B. deine freien Tage laut Dienstplan.","Wo?","Ort auf der Karte ausw\xe4hlen","Wie weit w\xfcrdest du fahren?","Vom Treffpunkt aus. Ihr passt zusammen, wenn sich eure beiden Umkreise ber\xfchren.","Distanz (km)","Speichern","Ver\xf6ffentlichen","Ver\xf6ffentlichen ({count} Tage)","{count} Sportzeiten hinzugef\xfcgt.","Ort ausw\xe4hlen","Namen f\xfcr den Treffpunkt eingeben (z. B. Parkplatz Hohe Wand)","Punkt auf der Karte","Ort suchen, z.B. Prater","Diesen Ort \xfcbernehmen","Als Favorit merken","Als Favorit gespeichert.","Fehlgeschlagen: {error}","Kontakt fehlgeschlagen: {error}","{sport} mit {name}","Beitreten fehlgeschlagen: {error}","Filter","Events in der N\xe4he anzeigen","Uhrzeit: {start} - {end}{any}"," (egal)","Filter zur\xfccksetzen","Nur im Umkreis","Standort festlegen","Umkreis-Filter entfernen","{km} km","Event hosten","Erneut versuchen","An diesem Tag hat noch niemand eine Sportzeit eingetragen.","Nichts passt zu deinen Filtern.","Filter anpassen","Events in der N\xe4he","Offene Events","Community-Events","Alle Events","Tagesansicht","Events","Keine Events in den n\xe4chsten Monaten gefunden.","Passende Leute","Mehr Infos","{count} dabei","{count}/{max} dabei","Chat \xf6ffnen","Voll","Teilnehmen","Kontaktieren","Event bearbeiten","Sportart, Datum/Uhrzeit und Ort k\xf6nnen nach der Ver\xf6ffentlichung nicht mehr ge\xe4ndert werden.","Bearbeiten fehlgeschlagen: {error}","Event l\xf6schen?","Das Event wird aus Entdecken entfernt. Der Gruppenchat bleibt bestehen, falls ihr euch schon ausgetauscht habt.","L\xf6schen","L\xf6schen fehlgeschlagen: {error}","Jan","Feb","M\xe4r","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez","Event hosten","Erstellen fehlgeschlagen: {error}","Titel","z.B. Sonntags-Lauftreff am Donaukanal","Bis (optional)","Beschreibung (optional)","F\xfcr wen ist das Event, was sollte man mitbringen...","Max. Teilnehmer (optional)","Event ver\xf6ffentlichen","Buddys","W\xe4hl aus, wen du zum Gruppenchat einladen willst.","W\xe4hl aus, wen du zum bestehenden Chat einladen willst.","Gruppenchat erstellen","Chat konnte nicht erstellt werden: {error}","Einladung verschickt - sobald sie best\xe4tigt wird, seid ihr gemeinsam im Chat.","Schon dabei","Einladung ausstehend","Buddy: {name}","Aktuell gibt es noch keine passenden Leute zu deinen Sportzeiten. Trag weitere Zeiten ein oder schau sp\xe4ter nochmal vorbei.","Sportzeit eintragen","Chat starten","1 Buddy","{count} Buddys","Gruppenchat","Nachricht","Gruppenchat mit allen","{count} weitere Vorschl\xe4ge","1 weiterer Vorschlag","Ansehen","Buddys konnten nicht geladen werden.","Da ging etwas schief: {error}","Passende Leute","Ort flexibel","Noch keine passenden Leute gefunden.","Wisch durch, wer zu dir passt.","Gespeichert! {count} Leute passen schon zu deiner Sportzeit \ud83c\udf89","Gespeichert! 1 Person passt schon zu deiner Sportzeit \ud83c\udf89","Gespeichert! Deine Sportzeit ist eingetragen.","Alle, die noch zu dir passen.","Das waren alle f\xfcr heute.","Noch niemand zur gleichen Zeit","Sobald jemand dazukommt, der passt, bekommst du eine Push-Nachricht.","Schalte Push ein, dann sagen wir dir Bescheid, sobald jemand passt.","Neue Leute kommen laufend dazu - schau bald wieder vorbei.","Push einschalten","Fast passend: an anderen Tagen","{day}: {count} Leute","{day}: {count} in deiner N\xe4he","{day}: 1 Person","{day}: 1 Person in deiner N\xe4he","+ {day}","{day} hinzugef\xfcgt - hier sind deine Leute.","Fast passend: {day} zu anderer Zeit","Events & Treffs in deiner Stadt","Alle in Entdecken","Kennst du jemanden, der mitmachen w\xfcrde?","Je mehr Leute dabei sind, desto schneller findest du Buddys.","Signal & mehr","Einladung kopiert - f\xfcge sie jetzt in Signal oder eine andere App ein.","Hey! Ich suche \xfcber SAMEPACE Leute f\xfcr {sport} am {day}. Magst du mitmachen? {url}","Sobald jemand eine \xe4hnliche Sportzeit eintr\xe4gt, erscheint er oder sie hier.","Keine weiteren Vorschl\xe4ge - schau sp\xe4ter nochmal vorbei.","Gleiche Zeit","Gleiche Pace","Niemand passt zu diesen Filtern.","Mit diesen Filtern passt gerade niemand. Versuch es mit weniger Filtern.","Filter zur\xfccksetzen","Letztes r\xfcckg\xe4ngig machen","HIGH FIVE","WEITER","High Five","Als Liste anzeigen","Zum Swipen wechseln","Chat \xf6ffnen","Zu deinen Buddys","Weiter swipen","Fertig","Bereich: \xd6ffentlich (antippen zum Wechseln)","Bereich: {circle} (antippen zum Wechseln)","Verlassen fehlgeschlagen: {error}","Kreis konnte nicht erstellt werden: {error}",'Kreis "{circle}" beigetreten.',"Bereich wechseln","Sportplan, Entdecken und Buddys zeigen dann nur noch diesen Bereich.","\xd6ffentlich","F\xfcr alle sichtbar, wie bisher","Kreis verlassen","Code: {code}","Kreis erstellen","Beitreten","z.B. Laufgruppe Wien","Erstellen","Kreis beitreten","Einladungscode",'"{circle}" erstellt',"Du bist Trainer:in? \xdcber das + unten legst du Trainingstermine an, die deine Leute hier buchen k\xf6nnen.","Teile diesen Code, damit andere beitreten k\xf6nnen:","Mitglieder konnten nicht geladen werden: {error}","{count} Mitglieder","Details & Verwaltung","Beschreibung (optional)","Nachricht an alle senden","Als Push-Nachricht an alle anderen Mitglieder dieses Kreises, auch wenn SAMEPACE gerade geschlossen ist.","z. B. Training heute f\xe4llt aus","Senden","Nachricht verschickt.","Hat nicht geklappt: {error}","Noch keine Beschreibung.","Trainingsarchiv","Trainingsarchiv","Noch keine vergangenen Trainings.","Nach Person","Zuletzt am {date}","{count}x","mit {name}","\xc4nderung fehlgeschlagen: {error}","Einladen","Antippen zum Kopieren","Code kopiert.","WhatsApp","SMS","QR-Code anzeigen","Scannen und sofort beitreten - ohne Code abtippen.","Einladen konnte nicht ge\xf6ffnet werden.",'Tritt meinem SAMEPACE-Kreis "{circle}" bei! \xd6ffne die App, geh auf den Bereich-Button und gib bei "Beitreten" diesen Code ein: {code}',"{name} (Du)","Admin","Zum Admin machen","Admin-Rechte entfernen","Aus Kreis entfernen","Mitglied entfernen","{name} wirklich aus dem Kreis entfernen?",'Du verl\xe4sst den Kreis "{circle}". \xdcber den Einladungscode kannst du sp\xe4ter wieder beitreten.',"Kreis l\xf6schen","Kreis l\xf6schen?",'Der Kreis "{circle}" wird f\xfcr alle Mitglieder endg\xfcltig gel\xf6scht. Sportzeiten, die nur diesem Kreis zugeordnet waren, werden mitgel\xf6scht. Das kann nicht r\xfcckg\xe4ngig gemacht werden.',"L\xf6schen fehlgeschlagen: {error}","Chat verlassen?",'Du verl\xe4sst den Chat "{name}".',"Verlassen","Chat l\xf6schen?",'Der Chat "{name}" wird f\xfcr alle Teilnehmer unwiderruflich gel\xf6scht.',"Der Chat mit {name} wird f\xfcr euch beide gel\xf6scht, inklusive aller Nachrichten.","Archivierte Chats","Chats","Privater Chat","Private Chats","Gruppen & Events","Aktive Chats anzeigen","Archivierte Chats anzeigen","Keine archivierten Chats.","Noch keine Chats. Schreib jemandem \xfcber Entdecken oder deine Buddys.","{count} Teilnehmer","Archivieren","Wiederherstellen","Danke f\xfcr die R\xfcckmeldung.","Check-in fehlgeschlagen: {error}","Treffpunkt","In OpenStreetMap \xf6ffnen","Person melden","Treffpunkt auf der Karte festlegen","Mitglied hinzuf\xfcgen","Buddy einladen","Einladung senden","Einladung verschickt.","Du hast schon alle deine Buddys eingeladen, oder sie sind schon dabei.","Entfernen","Mitglied entfernen?","{name} wird aus der Gruppe entfernt und kann nicht mehr mitlesen.","{name}: Einladung ausstehend - zum Zur\xfcckziehen antippen","Zur\xfcckziehen","Einladung zur\xfcckziehen?","Die Einladung an {name} wird zur\xfcckgezogen.","Neue Gruppe","W\xe4hl aus, wen du einladen m\xf6chtest.","Gruppenname (optional)","Gruppe erstellen","W\xe4hl mindestens 2 Buddys - f\xfcr eine Person gibt's schon den Direktchat.","Gruppeneinladungen",'{name} l\xe4dt dich zur Gruppe \u201e{group}" ein',"Chat-Anfragen","Zum Kalender hinzuf\xfcgen","Google Kalender","Andere Kalender-App (.ics)","Hat das Treffen stattgefunden?","Bewerte kurz die anderen - anonym, es z\xe4hlt nur f\xfcr den Zuverl\xe4ssigkeits-Score.","Nicht getroffen","Ja, bewerten","Wie war das Treffen?","Anonym - niemand sieht, wie du bewertet hast. Es z\xe4hlt nur f\xfcr den Zuverl\xe4ssigkeits-Score.","War da?","Haben die Angaben gestimmt?","Was hat nicht gestimmt?","Ja","Nein","Absenden","Danke! Deine Bewertung ist anonym.","Pace","Level","Distanz","P\xfcnktlichkeit","Treffpunkt","Sonstiges","Noch keine Nachrichten. Sag hallo!","GIFs suchen","Keine GIFs gefunden.","GIFs konnten gerade nicht geladen werden.","GIF konnte nicht gesendet werden: {error}","GIF senden","Vorherige gemeinsame Sportzeit","N\xe4chste gemeinsame Sportzeit","Weitere gemeinsame Sportzeit von euch","Als Treffen festlegen","dir","Von euch beiden best\xe4tigt","Von allen best\xe4tigt","Von {names} best\xe4tigt","Best\xe4tigung zur\xfcckziehen","Du hast das Treffen best\xe4tigt.","{name} hat das Treffen best\xe4tigt.","Du hast deine Best\xe4tigung zur\xfcckgezogen.","{name} hat die Best\xe4tigung zur\xfcckgezogen.","Treffen konnte nicht festgelegt werden: {error}","Diesen Chat gibt es nicht mehr.","Nachricht konnte nicht gesendet werden. Bitte versuch es nochmal.","Nachricht schreiben...","Heute","Gestern","Bel\xe4stigung","Unangemessenes Verhalten","Nicht erschienen","Fake-Profil","Sonstiges","Melden fehlgeschlagen: {error}","Danke, deine Meldung wurde \xfcbermittelt. Wir schauen uns das an.","Keine anderen Mitglieder in dieser Gruppe.","Wen m\xf6chtest du melden?","Grund","Details (optional)","Diese Person auch blockieren","Kein Kontakt/Matching mehr m\xf6glich. Die Person wird nicht benachrichtigt.","Melden","Deutsch","English","Andere","Reisen","Musik","Kochen & Backen","Lesen","Fotografie","Filme & Serien","Kunst & Kultur","Gaming","Natur & Outdoor","Yoga & Meditation","Ern\xe4hrung","Tiere","Caf\xe9 & Brunch","Festivals & Konzerte","Nachhaltigkeit","Foto konnte nicht hochgeladen werden: {error}","Mein Profil","Abmelden","{age} Jahre","Profil bearbeiten","Profil verifizieren","Die Verifizierung ist bald verf\xfcgbar. Damit kannst du anderen zeigen, dass dein Profil echt ist.","Okay","Profil verifizieren","Meine Sportarten & Level","Hinzuf\xfcgen","Noch keine Sportart hinterlegt.","Interessen & Sprachen","Meine Prompts","Zuverl\xe4ssigkeit","Noch keine Bewertungen nach Treffen.","Erscheint zu Treffen","Angaben stimmen","{count} von {total}","Was nicht gepasst hat","Nur f\xfcr dich sichtbar - anonym aus allen Bewertungen.","Sport in den letzten 7 Tagen","Ein H\xe4kchen f\xfcr jeden Tag mit einem Treffen, das du im Chat best\xe4tigt hast.","Chat mit {name}","Profil","Sportarten & Level","Nachricht senden","Blockieren","Nutzer blockieren?","{name} kann dich danach nicht mehr kontaktieren und wird dir nicht mehr als Vorschlag angezeigt. {name} wird nicht benachrichtigt.","Blockieren","Nutzer blockiert.","Blockieren fehlgeschlagen: {error}","Blockierte Nutzer","Du hast noch niemanden blockiert.","Entsperren","Entsperren fehlgeschlagen: {error}","Mein Lieblings-Trainingsort ist...","Du findest mich garantiert beim...","Nach dem Sport brauche ich unbedingt...","Mein verr\xfccktestes Sport-Erlebnis...",u.E,"Das w\xfcrde ich gerne mal ausprobieren...","Mein Trick, wenn ich keine Lust habe...","Perfektes Sport-Date f\xfcr mich...","\xdcber mich","Erz\xe4hl kurz, wer du bist und worauf du Lust hast...","Lege oben dein Geschlecht fest, um dies einzuschr\xe4nken.","Sprachen","Interessen (max. {max})","Prompts (max. {max})","W\xe4hl ein paar Fragen und beantworte sie kurz - zeigt mehr von dir als nur Zahlen.","Sportart & Level","Platz da","Sucht Platz","Verifiziertes Profil","{m} min","{s} sek","Lauf-Typ","Normaler Lauf","Long Run","Speed Run","Welches Training?","Krafttraining","Yoga","Pilates","HIIT","Functional Training","Outdoor-Bootcamp","Stretching & Mobility","Hast du einen Hund dabei?","Habe einen Hund","Habe keinen Hund","Dein Kind","Alter","{age} Jahre","Sicherheitshinweis: Trefft euch nur an \xf6ffentlichen, belebten Orten wie Spielpl\xe4tzen oder Parks - nie privat oder abgelegen.","Rechtliches & Support","H\xe4ufige Fragen","Antworten auf die wichtigsten Fragen","Datenschutzerkl\xe4rung","Wie wir mit deinen Daten umgehen","Impressum","Anbieterkennzeichnung","Feedback geben","Was gef\xe4llt dir, was fehlt, was klemmt? Jede Nachricht wird gelesen.","Idee","Fehler","Lob","Sonstiges","Testprotokoll","Deine Nachricht \u2026","Absenden","Danke f\xfcr dein Feedback! \ud83d\udc9a","Feedback konnte nicht gesendet werden: {error}","Admins","Admins sehen diese Ansicht mit allen Meldungen und allem Feedback. Ernenne nur Personen, denen du vertraust.","Admin hinzuf\xfcgen","Admin hinzuf\xfcgen","{name} kann danach alle Meldungen, Feedbacks und Konto-Gr\xfcnde sehen und selbst Admins ernennen. Fortfahren?","Ernennen","Admin entfernen?","{name} ist danach kein Admin mehr.","Entfernen","Es muss immer mindestens einen Admin geben.","Konnte nicht ge\xe4ndert werden: {error}","Name suchen \u2026","{name} (du)","Meldungen & Feedback","Nur f\xfcr dich sichtbar \xb7 als Excel exportierbar","Admin-Konsole","Nutzer, Chats, Events, Einstellungen - am besten am Laptop: samepace.github.io/#/admin","Aktualisieren","Als Excel (CSV) herunterladen","Download geht nur in der Web-App.","Meldungen","Feedback","Pausiert/Gel\xf6scht","Konnte nicht geladen werden: {error}","{reporter} meldet {reported}","{count}\xd7 gemeldet insgesamt","automatisch gesperrt","Chat gespeichert","Gel\xf6schtes Konto","Konto gel\xf6scht","Konto pausiert","Kein Grund angegeben","Noch nichts da.","Erledigt","Neu","Feedback geben","Sag uns, was wir besser machen k\xf6nnen","Kontakt","Frage oder Problem? Schreib uns","E-Mail-App konnte nicht ge\xf6ffnet werden.","Konto","Konto pausieren","Vor\xfcbergehend unsichtbar machen","Konto l\xf6schen","Endg\xfcltig und unwiderruflich","Konto pausieren?","Dein Profil wird f\xfcr andere unsichtbar und taucht nicht mehr als Vorschlag oder in Entdecken auf. Melde dich einfach jederzeit wieder an, um dein Konto zu reaktivieren.","Pausieren","Konto pausiert","Dein Konto ist jetzt pausiert. Melde dich jederzeit wieder an, um es zu reaktivieren.","Konto endg\xfcltig l\xf6schen?","Dein Profil, deine Sportzeiten, Buddys und Chats werden unwiderruflich gel\xf6scht. Das kann nicht r\xfcckg\xe4ngig gemacht werden.","L\xf6schen","Konto gel\xf6scht","Dein Konto und alle Daten wurden gel\xf6scht. Schade, dass du gehst!","Grund (optional)","Magst du uns sagen, warum?","Das hat leider nicht geklappt: {error}","Ich mache gerade eine Sportpause","Ich habe schon eine feste Trainingsgruppe gefunden","Ich m\xf6chte f\xfcr eine Weile nicht gefunden werden","Ich habe nicht gefunden, was ich gesucht habe","Datenschutz- oder Sicherheitsbedenken","Ich nutze eine andere App","Sonstiges","Magst du uns sagen, warum?","H\xe4ufige Fragen","Ist SAMEPACE eine Dating-App?","Nein. SAMEPACE matcht dich ausschlie\xdflich nach Trainingszeit, Tempo und Sportart mit anderen - es geht um Trainingspartner, nicht um Dating.","Wie funktioniert das Matching?","Du tr\xe4gst deine geplanten Trainingszeiten ein. SAMEPACE zeigt dir Leute mit \xfcberschneidendem Zeitfenster und \xe4hnlichem Tempo f\xfcr dieselbe Sportart. Gebt ihr euch gegenseitig ein High Five, seid ihr Buddys und k\xf6nnt chatten.","Wie sicher ist ein Treffen mit einer fremden Person?","Du kannst jederzeit ein Profil blockieren oder melden. Nach mehreren Meldungen wird ein Konto automatisch gesperrt. Trotzdem gilt: Trefft euch beim ersten Mal an einem \xf6ffentlichen Ort und gebt keine sensiblen Daten weiter.","Was ist der Zuverl\xe4ssigkeits-Score?","Nach einem Treffen bewerten sich die Teilnehmer:innen gegenseitig und anonym: War die Person da, und haben ihre Angaben (Pace, Level \u2026) gestimmt? Daraus ergeben sich zwei Werte, die alle sehen: wie oft jemand erscheint und wie oft die Angaben stimmen. Was genau nicht gepasst hat, siehst nur du selbst in deinem Profil.","Was sind Circles?","Circles sind private Trainingsgruppen, z. B. f\xfcr Freunde oder eine feste Laufgruppe - getrennt vom offenen Matching.","Warum sehe ich nur den Vornamen von anderen?","Aus Datenschutz- und Sicherheitsgr\xfcnden zeigen wir anderen Nutzer:innen nur deinen Vornamen. Deinen vollst\xe4ndigen Namen siehst nur du selbst in deinem Profil.","Wie l\xf6sche ich mein Konto?","Schreib uns eine E-Mail \xfcber den Kontakt-Button in den Einstellungen - wir l\xf6schen dein Konto und alle zugeh\xf6rigen Daten.","Ist SAMEPACE kostenlos?","Ja, die App ist aktuell komplett kostenlos nutzbar.","Datenschutzerkl\xe4rung","Impressum","Sichtbarkeit in Entdecken","Mehr Details (optional)","Jetzt deine erste Sportzeit \ud83d\ude4c","Wann h\xe4ttest du Zeit? Wir zeigen dir sofort, wer zur gleichen Zeit kann - und melden uns, sobald jemand dazukommt.","Tempo, Level, Umkreis, Sichtbarkeit - schon aus deinem Profil vorausgef\xfcllt","Sichtbar in Entdecken","Sichtbar, Chat nur nach Anfrage","Nur passende Leute (nicht in Entdecken)","\xc4ndern","Neu in SAMEPACE","Los geht's","Erste Sportzeit \xfcberspringbar",'Nach der Registrierung musst du nicht mehr sofort eine Sportzeit anlegen - "Sp\xe4ter" oben rechts \xfcberspringt den Schritt.',"Chat-Anfragen mit echter Nachricht","Eine Chat-Anfrage schreibt jetzt gleich eine erste Nachricht statt nur anzuklopfen.","Trainingsarchiv","Vergangene Trainings mit Report pro Person und Monat - zu finden auf dem Plan-Screen und im Kreis.","QR-Code f\xfcr deinen Kreis","Trainer k\xf6nnen jetzt einen QR-Code zeigen, der direkt in ihren Kreis f\xfchrt - ohne Einladungscode abtippen.","High Fives ablehnen","Ein High Five musst du nicht mehr nur ignorieren - ein Klick lehnt es sichtbar ab.","Chat-Anfragen im Blick","Neue Anfragen zeigen jetzt ein Banner und ein Badge in der Navigation, und eine eigene Anfrage kannst du wieder zur\xfcckziehen.","Gruppenchats mit mehreren Leuten","Lade mehrere Buddys gleichzeitig in einen Chat ein, erstelle freie Gruppen und entferne Mitglieder wieder, wenn du den Chat erstellt hast.","Haken f\xfcr best\xe4tigte Treffen","In deiner Woche siehst du jetzt einen Haken bei Terminen, die wirklich best\xe4tigt wurden - nicht nur vorgeschlagen.","Erinnerung zum Bewerten","Rund eine Stunde nach einem best\xe4tigten Treffen fragt dich ein Pop-up, wie es war - statt dass du es im Chat suchen musst.","Wer hat das Treffen best\xe4tigt?","Im Chat steht jetzt, wer schon zugesagt hat - von dir, von euch beiden oder von allen in der Gruppe.","Anfrage senden","Anfrage gesendet","Anfrage fehlgeschlagen: {error}","Nachricht an {name}","Kommt als Anfrage an - erst wenn sie oder er annimmt, geht euer Chat los.","Deine Nachricht...","Anfragen","Keine offenen Anfragen.","\ud83d\udce9 1 neue Anfrage","\ud83d\udce9 {count} neue Anfragen","Annehmen","Ablehnen","Das hat leider nicht geklappt: {error}","Anfragen"],t.w)
 B.ajq=new A.dw([0,"FontWeight.w100",1,"FontWeight.w200",2,"FontWeight.w300",3,"FontWeight.w400",4,"FontWeight.w500",5,"FontWeight.w600",6,"FontWeight.w700",7,"FontWeight.w800",8,"FontWeight.w900"],A.aE("dw<t,o>"))
 B.Le={AVRInput:0,AVRPower:1,Accel:2,Accept:3,Again:4,AllCandidates:5,Alphanumeric:6,AltGraph:7,AppSwitch:8,ArrowDown:9,ArrowLeft:10,ArrowRight:11,ArrowUp:12,Attn:13,AudioBalanceLeft:14,AudioBalanceRight:15,AudioBassBoostDown:16,AudioBassBoostToggle:17,AudioBassBoostUp:18,AudioFaderFront:19,AudioFaderRear:20,AudioSurroundModeNext:21,AudioTrebleDown:22,AudioTrebleUp:23,AudioVolumeDown:24,AudioVolumeMute:25,AudioVolumeUp:26,Backspace:27,BrightnessDown:28,BrightnessUp:29,BrowserBack:30,BrowserFavorites:31,BrowserForward:32,BrowserHome:33,BrowserRefresh:34,BrowserSearch:35,BrowserStop:36,Call:37,Camera:38,CameraFocus:39,Cancel:40,CapsLock:41,ChannelDown:42,ChannelUp:43,Clear:44,Close:45,ClosedCaptionToggle:46,CodeInput:47,ColorF0Red:48,ColorF1Green:49,ColorF2Yellow:50,ColorF3Blue:51,ColorF4Grey:52,ColorF5Brown:53,Compose:54,ContextMenu:55,Convert:56,Copy:57,CrSel:58,Cut:59,DVR:60,Delete:61,Dimmer:62,DisplaySwap:63,Eisu:64,Eject:65,End:66,EndCall:67,Enter:68,EraseEof:69,Esc:70,Escape:71,ExSel:72,Execute:73,Exit:74,F1:75,F10:76,F11:77,F12:78,F13:79,F14:80,F15:81,F16:82,F17:83,F18:84,F19:85,F2:86,F20:87,F21:88,F22:89,F23:90,F24:91,F3:92,F4:93,F5:94,F6:95,F7:96,F8:97,F9:98,FavoriteClear0:99,FavoriteClear1:100,FavoriteClear2:101,FavoriteClear3:102,FavoriteRecall0:103,FavoriteRecall1:104,FavoriteRecall2:105,FavoriteRecall3:106,FavoriteStore0:107,FavoriteStore1:108,FavoriteStore2:109,FavoriteStore3:110,FinalMode:111,Find:112,Fn:113,FnLock:114,GoBack:115,GoHome:116,GroupFirst:117,GroupLast:118,GroupNext:119,GroupPrevious:120,Guide:121,GuideNextDay:122,GuidePreviousDay:123,HangulMode:124,HanjaMode:125,Hankaku:126,HeadsetHook:127,Help:128,Hibernate:129,Hiragana:130,HiraganaKatakana:131,Home:132,Hyper:133,Info:134,Insert:135,InstantReplay:136,JunjaMode:137,KanaMode:138,KanjiMode:139,Katakana:140,Key11:141,Key12:142,LastNumberRedial:143,LaunchApplication1:144,LaunchApplication2:145,LaunchAssistant:146,LaunchCalendar:147,LaunchContacts:148,LaunchControlPanel:149,LaunchMail:150,LaunchMediaPlayer:151,LaunchMusicPlayer:152,LaunchPhone:153,LaunchScreenSaver:154,LaunchSpreadsheet:155,LaunchWebBrowser:156,LaunchWebCam:157,LaunchWordProcessor:158,Link:159,ListProgram:160,LiveContent:161,Lock:162,LogOff:163,MailForward:164,MailReply:165,MailSend:166,MannerMode:167,MediaApps:168,MediaAudioTrack:169,MediaClose:170,MediaFastForward:171,MediaLast:172,MediaPause:173,MediaPlay:174,MediaPlayPause:175,MediaRecord:176,MediaRewind:177,MediaSkip:178,MediaSkipBackward:179,MediaSkipForward:180,MediaStepBackward:181,MediaStepForward:182,MediaStop:183,MediaTopMenu:184,MediaTrackNext:185,MediaTrackPrevious:186,MicrophoneToggle:187,MicrophoneVolumeDown:188,MicrophoneVolumeMute:189,MicrophoneVolumeUp:190,ModeChange:191,NavigateIn:192,NavigateNext:193,NavigateOut:194,NavigatePrevious:195,New:196,NextCandidate:197,NextFavoriteChannel:198,NextUserProfile:199,NonConvert:200,Notification:201,NumLock:202,OnDemand:203,Open:204,PageDown:205,PageUp:206,Pairing:207,Paste:208,Pause:209,PinPDown:210,PinPMove:211,PinPToggle:212,PinPUp:213,Play:214,PlaySpeedDown:215,PlaySpeedReset:216,PlaySpeedUp:217,Power:218,PowerOff:219,PreviousCandidate:220,Print:221,PrintScreen:222,Process:223,Props:224,RandomToggle:225,RcLowBattery:226,RecordSpeedNext:227,Redo:228,RfBypass:229,Romaji:230,STBInput:231,STBPower:232,Save:233,ScanChannelsToggle:234,ScreenModeNext:235,ScrollLock:236,Select:237,Settings:238,ShiftLevel5:239,SingleCandidate:240,Soft1:241,Soft2:242,Soft3:243,Soft4:244,Soft5:245,Soft6:246,Soft7:247,Soft8:248,SpeechCorrectionList:249,SpeechInputToggle:250,SpellCheck:251,SplitScreenToggle:252,Standby:253,Subtitle:254,Super:255,Symbol:256,SymbolLock:257,TV:258,TV3DMode:259,TVAntennaCable:260,TVAudioDescription:261,TVAudioDescriptionMixDown:262,TVAudioDescriptionMixUp:263,TVContentsMenu:264,TVDataService:265,TVInput:266,TVInputComponent1:267,TVInputComponent2:268,TVInputComposite1:269,TVInputComposite2:270,TVInputHDMI1:271,TVInputHDMI2:272,TVInputHDMI3:273,TVInputHDMI4:274,TVInputVGA1:275,TVMediaContext:276,TVNetwork:277,TVNumberEntry:278,TVPower:279,TVRadioService:280,TVSatellite:281,TVSatelliteBS:282,TVSatelliteCS:283,TVSatelliteToggle:284,TVTerrestrialAnalog:285,TVTerrestrialDigital:286,TVTimer:287,Tab:288,Teletext:289,Undo:290,Unidentified:291,VideoModeNext:292,VoiceDial:293,WakeUp:294,Wink:295,Zenkaku:296,ZenkakuHankaku:297,ZoomIn:298,ZoomOut:299,ZoomToggle:300}
 B.ajr=new A.az(B.Le,[B.Il,B.Im,B.G1,B.Gg,B.Gh,B.GF,B.GG,B.nm,B.JP,B.eh,B.dQ,B.dR,B.ei,B.Gi,B.Ie,B.If,B.Ig,B.JG,B.Ih,B.Ii,B.Ij,B.Ik,B.JH,B.JI,B.HQ,B.HS,B.HR,B.cq,B.Gu,B.Gv,B.I7,B.I8,B.I9,B.Ia,B.Ib,B.Ic,B.Id,B.JQ,B.Gw,B.JR,B.Gj,B.k9,B.In,B.Io,B.t7,B.HD,B.Iv,B.GH,B.Ip,B.Iq,B.Ir,B.Is,B.It,B.Iu,B.GI,B.Gk,B.GJ,B.G8,B.G9,B.Ga,B.Jt,B.cr,B.Iw,B.Ix,B.GY,B.Gx,B.hk,B.JS,B.nl,B.Gb,B.k8,B.k8,B.Gc,B.Gl,B.Iy,B.H7,B.Hg,B.Hh,B.Hi,B.Hj,B.Hk,B.Hl,B.Hm,B.Hn,B.Ho,B.Hp,B.H8,B.Hq,B.Hr,B.Hs,B.Ht,B.Hu,B.H9,B.Ha,B.Hb,B.Hc,B.Hd,B.He,B.Hf,B.Iz,B.IA,B.IB,B.IC,B.ID,B.IE,B.IF,B.IG,B.IH,B.II,B.IJ,B.IK,B.GK,B.Gm,B.t6,B.G2,B.JT,B.JU,B.GL,B.GM,B.GN,B.GO,B.IL,B.IM,B.IN,B.GV,B.GW,B.GZ,B.JV,B.Gn,B.GC,B.H_,B.H0,B.hl,B.G3,B.IO,B.kc,B.IP,B.GX,B.H1,B.H2,B.H3,B.Kq,B.Kr,B.JW,B.HY,B.HT,B.I5,B.HU,B.I3,B.I6,B.HV,B.HW,B.HX,B.I4,B.HZ,B.I_,B.I0,B.I1,B.I2,B.IQ,B.IR,B.IS,B.IT,B.Gy,B.HE,B.HF,B.HG,B.JY,B.IU,B.Ju,B.JF,B.IV,B.IW,B.IX,B.IY,B.HH,B.IZ,B.J_,B.J0,B.Jv,B.Jw,B.Jx,B.Jy,B.HI,B.Jz,B.HJ,B.HK,B.JJ,B.JK,B.JM,B.JL,B.GP,B.JA,B.JB,B.JC,B.JD,B.HL,B.GQ,B.J1,B.J2,B.GR,B.JX,B.nn,B.J3,B.HM,B.ka,B.kb,B.JE,B.Gd,B.Go,B.J4,B.J5,B.J6,B.J7,B.Gp,B.J8,B.J9,B.Ja,B.Gz,B.GA,B.GS,B.HN,B.GB,B.GT,B.Gq,B.Jb,B.Jc,B.Jd,B.Ge,B.Je,B.H4,B.Jj,B.Jk,B.HO,B.Jf,B.Jg,B.no,B.Gr,B.Jh,B.G7,B.GU,B.Hv,B.Hw,B.Hx,B.Hy,B.Hz,B.HA,B.HB,B.HC,B.JN,B.JO,B.HP,B.Ji,B.GD,B.Jl,B.G4,B.G5,B.G6,B.Jn,B.K_,B.K0,B.K1,B.K2,B.K3,B.K4,B.K5,B.Jo,B.K6,B.K7,B.K8,B.K9,B.Ka,B.Kb,B.Kc,B.Kd,B.Ke,B.Kf,B.Kg,B.Kh,B.Jp,B.Ki,B.Kj,B.Kk,B.Kl,B.Km,B.Kn,B.Ko,B.Kp,B.nk,B.Jm,B.Gf,B.G0,B.Jq,B.JZ,B.GE,B.Jr,B.H5,B.H6,B.Gs,B.Gt,B.Js],A.aE("az<o,v>"))
 B.ajs=new A.az(B.Le,[4294970632,4294970633,4294967553,4294968577,4294968578,4294969089,4294969090,4294967555,4294971393,4294968065,4294968066,4294968067,4294968068,4294968579,4294970625,4294970626,4294970627,4294970882,4294970628,4294970629,4294970630,4294970631,4294970884,4294970885,4294969871,4294969873,4294969872,4294967304,4294968833,4294968834,4294970369,4294970370,4294970371,4294970372,4294970373,4294970374,4294970375,4294971394,4294968835,4294971395,4294968580,4294967556,4294970634,4294970635,4294968321,4294969857,4294970642,4294969091,4294970636,4294970637,4294970638,4294970639,4294970640,4294970641,4294969092,4294968581,4294969093,4294968322,4294968323,4294968324,4294970703,4294967423,4294970643,4294970644,4294969108,4294968836,4294968069,4294971396,4294967309,4294968325,4294967323,4294967323,4294968326,4294968582,4294970645,4294969345,4294969354,4294969355,4294969356,4294969357,4294969358,4294969359,4294969360,4294969361,4294969362,4294969363,4294969346,4294969364,4294969365,4294969366,4294969367,4294969368,4294969347,4294969348,4294969349,4294969350,4294969351,4294969352,4294969353,4294970646,4294970647,4294970648,4294970649,4294970650,4294970651,4294970652,4294970653,4294970654,4294970655,4294970656,4294970657,4294969094,4294968583,4294967558,4294967559,4294971397,4294971398,4294969095,4294969096,4294969097,4294969098,4294970658,4294970659,4294970660,4294969105,4294969106,4294969109,4294971399,4294968584,4294968841,4294969110,4294969111,4294968070,4294967560,4294970661,4294968327,4294970662,4294969107,4294969112,4294969113,4294969114,4294971905,4294971906,4294971400,4294970118,4294970113,4294970126,4294970114,4294970124,4294970127,4294970115,4294970116,4294970117,4294970125,4294970119,4294970120,4294970121,4294970122,4294970123,4294970663,4294970664,4294970665,4294970666,4294968837,4294969858,4294969859,4294969860,4294971402,4294970667,4294970704,4294970715,4294970668,4294970669,4294970670,4294970671,4294969861,4294970672,4294970673,4294970674,4294970705,4294970706,4294970707,4294970708,4294969863,4294970709,4294969864,4294969865,4294970886,4294970887,4294970889,4294970888,4294969099,4294970710,4294970711,4294970712,4294970713,4294969866,4294969100,4294970675,4294970676,4294969101,4294971401,4294967562,4294970677,4294969867,4294968071,4294968072,4294970714,4294968328,4294968585,4294970678,4294970679,4294970680,4294970681,4294968586,4294970682,4294970683,4294970684,4294968838,4294968839,4294969102,4294969868,4294968840,4294969103,4294968587,4294970685,4294970686,4294970687,4294968329,4294970688,4294969115,4294970693,4294970694,4294969869,4294970689,4294970690,4294967564,4294968588,4294970691,4294967569,4294969104,4294969601,4294969602,4294969603,4294969604,4294969605,4294969606,4294969607,4294969608,4294971137,4294971138,4294969870,4294970692,4294968842,4294970695,4294967566,4294967567,4294967568,4294970697,4294971649,4294971650,4294971651,4294971652,4294971653,4294971654,4294971655,4294970698,4294971656,4294971657,4294971658,4294971659,4294971660,4294971661,4294971662,4294971663,4294971664,4294971665,4294971666,4294971667,4294970699,4294971668,4294971669,4294971670,4294971671,4294971672,4294971673,4294971674,4294971675,4294967305,4294970696,4294968330,4294967297,4294970700,4294971403,4294968843,4294970701,4294969116,4294969117,4294968589,4294968590,4294970702],t.eL)
 B.alC={"app.tagline":0,"login.howItWorks":1,"login.watchVideo":2,"login.watchTrainerVideo":3,"login.email":4,"login.emailInvalid":5,"login.password":6,"login.passwordTooShort":7,"login.rememberMe":8,"login.forgotPassword":9,"login.signInFailed":10,"login.signIn":11,"login.noAccount":12,"login.accountReactivated":13,"register.backToLogin":14,"register.haveAccount":15,"register.title":16,"register.name":17,"register.nameRequired":18,"register.language":19,"register.signUpFailed":20,"register.submit":21,"forgotPassword.title":22,"forgotPassword.sentMessage":23,"forgotPassword.instructions":24,"forgotPassword.sendFailed":25,"forgotPassword.send":26,"common.cancel":27,"common.save":28,"common.close":29,"common.and":30,"common.tookTooLong":31,"resetPassword.title":32,"resetPassword.instructions":33,"resetPassword.newPassword":34,"resetPassword.confirmPassword":35,"resetPassword.mismatch":36,"resetPassword.changeFailed":37,"resetPassword.changed":38,"resetPassword.submit":39,"resetPassword.checking":40,"resetPassword.linkInvalid":41,"resetPassword.requestNew":42,"settings.title":43,"settings.help":44,"settings.howItWorks":45,"settings.tutorialSubtitle":46,"settings.whatsNew":47,"settings.whatsNewSubtitle":48,"settings.privacy":49,"settings.blockedUsers":50,"settings.blockedUsersSubtitle":51,"settings.blockOnDecline":52,"settings.blockOnDeclineDesc":53,"settings.visibilityTitle":54,"settings.setGenderFirst":55,"settings.visibilityDesc":56,"settings.visibilityOpen":57,"settings.visibilityOpenDesc":58,"settings.visibilityRequest":59,"settings.visibilityRequestDesc":60,"settings.visibilityHidden":61,"settings.visibilityHiddenDesc":62,"settings.visibilitySaved":63,"settings.visibilityError":64,"settings.chats":65,"settings.autoArchiveDesc":66,"settings.autoArchive":67,"settings.notifications":68,"settings.notificationsDescSupported":69,"settings.notificationsDescUnsupported":70,"push.title":71,"push.desc":72,"push.enabled":73,"push.denied":74,"push.failed":75,"push.unsupported":76,"push.iosDesc":77,"push.iosTitle":78,"push.iosSteps":79,"push.iosButton":80,"push.promptTitle":81,"push.promptBody":82,"push.promptAction":83,"push.quietTitle":84,"push.quietAdd":85,"push.quietRemove":86,"push.quietDesc":87,"group.menu":88,"group.reply":89,"group.replyTo":90,"group.replyGone":91,"group.you":92,"group.copy":93,"group.copied":94,"group.removeReaction":95,"group.reactFailed":96,"likes.likedYou":97,"likes.likedYouLong":98,"likes.cardOne":99,"likes.cardMany":100,"likes.cardSubtitle":101,"likes.sheetTitle":102,"likes.sheetSubtitle":103,"likes.likeBack":104,"likes.decline":105,"likes.receivedEmpty":106,"likes.pendingCardOne":107,"likes.pendingCard":108,"likes.undoTooLate":109,"likes.pendingCardSubtitle":110,"likes.pendingTitle":111,"likes.pendingSubtitle":112,"likes.pendingEmpty":113,"likes.undo":114,"likes.matchTitle":115,"likes.matchBody":116,"like.like":117,"like.liked":118,"like.waiting":119,"like.pending":120,"like.failed":121,"editProfile.strava":122,"editProfile.stravaHelp":123,"editProfile.stravaInvalid":124,"profile.stravaButton":125,"coach.title":126,"coach.summary":127,"coach.offer":128,"coach.empty":129,"coach.emptyAdmin":130,"coach.book":131,"coach.cancel":132,"coach.bookTitle":133,"coach.bookBody":134,"coach.booked":135,"coach.cancelTitle":136,"coach.cancelBody":137,"coach.cancelConfirm":138,"coach.cancelled":139,"coach.deleteTitle":140,"coach.deleteBody":141,"coach.deleteBodyBooked":142,"coach.statusFree":143,"coach.noBookingsYet":144,"coach.statusFreeMany":145,"coach.statusMine":146,"coach.statusFull":147,"coach.statusBookedBy":148,"coach.withCoach":149,"coach.withClients":150,"coach.offerTitle":151,"coach.offerIntro":152,"coach.offerCard":153,"coach.emptyDayAdmin":154,"coach.sport":155,"coach.weekdays":156,"coach.timeAndLength":157,"coach.addTime":158,"coach.minutes":159,"coach.weeks":160,"coach.weekOne":161,"coach.weekMany":162,"coach.spots":163,"coach.spotsOne":164,"coach.spotsMany":165,"coach.place":166,"coach.pickPlace":167,"coach.note":168,"coach.noteHint":169,"coach.previewNone":170,"coach.previewOne":171,"coach.previewMany":172,"coach.create":173,"coach.created":174,"coach.sessionsTitle":175,"coach.showAll":176,"coach.msgBooked":177,"coach.msgCancelled":178,"coach.msgSlotDeleted":179,"coach.errFull":180,"coach.errPast":181,"coach.errNotReady":182,"coach.errGeneric":183,"buddies.title":184,"buddies.showAll":185,"buddies.tapToChat":186,"buddies.chatWith":187,"buddies.since":188,"buddies.chat":189,"buddies.search":190,"buddies.noResults":191,"buddies.more":192,"buddies.viewProfile":193,"buddies.newGroup":194,"buddies.newGroupButton":195,"unmatch.menu":196,"unmatch.title":197,"unmatch.body":198,"unmatch.alsoBlock":199,"unmatch.alsoBlockHint":200,"unmatch.confirm":201,"unmatch.done":202,"unmatch.doneBlocked":203,"unmatch.failed":204,"unmatch.notReady":205,"week.title":206,"week.next":207,"section.expand":208,"section.collapse":209,"matchesHub.sportTimes":210,"matchesHub.newSuggestions":211,"matchesHub.newSuggestionsOne":212,"week.with":213,"week.meetup":214,"week.confirmed":215,"group.mute":216,"group.mutedBanner":217,"group.unmuteShort":218,"group.unmute":219,"group.mutedOn":220,"group.mutedOff":221,"settings.browserNotifications":222,"settings.permissionDenied":223,"settings.design":224,"settings.designDesc":225,"settings.language":226,"settings.languageDesc":227,"home.question":228,"home.questionToday":229,"home.modePlan":230,"home.modeToday":231,"home.tutorialTooltip":232,"home.configureTooltip":233,"homeLayout.title":234,"homeLayout.subtitle":235,"homeLayout.save":236,"homeLayout.saveFailed":237,"homeLayout.saved":238,"nav.discover":239,"nav.plan":240,"nav.add":241,"nav.buddies":242,"nav.chat":243,"nav.profile":244,"appbar.home":245,"appbar.settings":246,"sportPicker.mine":247,"sportPicker.all":248,"sportPicker.title":249,"sport.laufen":250,"sport.radfahren":251,"sport.schwimmen":252,"sport.wandern":253,"sport.tennis":254,"sport.padel":255,"sport.schwangerschaftssport":256,"sport.hundeGassi":257,"sport.kinderSpielen":258,"sport.bouldern":259,"sport.badminton":260,"sport.tischtennis":261,"sport.beachvolleyball":262,"sport.fitness":263,"sport.sonstige":264,"bikeType.rennrad":265,"bikeType.mountainbike":266,"bikeType.gravel":267,"bikeType.trekking":268,"bikeType.ebike":269,"weekday.mo":270,"weekday.tu":271,"weekday.we":272,"weekday.th":273,"weekday.fr":274,"weekday.sa":275,"weekday.su":276,"weekdayFull.mo":277,"weekdayFull.tu":278,"weekdayFull.we":279,"weekdayFull.th":280,"weekdayFull.fr":281,"weekdayFull.sa":282,"weekdayFull.su":283,"level.beginner":284,"level.advanced":285,"level.pro":286,"gender.female":287,"gender.male":288,"gender.diverse":289,"common.next":290,"common.from":291,"common.to":292,"common.saveFailed":293,"tutorial.skip":294,"tutorial.done":295,"tutorial.dontShowAgain":296,"tutorial.step":297,"tutorial.welcome.title":298,"tutorial.welcome.description":299,"tutorial.plan.title":300,"tutorial.plan.description":301,"tutorial.buddies.title":302,"tutorial.buddies.description":303,"tutorial.discover.title":304,"tutorial.discover.description":305,"tutorial.chat.title":306,"tutorial.chat.description":307,"tutorial.profile.title":308,"tutorial.profile.description":309,"onboarding.title":310,"onboarding.later":311,"onboarding.back":312,"onboarding.step1.title":313,"onboarding.step1.subtitle":314,"onboarding.step2.title":315,"onboarding.step2.subtitle":316,"onboarding.step2.noSports":317,"onboarding.step2.paceRange":318,"onboarding.step2.level":319,"onboarding.step2.noPace":320,"onboarding.step3.title":321,"onboarding.step3.subtitle":322,"onboarding.step3.age":323,"onboarding.step3.photo":324,"onboarding.step3.photoChange":325,"onboarding.step3.photoHint":326,"city.hint":327,"city.pickFromList":328,"onboarding.step3.city":329,"onboarding.step3.gender":330,"onboarding.step4.title":331,"onboarding.step4.visibilityHint":332,"onboarding.step4.subtitle":333,"onboarding.step4.anyone":334,"onboarding.step4.sameGenderOnly":335,"onboarding.step4.setGenderFirst":336,"onboarding.step4.ageRange":337,"onboarding.step4.unlimited":338,"common.delete":339,"common.edit":340,"plan.title":341,"plan.timeColumn":342,"plan.hourRange.title":343,"plan.hourRange.subtitle":344,"plan.hourRange.value":345,"plan.weekView":346,"plan.listView":347,"plan.addActivity":348,"plan.deleteTitle":349,"plan.deleteConfirm":350,"plan.emptyDay":351,"plan.noFixedLocation":352,"plan.oneOffLocation":353,"plan.showMatches":354,"plan.openChat":355,"plan.emptyWeek":356,"plan.goToThisWeek":357,"plan.emptyWeekShort":358,"plan.suggestions":359,"newActivity.title":360,"newActivity.editTitle":361,"newActivity.publishPublic":362,"newActivity.publishInCircle":363,"newActivity.sport":364,"newActivity.hasVenue":365,"newActivity.hasVenueYes":366,"newActivity.hasVenueNo":367,"newActivity.bikeType":368,"newActivity.level":369,"newActivity.when":370,"newActivity.everyWeek":371,"newActivity.oneOffOn":372,"newActivity.pickDate":373,"newActivity.weekdays":374,"newActivity.weekend":375,"newActivity.everyDay":376,"newActivity.today":377,"newActivity.tomorrow":378,"newActivity.alreadyThere":379,"newActivity.playersWanted":380,"newActivity.playersHint":381,"team.hint":382,"newActivity.playersOne":383,"newActivity.playersMany":384,"matches.lookingFor":385,"newActivity.addDate":386,"newActivity.multiDateHint":387,"newActivity.where":388,"newActivity.pickLocation":389,"newActivity.radius":390,"newActivity.radiusHelp":391,"newActivity.distance":392,"newActivity.save":393,"newActivity.publish":394,"newActivity.publishMultiple":395,"newActivity.added":396,"locationPicker.title":397,"locationPicker.nameThisPlace":398,"location.pinOnMap":399,"locationPicker.search":400,"locationPicker.confirm":401,"locationPicker.saveFavorite":402,"locationPicker.favoriteSaved":403,"locationPicker.favoriteSaveFailed":404,"discover.contactFailed":405,"discover.groupNameWith":406,"discover.joinFailed":407,"discover.filters.title":408,"discover.filters.showNearbyEvents":409,"discover.filters.time":410,"discover.filters.timeAny":411,"discover.filters.reset":412,"discover.filters.radius":413,"discover.filters.pickCenter":414,"discover.filters.clearCenter":415,"discover.filters.radiusKm":416,"discover.hostEvent":417,"discover.retry":418,"discover.emptyDay":419,"discover.emptyFiltered":420,"discover.adjustFilters":421,"discover.eventsNearby":422,"discover.openEvents":423,"discover.starEvents":424,"discover.allEventsView":425,"discover.dayView":426,"discover.timelineTitle":427,"discover.timelineEmpty":428,"discover.matchingPeople":429,"discover.moreInfo":430,"discover.participants":431,"discover.participantsMax":432,"discover.openChat":433,"discover.full":434,"discover.join":435,"discover.contact":436,"discover.editEventTitle":437,"discover.editEventLockedHint":438,"discover.editEventFailed":439,"discover.deleteEventTitle":440,"discover.deleteEventBody":441,"discover.deleteEventConfirm":442,"discover.deleteEventFailed":443,"month.jan":444,"month.feb":445,"month.mar":446,"month.apr":447,"month.may":448,"month.jun":449,"month.jul":450,"month.aug":451,"month.sep":452,"month.oct":453,"month.nov":454,"month.dec":455,"hostEvent.title":456,"hostEvent.createFailed":457,"hostEvent.eventTitle":458,"hostEvent.eventTitleHint":459,"hostEvent.untilOptional":460,"hostEvent.descriptionOptional":461,"hostEvent.descriptionHint":462,"hostEvent.maxParticipantsOptional":463,"hostEvent.publish":464,"matchesHub.title":465,"matchesHub.pickForNewChat":466,"matchesHub.pickForExistingChat":467,"matchesHub.createGroupChat":468,"matchesHub.chatCreateFailed":469,"matchesHub.invitesSent":470,"matchesHub.alreadyMember":471,"matchesHub.invitePending":472,"matchesHub.sportbuddyChatName":473,"matchesHub.empty":474,"matchesHub.addActivity":475,"matchesHub.startChat":476,"matchesHub.buddyCountOne":477,"matchesHub.buddyCountMany":478,"matchesHub.groupChat":479,"matchesHub.message":480,"matchesHub.groupChatAll":481,"matchesHub.moreSuggestions":482,"matchesHub.moreSuggestionsOne":483,"matchesHub.view":484,"matches.loadFailed":485,"matches.somethingWentWrong":486,"matches.title":487,"matches.flexibleLocation":488,"matches.noneFoundYet":489,"matches.swipePrompt":490,"matches.savedMany":491,"matches.savedOne":492,"matches.savedNone":493,"matches.listPrompt":494,"matches.allDoneForToday":495,"noMatches.title":496,"noMatches.pushOn":497,"noMatches.pushOff":498,"noMatches.noPush":499,"noMatches.enablePush":500,"noMatches.otherDaysTitle":501,"noMatches.peopleOnDay":502,"noMatches.peopleOnDayNear":503,"noMatches.peopleOnDayOne":504,"noMatches.peopleOnDayNearOne":505,"noMatches.addDay":506,"noMatches.dayAdded":507,"noMatches.otherTimesTitle":508,"noMatches.eventsTitle":509,"noMatches.allEvents":510,"noMatches.inviteTitle":511,"noMatches.inviteBody":512,"noMatches.inviteMore":513,"noMatches.inviteCopied":514,"noMatches.inviteMessage":515,"matches.emptyHint":516,"matches.noMoreSuggestions":517,"matches.filterSameTime":518,"matches.filterSamePace":519,"matches.noneMatchFilters":520,"matches.noneMatchFiltersHint":521,"matches.clearFilters":522,"matches.undoLast":523,"matches.like":524,"matches.nope":525,"matches.likeButton":526,"matches.viewToggleList":527,"matches.viewToggleSwipe":528,"matches.celebration.openChat":529,"matches.celebration.goToBuddies":530,"matches.celebration.keepSwiping":531,"common.done":532,"circles.tooltipPublic":533,"circles.tooltipCircle":534,"circles.leaveFailed":535,"circles.createFailed":536,"circles.joined":537,"circles.switchTitle":538,"circles.switchSubtitle":539,"circles.public":540,"circles.publicSubtitle":541,"circles.leaveCircle":542,"circles.code":543,"circles.createCircle":544,"circles.join":545,"circles.createHint":546,"circles.create":547,"circles.joinTitle":548,"circles.inviteCode":549,"circles.createdTitle":550,"circles.coachTip":551,"circles.shareCode":552,"circles.membersLoadFailed":553,"circles.memberCount":554,"circles.details":555,"circles.descriptionOptional":556,"circles.notifyAll":557,"circles.notifyAllSubtitle":558,"circles.notifyAllHint":559,"circles.notifyAllSend":560,"circles.notifyAllSent":561,"circles.notifyAllFailed":562,"circles.noDescription":563,"coachArchive.open":564,"coachArchive.title":565,"coachArchive.empty":566,"coachArchive.byPerson":567,"coachArchive.lastOn":568,"coachArchive.count":569,"coachArchive.withCoach":570,"circles.updateFailed":571,"circles.inviteTitle":572,"circles.tapToCopy":573,"circles.codeCopied":574,"circles.inviteWhatsApp":575,"circles.inviteSms":576,"circles.showQr":577,"circles.qrHint":578,"circles.inviteFailed":579,"circles.inviteMessage":580,"circles.meLabel":581,"circles.adminBadge":582,"circles.makeAdmin":583,"circles.revokeAdmin":584,"circles.removeMember":585,"circles.removeMemberTitle":586,"circles.removeMemberConfirm":587,"circles.leaveConfirm":588,"circles.deleteCircle":589,"circles.deleteCircleTitle":590,"circles.deleteConfirm":591,"circles.deleteFailed":592,"chatList.leaveTitle":593,"chatList.leaveConfirm":594,"chatList.leave":595,"chatList.deleteTitle":596,"chatList.deleteConfirm":597,"chatList.deleteDirectConfirm":598,"chatList.archivedTitle":599,"chatList.title":600,"chatList.directChat":601,"chatList.directSection":602,"chatList.groupSection":603,"chatList.showActive":604,"chatList.showArchived":605,"chatList.emptyArchived":606,"chatList.emptyActive":607,"chatList.participants":608,"chatList.archive":609,"chatList.unarchive":610,"group.checkinThanks":611,"group.checkinFailed":612,"group.meetingPoint":613,"group.openInOsm":614,"group.reportUser":615,"group.setMeetingPoint":616,"group.addMember":617,"group.addMemberSheetTitle":618,"group.sendInvites":619,"group.inviteSent":620,"group.noMoreBuddiesToInvite":621,"group.removeMember":622,"group.removeMemberTitle":623,"group.removeMemberConfirm":624,"group.invitePending":625,"group.withdrawInvite":626,"group.withdrawInviteTitle":627,"group.withdrawInviteConfirm":628,"groupCreate.title":629,"groupCreate.subtitle":630,"groupCreate.nameHint":631,"groupCreate.create":632,"groupCreate.minTwo":633,"groupInvites.sectionTitle":634,"groupInvites.cardTitle":635,"chatRequests.sectionTitle":636,"group.addToCalendar":637,"group.addToCalendarGoogle":638,"group.addToCalendarIcs":639,"group.didMeetingHappen":640,"group.checkinHint":641,"group.review.notMet":642,"group.review.start":643,"group.review.title":644,"group.review.hint":645,"group.review.showedUp":646,"group.review.detailsMatched":647,"group.review.whatDidntMatch":648,"group.review.yes":649,"group.review.no":650,"group.review.submit":651,"group.review.thanks":652,"group.review.mismatch.pace":653,"group.review.mismatch.level":654,"group.review.mismatch.distance":655,"group.review.mismatch.punctuality":656,"group.review.mismatch.meetingPoint":657,"group.review.mismatch.other":658,"group.noMessages":659,"group.gifSearch":660,"group.gifNoResults":661,"group.gifLoadFailed":662,"group.gifSendFailed":663,"group.sendGif":664,"group.previousSportTime":665,"group.nextSportTime":666,"group.otherSportTimeHint":667,"group.useAsMeetup":668,"group.byYou":669,"group.meetupConfirmedBoth":670,"group.meetupConfirmedAll":671,"group.meetupConfirmedByNames":672,"group.withdrawConfirmation":673,"group.meetupConfirmedMsgMe":674,"group.meetupConfirmedMsgOther":675,"group.meetupWithdrawnMsgMe":676,"group.meetupWithdrawnMsgOther":677,"group.setMeetupFailed":678,"group.chatGone":679,"group.sendFailed":680,"group.messagePlaceholder":681,"group.today":682,"group.yesterday":683,"report.harassment":684,"report.inappropriateBehavior":685,"report.noShow":686,"report.fakeProfile":687,"report.other":688,"report.submitFailed":689,"report.thanks":690,"report.noOtherMembers":691,"report.whoToReport":692,"report.reason":693,"report.detailsOptional":694,"report.alsoBlock":695,"report.alsoBlockSubtitle":696,"report.submit":697,"language.de":698,"language.en":699,"language.other":700,"interest.travel":701,"interest.music":702,"interest.cooking":703,"interest.reading":704,"interest.photography":705,"interest.moviesSeries":706,"interest.artCulture":707,"interest.gaming":708,"interest.natureOutdoors":709,"interest.yogaMeditation":710,"interest.nutrition":711,"interest.animals":712,"interest.cafeBrunch":713,"interest.festivalsConcerts":714,"interest.sustainability":715,"profile.avatarUploadFailed":716,"profile.title":717,"profile.signOut":718,"profile.ageYears":719,"profile.editProfile":720,"profile.verifyTitle":721,"profile.verifyBody":722,"profile.okay":723,"profile.verifyProfile":724,"profile.sportsAndLevel":725,"profile.add":726,"profile.noSports":727,"profile.interestsAndLanguages":728,"profile.myPrompts":729,"profile.reliability":730,"profile.noReviewsYet":731,"profile.attendanceScore":732,"profile.accuracyScore":733,"profile.outOf":734,"profile.mismatchesTitle":735,"profile.mismatchesOnlyYou":736,"profile.activeLast7Days":737,"profile.activeLast7DaysHint":738,"publicProfile.chatWith":739,"publicProfile.title":740,"publicProfile.sportsAndLevel":741,"publicProfile.sendMessage":742,"publicProfile.block":743,"publicProfile.blockTitle":744,"publicProfile.blockBody":745,"publicProfile.blockConfirm":746,"publicProfile.blocked":747,"publicProfile.blockFailed":748,"blockedUsers.title":749,"blockedUsers.empty":750,"blockedUsers.unblock":751,"blockedUsers.unblockFailed":752,"prompt.favoriteSpot":753,"prompt.youllFindMe":754,"prompt.afterSport":755,"prompt.craziestExperience":756,"prompt.trainingFocus":757,"prompt.wantToTry":758,"prompt.motivationTrick":759,"prompt.perfectSportDate":760,"editProfile.aboutMe":761,"editProfile.aboutMeHint":762,"editProfile.setGenderFirst":763,"editProfile.languages":764,"editProfile.interestsMax":765,"editProfile.promptsMax":766,"editProfile.promptsHint":767,"editSport.title":768,"venue.hasVenue":769,"venue.needsVenue":770,"verifiedBadge.tooltip":771,"pacePicker.minutes":772,"pacePicker.seconds":773,"newActivity.runType":774,"runType.normal":775,"runType.longRun":776,"runType.speedRun":777,"newActivity.fitnessType":778,"fitnessType.krafttraining":779,"fitnessType.yoga":780,"fitnessType.pilates":781,"fitnessType.hiit":782,"fitnessType.functional":783,"fitnessType.bootcamp":784,"fitnessType.mobility":785,"newActivity.hasDog":786,"newActivity.hasDogYes":787,"newActivity.hasDogNo":788,"newActivity.childInfo":789,"newActivity.childAge":790,"newActivity.childAgeYears":791,"safety.childMeetupNotice":792,"settings.legal":793,"settings.faq":794,"settings.faqSubtitle":795,"settings.privacyPolicy":796,"settings.privacyPolicySubtitle":797,"settings.imprint":798,"settings.imprintSubtitle":799,"feedback.title":800,"feedback.subtitle":801,"feedback.category.idea":802,"feedback.category.bug":803,"feedback.category.praise":804,"feedback.category.other":805,"feedback.category.test":806,"feedback.hint":807,"feedback.send":808,"feedback.thanks":809,"feedback.failed":810,"admin.admins":811,"admin.adminsHint":812,"admin.addButton":813,"admin.addTitle":814,"admin.addConfirm":815,"admin.add":816,"admin.removeTitle":817,"admin.removeConfirm":818,"admin.remove":819,"admin.lastAdmin":820,"admin.changeFailed":821,"admin.searchHint":822,"admin.you":823,"admin.title":824,"admin.subtitle":825,"admin.console":826,"admin.consoleSubtitle":827,"admin.refresh":828,"admin.export":829,"admin.exportUnavailable":830,"admin.reports":831,"admin.feedback":832,"admin.accounts":833,"admin.loadFailed":834,"admin.reportTitle":835,"admin.reportCount":836,"admin.suspended":837,"admin.chatKept":838,"admin.deletedAccount":839,"admin.deleted":840,"admin.paused":841,"admin.noReason":842,"admin.empty":843,"admin.done":844,"admin.new":845,"settings.feedback":846,"settings.feedbackSubtitle":847,"settings.contact":848,"settings.contactSubtitle":849,"settings.mailFailed":850,"settings.account":851,"settings.pauseAccount":852,"settings.pauseAccountSubtitle":853,"settings.deleteAccount":854,"settings.deleteAccountSubtitle":855,"settings.pauseAccountTitle":856,"settings.pauseAccountBody":857,"settings.pauseAccountConfirm":858,"settings.pauseAccountDoneTitle":859,"settings.pauseAccountDoneBody":860,"settings.deleteAccountTitle":861,"settings.deleteAccountBody":862,"settings.deleteAccountConfirm":863,"settings.deleteAccountDoneTitle":864,"settings.deleteAccountDoneBody":865,"settings.accountReasonLabel":866,"settings.accountReasonHint":867,"settings.accountActionFailed":868,"settings.pauseReason1":869,"settings.pauseReason2":870,"settings.pauseReason3":871,"settings.deleteReason1":872,"settings.deleteReason2":873,"settings.deleteReason3":874,"settings.reasonOther":875,"settings.reasonOtherHint":876,"faq.title":877,"faq.q1":878,"faq.a1":879,"faq.q2":880,"faq.a2":881,"faq.q3":882,"faq.a3":883,"faq.q4":884,"faq.a4":885,"faq.q5":886,"faq.a5":887,"faq.q6":888,"faq.a6":889,"faq.q7":890,"faq.a7":891,"faq.q8":892,"faq.a8":893,"privacy.title":894,"imprint.title":895,"newActivity.visibility":896,"newActivity.moreDetails":897,"newActivity.firstTitle":898,"newActivity.firstBody":899,"newActivity.moreDetailsHint":900,"newActivity.visibilityOpen":901,"newActivity.visibilityRequest":902,"newActivity.visibilityHidden":903,"newActivity.visibilityChange":904,"whatsNew.title":905,"whatsNew.close":906,"whatsNew.skipFirstTime.title":907,"whatsNew.skipFirstTime.body":908,"whatsNew.realFirstMessage.title":909,"whatsNew.realFirstMessage.body":910,"whatsNew.coachArchive.title":911,"whatsNew.coachArchive.body":912,"whatsNew.circleQr.title":913,"whatsNew.circleQr.body":914,"whatsNew.declineHighFive.title":915,"whatsNew.declineHighFive.body":916,"whatsNew.chatRequests.title":917,"whatsNew.chatRequests.body":918,"whatsNew.groupChats.title":919,"whatsNew.groupChats.body":920,"whatsNew.meetupCheckmark.title":921,"whatsNew.meetupCheckmark.body":922,"whatsNew.reviewReminder.title":923,"whatsNew.reviewReminder.body":924,"whatsNew.meetupWhoConfirmed.title":925,"whatsNew.meetupWhoConfirmed.body":926,"discover.sendRequest":927,"discover.requestSent":928,"discover.requestFailed":929,"discover.firstMessageTitle":930,"discover.firstMessageHint":931,"discover.firstMessagePlaceholder":932,"chatRequests.title":933,"chatRequests.empty":934,"chatRequests.bannerOne":935,"chatRequests.bannerMany":936,"chatRequests.accept":937,"chatRequests.decline":938,"chatRequests.respondFailed":939,"chatList.chatRequests":940}
-B.ajt=new A.az(B.alC,["Do sport together, whenever the timing works.","How does it work?","Watch the video \xb7 46 sec","Watch the video for coaches","Email","Enter a valid email","Password","At least 6 characters","Stay signed in","Forgot password?","Sign in failed: {error}","Sign in","No account yet? Register now","Welcome back! Your account has been reactivated.","Back to login","Already have an account? Log in","Create account","Name","Enter a name","Language","Registration failed: {error}","Register","Forgot password?","If an account exists for this email, we've sent a link to reset the password. Check your spam folder too.","Enter your email address. We'll send you a link to set a new password.","Couldn't be sent: {error}","Send link","Cancel","Save","Close","and","That took too long - please try again.","New password","Please set a new password.","New password","Confirm password","Passwords don't match","Change failed: {error}","Password changed.","Change password","Checking the link \u2026",'This link has expired or was already used. Just request a new one: on the sign-in page under "Forgot password?".',"Request a new link","Settings","Help","How SAMEPACE works","Watch a short tutorial","New in SAMEPACE","See every highlight again","Privacy & Safety","Blocked users","Manage who you've blocked","Permanently hide people you decline","Declining a High Five or swiping someone away then blocks them mutually, like the Block feature. Off by default - otherwise declined people can resurface later.","Who can find your sport times?",'Add your gender under "Edit profile" to restrict this.',"Applies to all your sport times. You can still set single ones differently when editing them.","Everyone in Discover","Everyone sees your times in Discover and can give you a high five.","Discover with chat request","Visible in Discover - whoever writes sends an opening message right away. You decide whether it goes further.","Only people who match","Not in Discover. Only people with the same sport at the same time can see you.","Now applies to all your sport times.","Couldn't save. Please try again later.","Chats","Automatically archive chats with no new message for 7 days.","Auto-archive","Notifications","Get a browser notification for new messages and buddies while SAMEPACE is open in a tab.","Your browser doesn't support notifications.","Push notifications","Get a notification on your phone for new chat messages, buddies and chat requests - even when SAMEPACE is closed.","Push is on \ud83d\udd14","Notifications are blocked. You can allow them in your browser or phone settings.","Couldn't turn on push right now. Please try again later.","Your browser doesn't support push notifications. On iPhone it needs iOS 16.4 or newer.","On iPhone, push works once SAMEPACE is on your home screen.","Push on iPhone",'1. In Safari, tap "Share" at the bottom (square with an arrow).\n2. Choose "Add to Home Screen".\n3. Open SAMEPACE from the new icon.\n4. Turn on push notifications under Settings.\n\nWorks from iOS 16.4.',"How it works on iPhone","Never miss a message","Turn on push and SAMEPACE lets you know on your phone when someone writes to you.","Turn on","Quiet hours","Add quiet hours","Remove quiet hours","No push notifications during this time - e.g. at night or on a night shift.","More","Reply","Replying to {name}","Message no longer available","You","Copy","Message copied.","Remove reaction","Couldn't react right now - please try again.","\ud83d\ude4c for you","Already gave you a high five - give one back and you're buddies.","{name} gave you a high five","{count} people gave you a high five","Give one back - and you're buddies.","High fives for you","One high five back and you're buddies right away. Tap someone to see their profile.","High five back","Decline","No open high fives left.","Waiting for one answer","Waiting for {count} answers","{name} high-fived you back in the meantime - you're buddies now.","Your high fives without an answer - undo them here.","Waiting for an answer","You gave these people a high five, they haven't given you one (yet). They're no longer suggested to you. Undo a high five and they show up as a suggestion again.","No open high fives left.","Undo","You're buddies! \ud83c\udf89","You and {name} are buddies now.","High five","High five sent","High five sent - waiting for an answer","High five sent! If {name} gives you one back, you're buddies and can chat.","High five didn't work: {error}","Strava profile (optional)","Others see a button to your Strava - so your pace is easy to check.","That isn't a Strava link. Copy it in Strava: Profile \u2192 Share.","View Strava profile","Training times","{free} open","Add times","No times right now. Check back later.","No times yet. Add your free training times and your people can book them here.","Book","Cancel","Book this time?","{when} with {coach}. {coach} gets a message in the chat.","Booked! {coach} knows, and it's in your plan.","Cancel this time?","{when} with {coach}. The place opens up again and {coach} gets a message.","Cancel it","Cancelled. The place is free again.","Delete time","Really delete this time?","Booked by {names}. They get a message that it's off.","Open","Nobody has booked yet","{n} places open","\u2713 Booked by you","Fully booked","Booked by {names}","with {coach}","with {names}","Add training times","Your free times show up for everyone in this circle. Whoever books takes a place, and you get a message.","For everyone in {circle}: add your open times, your people book right away.","No times on this day yet.","Sport","On which days?","Times and length","Another time","{n} min","How far ahead?","1 week","{n} weeks","Places per time","Personal training (1 person)","Small group","Place (optional)","Pick a place on the map","Note (optional)","e.g. meet at the entrance, bring a mat","Pick at least one day.","1 time will be added.","{n} times will be added.","Add times","{n} times added.","Training times","See all","\u2705 I booked {when}.","\u274c Sorry, I have to cancel {when}.","\u274c Sorry, {when} is off.","Someone was quicker: this time is already fully booked.","This time has already started.","Training times work once database update 0063 is in.","That didn't work: {error}","Your buddies","See all","Tap someone to message them.","Chat with {name}","Buddies since {date}","Chat","Search buddies","Nobody found.","More","View profile","New group","Create new group","Unmatch","Unmatch {name}?","You'll no longer be buddies and your private chat disappears on your side. {name} won't be notified. You may be suggested to each other again later.","Also block","You won't see each other anywhere in the app.","Unmatch","Unmatched {name}.","Unmatched and blocked {name}.","That didn't work: {error}","This works once database update 0062 has been applied.","Your week","Next: {what}","Expand","Collapse","Your sport times","{count} new suggestions","1 new suggestion","with {names}","Meetup from the chat","Confirmed meetup","Mute this chat","This chat is muted - no push notifications.","Unmute","Unmute this chat","Chat muted - no more push notifications.","Push notifications for this chat are back on.","Browser notifications","Permission not granted. You can change it in your browser settings.","Design","Choose the look that suits you best.","Language","Which language should SAMEPACE be shown in?","What do you want to do this week?","What do you feel like doing today?","Plan","Spontaneous today","Tutorial","Customize home screen","Customize home screen","Drag to reorder, tick to show or hide.","Save","Save failed: {error}","Saved.","Discover","Plan","Add","Buddies","Chat","Profile","Home","Settings","Your sports","All sports","Choose a sport","Running","Cycling","Swimming","Hiking","Tennis","Padel","Pregnancy / postnatal fitness","Dog walking","Kids playdate","Bouldering","Badminton","Table tennis","Beach volleyball","Fitness","Other","Road bike","Mountain bike","Gravel bike","Trekking bike","E-bike","Mon","Tue","Wed","Thu","Fri","Sat","Sun","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","Beginner","Intermediate","Advanced","female","male","non-binary","Next","from","to","Couldn't be saved: {error}","Skip","Let's go","Don't show again","Step {current}/{total}","Welcome to SAMEPACE","Find people who train at the same pace and time as you.","My Sport Plan","Add your sport times - every week or just once. With your pace or level.","Buddies","If someone matches your time and pace, we suggest you to each other. Give each other a high five \ud83d\ude4c and you're buddies.","Discover","Discover sport times and events near you - filterable by sport, date and time.","Chat","Chat with the group and set your meeting point on the map.","Profile","Show your sports, your level and your interests - so others can see if you're a match.","Let's go","Later","Back","Which sports do you do?","Pick what we should be looking out for on your behalf. You can add more any time later.","How fit are you?","Helps us bring you together with people at a similar level.","You haven't picked a sport yet - you can add one any time in your profile.","Your {sport} pace ({unit})","Level","For {sport} only the level matters - no pace needed.","A few basics","All optional - but helps others get a better sense of you.","Age","Add a profile photo","Change photo","With a photo, people know right away who they're meeting.","Search a city, e.g. Vienna","Please pick your city from the list.","City","Gender","Who should be suggested to you?","You can change this any time in the settings.","You can always adjust this later in your profile.","Anyone","Only my gender","Set your gender on the previous page to restrict this.","Age range: {min} - {max} years{unlimited}"," (unlimited)","Delete","Edit","My sports plan","Time","Visible time range","Which part of the day should the calendar show?","{start} - {end}","Week calendar view","List view","Add sport time","Delete sport time?","Really delete {sport} on {day}, {time}?","No sport time on this day yet.\nTap below to add one.","No fixed location","One-off, {date}  \xb7  {location}","Show matching people","Open chat","No sport times added yet.\nTap below to add one.","Go to this week","No sport times this week.","Suggestions","New sport time","Edit sport time","Will be published: Public","Will be published in: {circle}","Sport","Do you already have a venue?","Already have a venue","Still looking for a venue","Bike type","Level","When?","Every week","One-off on...","Pick a date","Weekdays","Weekend","Every day","Today","Tomorrow","You already have this sport time - here are your people.","How many people are you still missing?","Already have someone? Only count who's still missing - e.g. 2 for doubles if you're already two.","You're looking for {count} people. Once you've high-fived each other, start a group chat with everyone in the Buddys tab.","1 person","{count} people","looking for {count}","+ Add another date","You can pick several days - e.g. your days off this week.","Where?","Pick a location on the map","How far would you travel?","From the meeting point. You match when both of your circles touch.","Distance (km)","Save","Publish","Publish ({count} days)","{count} sport times added.","Pick a location","Name this meeting point (e.g. Hohe Wand car park)","Pin on the map","Search for a place, e.g. Central Park","Use this location","Save as favorite","Saved as favorite.","Failed: {error}","Contact failed: {error}","{sport} with {name}","Couldn't join: {error}","Filters","Show events nearby","Time: {start} - {end}{any}"," (any)","Reset filters","Within range only","Set location","Remove range filter","{km} km","Host event","Try again","No one has added a sport time on this day yet.","Nothing matches your filters.","Adjust filters","Events nearby","Open events","Community events","All events","Day view","Events","No events found in the next few months.","Matching people","More info","{count} joined","{count}/{max} joined","Open chat","Full","Join","Contact","Edit event","Sport, date/time and location can't be changed after publishing.","Edit failed: {error}","Delete event?","The event will be removed from Discover. The group chat stays intact in case you've already been in touch.","Delete","Delete failed: {error}","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Host event","Couldn't be created: {error}","Title","e.g. Sunday morning run by the river","Until (optional)","Description (optional)","Who's this for, what to bring...","Max. participants (optional)","Publish event","Buddies","Pick who to invite to the group chat.","Pick who to invite to the existing chat.","Create group chat","Chat couldn't be created: {error}","Invite sent - you'll be chatting together once it's accepted.","Already in","Invite pending","Buddy: {name}","No matching people for your sport times yet. Add more times or check back later.","Add sport time","Start chat","1 buddy","{count} buddies","Group chat","Message","Group chat with everyone","{count} more suggestions","1 more suggestion","View","Couldn't load buddies.","Something went wrong: {error}","Matching people","Flexible location","No matching people found yet.","Swipe through who matches you.","Saved! {count} people already fit your sport time \ud83c\udf89","Saved! 1 person already fits your sport time \ud83c\udf89","Saved! Your sport time is in.","Everyone who still matches you.","That was everyone for today.","Nobody at the same time yet","As soon as someone who fits joins, you'll get a push notification.","Turn on push and we'll let you know as soon as someone fits.","New people join all the time - check back soon.","Turn on push","Almost: on other days","{day}: {count} people","{day}: {count} near you","{day}: 1 person","{day}: 1 person near you","+ {day}","{day} added - here are your people.","Almost: {day} at another time","Events & meetups in your city","All in Discover","Know someone who'd join?","The more people join, the faster you find buddies.","Signal & more","Invite copied - paste it into Signal or any other app.","Hey! I'm looking for people for {sport} on {day} on SAMEPACE. Want to join? {url}","As soon as someone adds a similar sport time, they'll show up here.","No more suggestions - check back later.","Same time","Same pace","No one matches these filters.","No one matches these filters right now. Try fewer filters.","Clear filters","Undo last swipe","HIGH FIVE","SKIP","High five","Show as list","Switch to swiping","Open chat","Go to your buddies","Keep swiping","Done","Context: Public (tap to switch)","Context: {circle} (tap to switch)","Couldn't leave: {error}","Circle couldn't be created: {error}",'Joined circle "{circle}".',"Switch context","Your plan, Discover and Buddies will then only show this space.","Public","Visible to everyone, as before","Leave circle","Code: {code}","Create circle","Join","e.g. Vienna Run Club","Create","Join circle","Invite code",'"{circle}" created',"Are you a coach? Tap + below to add training times your people can book here.","Share this code so others can join:","Couldn't load members: {error}","{count} members","Details & management","Description (optional)","Message everyone","A push notification to every other member of this circle, even while SAMEPACE is closed.","e.g. Training is cancelled today","Send","Message sent.","Didn't work: {error}","No description yet.","Training archive","Training archive","No past training times yet.","By person","Last on {date}","{count}x","with {name}","Update failed: {error}","Invite","Tap to copy","Code copied.","WhatsApp","SMS","Show QR code","Scan to join right away - no code to type.","Couldn't open invite.",'Join my SAMEPACE circle "{circle}"! Open the app, tap the context button and enter this code under "Join": {code}',"{name} (You)","Admin","Make admin","Revoke admin","Remove from circle","Remove member","Really remove {name} from the circle?",'You\'re leaving the circle "{circle}". You can rejoin later with the invite code.',"Delete circle","Delete circle?",'The circle "{circle}" will be permanently deleted for everyone. Activities scoped only to it will be deleted too. This can\'t be undone.',"Delete failed: {error}","Leave chat?",'You\'re leaving the chat "{name}".',"Leave","Delete chat?",'The chat "{name}" will be permanently deleted for all members.',"The chat with {name} will be deleted for both of you, including all messages.","Archived chats","Chats","Private chat","Private chats","Groups & events","Show active chats","Show archived chats","No archived chats.","No chats yet. Message someone from Discover or your buddies.","{count} members","Archive","Unarchive","Thanks for letting us know.","Check-in failed: {error}","Meeting point","Open in OpenStreetMap","Report user","Set a meeting point on the map","Add member","Invite a buddy","Send invite","Invite sent.","You've already invited all your buddies, or they're already in.","Remove","Remove member?","{name} will be removed from the group and won't be able to read it anymore.","{name}: invite pending - tap to withdraw","Withdraw","Withdraw invite?","The invite to {name} will be withdrawn.","New group","Pick who to invite.","Group name (optional)","Create group","Pick at least 2 buddies - one person already has a direct chat.","Group invites",'{name} invited you to the group "{group}"',"Chat requests","Add to calendar","Google Calendar","Other calendar app (.ics)","Did the meetup happen?","Quickly rate the others - anonymous, it only counts toward the reliability score.","Didn't meet","Yes, rate","How was the meetup?","Anonymous - nobody sees how you rated. It only counts toward the reliability score.","Showed up?","Did their details match?","What didn't match?","Yes","No","Submit","Thanks! Your rating is anonymous.","Pace","Level","Distance","Punctuality","Meeting point","Other","No messages yet. Say hi!","Search GIFs","No GIFs found.","Couldn't load GIFs right now.","Couldn't send GIF: {error}","Send GIF","Previous shared sport time","Next shared sport time","Another sport time you both have","Make this our meetup","you","Confirmed by both of you","Confirmed by everyone","Confirmed by {names}","Withdraw confirmation","You confirmed the meetup.","{name} confirmed the meetup.","You withdrew your confirmation.","{name} withdrew their confirmation.","Couldn't set the meetup: {error}","This chat no longer exists.","Couldn't send your message. Please try again.","Write a message...","Today","Yesterday","Harassment","Inappropriate behavior","No-show","Fake profile","Other","Report failed: {error}","Thanks, your report has been submitted. We'll take a look.","No other members in this group.","Who do you want to report?","Reason","Details (optional)","Also block this person","No more contact/matching. They won't be notified.","Report","German","English","Other","Travel","Music","Cooking & Baking","Reading","Photography","Movies & TV","Art & Culture","Gaming","Nature & Outdoors","Yoga & Meditation","Nutrition","Animals","Caf\xe9 & Brunch","Festivals & Concerts","Sustainability","Photo couldn't be uploaded: {error}","My Profile","Sign out","{age} years","Edit profile","Verify profile","Verification is coming soon. It lets you show others your profile is genuine.","Okay","Verify profile","My sports & level","Add","No sport added yet.","Interests & languages","My prompts","Reliability","No reviews after meetups yet.","Shows up to meetups","Details match","{count} of {total}","What didn't match","Only visible to you - anonymous, from all reviews.","Sport in the last 7 days","A check for every day with a meetup you confirmed in the chat.","Chat with {name}","Profile","Sports & level","Send message","Block","Block this user?","{name} won't be able to contact you and won't show up as a match/suggestion anymore. {name} won't be notified.","Block","User blocked.","Blocking failed: {error}","Blocked users","You haven't blocked anyone yet.","Unblock","Unblocking failed: {error}","My favorite place to train is...","You'll definitely find me...","After sport I absolutely need...","My craziest sport experience...","What I care about most while training...","Something I'd love to try...","My trick for when I don't feel like it...","A perfect sport date for me...","About me","Tell us briefly who you are and what you're up for...","Set your gender above to restrict this.","Languages","Interests (max. {max})","Prompts (max. {max})","Pick a few questions and answer them briefly - shows more of you than just numbers.","Sport & level","Has venue","Needs venue","Verified profile","{m} min","{s} sec","Run type","Normal Run","Long Run","Speed Run","Which workout?","Strength training","Yoga","Pilates","HIIT","Functional training","Outdoor bootcamp","Stretching & mobility","Bringing a dog?","Have a dog","No dog","Your child","Age","{age} years old","Safety note: Only meet at public, busy places like playgrounds or parks - never in private or secluded ones.","Legal & support","FAQ","Answers to the most common questions","Privacy policy","How we handle your data","Imprint","Legal notice","Send feedback","What do you like, what's missing, what's broken? Every message gets read.","Idea","Bug","Praise","Other","Test protocol","Your message \u2026","Send","Thanks for your feedback! \ud83d\udc9a","Couldn't send feedback: {error}","Admins","Admins see this view with all reports and feedback. Only appoint people you trust.","Add admin","Add admin","{name} will then see all reports, feedback and account reasons and can appoint admins too. Continue?","Appoint","Remove admin?","{name} will no longer be an admin.","Remove","There always has to be at least one admin.","Couldn't change: {error}","Search by name \u2026","{name} (you)","Reports & feedback","Only visible to you \xb7 exportable to Excel","Admin console","Users, chats, events, settings - best on a laptop: samepace.github.io/#/admin","Refresh","Download as Excel (CSV)","Downloading only works in the web app.","Reports","Feedback","Paused/deleted","Couldn't load: {error}","{reporter} reports {reported}","reported {count}\xd7 in total","automatically suspended","chat kept","Deleted account","Account deleted","Account paused","No reason given","Nothing here yet.","Done","New","Send feedback","Tell us what we could do better","Contact","Question or issue? Get in touch","Could not open your email app.","Account","Pause account","Make yourself invisible for a while","Delete account","Permanent and irreversible","Pause your account?","Your profile becomes invisible to others and stops showing up in matches or Discover. Just log back in any time to reactivate it.","Pause","Account paused","Your account is now paused. Log back in any time to reactivate it.","Delete your account for good?","Your profile, activities, matches and chats will be permanently deleted. This cannot be undone.","Delete","Account deleted","Your account and all its data have been deleted. Sorry to see you go!","Reason (optional)","Mind telling us why?","That didn't work: {error}","I'm taking a break from sports right now","I already found a regular training group","I'd rather not be found for a while","I didn't find what I was looking for","Privacy or safety concerns","I'm using a different app","Other","Mind telling us why?","FAQ","Is SAMEPACE a dating app?","No. SAMEPACE only matches you with others by training time, pace and sport - it's about training partners, not dating.","How does matching work?","You enter your planned training times. SAMEPACE shows you people with an overlapping time window and similar pace for the same sport. If you give each other a high five, you're buddies and can chat.","How safe is meeting up with a stranger?","You can block or report any profile at any time. After several reports, an account is automatically suspended. Still: meet in a public place the first time and don't share sensitive personal details.","What is the reliability score?","After a meetup, participants rate each other anonymously: did the person show up, and did their details (pace, level, ...) match? This gives two scores everyone can see: how often someone shows up and how often their details match. What exactly didn't match is only visible to you, on your own profile.","What are Circles?","Circles are private training groups, e.g. for friends or a fixed running group - separate from open matching.","Why do I only see other people's first name?","For privacy and safety, other users only ever see your first name. Your full name is only visible to you, in your own profile.","How do I delete my account?","Email us via the Contact button in Settings - we'll delete your account and all associated data.","Is SAMEPACE free?","Yes, the app is currently completely free to use.","Privacy policy","Imprint","Visibility in Discover","More details (optional)","Now your first sport time \ud83d\ude4c","When would you have time? We'll show you right away who can make it too - and tell you when someone new joins.","Pace, level, radius, visibility - already prefilled from your profile","Visible in Discover","Visible, chat only after request","Only people who match (not in Discover)","Change","New in SAMEPACE","Got it","First sport time is now skippable",'You no longer have to set up a sport time right after registering - "Later" at the top right skips it.',"Chat requests send a real message","A chat request now writes an actual first message instead of just pinging.","Training archive","Past training sessions with a per-person, per-month report - on the Plan screen and in the Kreis.","QR code for your Kreis","Coaches can now show a QR code that takes someone straight into their Kreis - no invite code to type.","Decline a High Five","You no longer have to just ignore a High Five - one tap declines it visibly.","Chat requests, front and centre","New requests now show a banner and a badge in the nav bar, and you can withdraw a request you sent.","Group chats with several people","Invite several buddies into one chat at once, start an open group, and remove a member again if you created the chat.","A checkmark for confirmed meetups","Your week now shows a checkmark on meetups that were actually confirmed - not just suggested.","A reminder to leave a review","About an hour after a confirmed meetup, a pop-up asks how it went - instead of you having to find it in the chat.","Who confirmed the meetup?","The chat now shows who has already confirmed - by you, by both of you, or by everyone in the group.","Send request","Request sent","Request failed: {error}","Message to {name}","Sent as a request - your chat starts once they accept it.","Your message...","Requests","No open requests.","\ud83d\udce9 1 new request","\ud83d\udce9 {count} new requests","Accept","Decline","That didn't work: {error}","Requests"],t.w)
+B.ajt=new A.az(B.alC,["Do sport together, whenever the timing works.","How does it work?","Watch the video \xb7 50 sec","Watch the video for coaches","Email","Enter a valid email","Password","At least 6 characters","Stay signed in","Forgot password?","Sign in failed: {error}","Sign in","No account yet? Register now","Welcome back! Your account has been reactivated.","Back to login","Already have an account? Log in","Create account","Name","Enter a name","Language","Registration failed: {error}","Register","Forgot password?","If an account exists for this email, we've sent a link to reset the password. Check your spam folder too.","Enter your email address. We'll send you a link to set a new password.","Couldn't be sent: {error}","Send link","Cancel","Save","Close","and","That took too long - please try again.","New password","Please set a new password.","New password","Confirm password","Passwords don't match","Change failed: {error}","Password changed.","Change password","Checking the link \u2026",'This link has expired or was already used. Just request a new one: on the sign-in page under "Forgot password?".',"Request a new link","Settings","Help","How SAMEPACE works","Watch a short tutorial","New in SAMEPACE","See every highlight again","Privacy & Safety","Blocked users","Manage who you've blocked","Permanently hide people you decline","Declining a High Five or swiping someone away then blocks them mutually, like the Block feature. Off by default - otherwise declined people can resurface later.","Who can find your sport times?",'Add your gender under "Edit profile" to restrict this.',"Applies to all your sport times. You can still set single ones differently when editing them.","Everyone in Discover","Everyone sees your times in Discover and can give you a high five.","Discover with chat request","Visible in Discover - whoever writes sends an opening message right away. You decide whether it goes further.","Only people who match","Not in Discover. Only people with the same sport at the same time can see you.","Now applies to all your sport times.","Couldn't save. Please try again later.","Chats","Automatically archive chats with no new message for 7 days.","Auto-archive","Notifications","Get a browser notification for new messages and buddies while SAMEPACE is open in a tab.","Your browser doesn't support notifications.","Push notifications","Get a notification on your phone for new chat messages, buddies and chat requests - even when SAMEPACE is closed.","Push is on \ud83d\udd14","Notifications are blocked. You can allow them in your browser or phone settings.","Couldn't turn on push right now. Please try again later.","Your browser doesn't support push notifications. On iPhone it needs iOS 16.4 or newer.","On iPhone, push works once SAMEPACE is on your home screen.","Push on iPhone",'1. In Safari, tap "Share" at the bottom (square with an arrow).\n2. Choose "Add to Home Screen".\n3. Open SAMEPACE from the new icon.\n4. Turn on push notifications under Settings.\n\nWorks from iOS 16.4.',"How it works on iPhone","Never miss a message","Turn on push and SAMEPACE lets you know on your phone when someone writes to you.","Turn on","Quiet hours","Add quiet hours","Remove quiet hours","No push notifications during this time - e.g. at night or on a night shift.","More","Reply","Replying to {name}","Message no longer available","You","Copy","Message copied.","Remove reaction","Couldn't react right now - please try again.","\ud83d\ude4c for you","Already gave you a high five - give one back and you're buddies.","{name} gave you a high five","{count} people gave you a high five","Give one back - and you're buddies.","High fives for you","One high five back and you're buddies right away. Tap someone to see their profile.","High five back","Decline","No open high fives left.","Waiting for one answer","Waiting for {count} answers","{name} high-fived you back in the meantime - you're buddies now.","Your high fives without an answer - undo them here.","Waiting for an answer","You gave these people a high five, they haven't given you one (yet). They're no longer suggested to you. Undo a high five and they show up as a suggestion again.","No open high fives left.","Undo","You're buddies! \ud83c\udf89","You and {name} are buddies now.","High five","High five sent","High five sent - waiting for an answer","High five sent! If {name} gives you one back, you're buddies and can chat.","High five didn't work: {error}","Strava profile (optional)","Others see a button to your Strava - so your pace is easy to check.","That isn't a Strava link. Copy it in Strava: Profile \u2192 Share.","View Strava profile","Training times","{free} open","Add times","No times right now. Check back later.","No times yet. Add your free training times and your people can book them here.","Book","Cancel","Book this time?","{when} with {coach}. {coach} gets a message in the chat.","Booked! {coach} knows, and it's in your plan.","Cancel this time?","{when} with {coach}. The place opens up again and {coach} gets a message.","Cancel it","Cancelled. The place is free again.","Delete time","Really delete this time?","Booked by {names}. They get a message that it's off.","Open","Nobody has booked yet","{n} places open","\u2713 Booked by you","Fully booked","Booked by {names}","with {coach}","with {names}","Add training times","Your free times show up for everyone in this circle. Whoever books takes a place, and you get a message.","For everyone in {circle}: add your open times, your people book right away.","No times on this day yet.","Sport","On which days?","Times and length","Another time","{n} min","How far ahead?","1 week","{n} weeks","Places per time","Personal training (1 person)","Small group","Place (optional)","Pick a place on the map","Note (optional)","e.g. meet at the entrance, bring a mat","Pick at least one day.","1 time will be added.","{n} times will be added.","Add times","{n} times added.","Training times","See all","\u2705 I booked {when}.","\u274c Sorry, I have to cancel {when}.","\u274c Sorry, {when} is off.","Someone was quicker: this time is already fully booked.","This time has already started.","Training times work once database update 0063 is in.","That didn't work: {error}","Your buddies","See all","Tap someone to message them.","Chat with {name}","Buddies since {date}","Chat","Search buddies","Nobody found.","More","View profile","New group","Create new group","Unmatch","Unmatch {name}?","You'll no longer be buddies and your private chat disappears on your side. {name} won't be notified. You may be suggested to each other again later.","Also block","You won't see each other anywhere in the app.","Unmatch","Unmatched {name}.","Unmatched and blocked {name}.","That didn't work: {error}","This works once database update 0062 has been applied.","Your week","Next: {what}","Expand","Collapse","Your sport times","{count} new suggestions","1 new suggestion","with {names}","Meetup from the chat","Confirmed meetup","Mute this chat","This chat is muted - no push notifications.","Unmute","Unmute this chat","Chat muted - no more push notifications.","Push notifications for this chat are back on.","Browser notifications","Permission not granted. You can change it in your browser settings.","Design","Choose the look that suits you best.","Language","Which language should SAMEPACE be shown in?","What do you want to do this week?","What do you feel like doing today?","Plan","Spontaneous today","Tutorial","Customize home screen","Customize home screen","Drag to reorder, tick to show or hide.","Save","Save failed: {error}","Saved.","Discover","Plan","Add","Buddies","Chat","Profile","Home","Settings","Your sports","All sports","Choose a sport","Running","Cycling","Swimming","Hiking","Tennis","Padel","Pregnancy / postnatal fitness","Dog walking","Kids playdate","Bouldering","Badminton","Table tennis","Beach volleyball","Fitness","Other","Road bike","Mountain bike","Gravel bike","Trekking bike","E-bike","Mon","Tue","Wed","Thu","Fri","Sat","Sun","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","Beginner","Intermediate","Advanced","female","male","non-binary","Next","from","to","Couldn't be saved: {error}","Skip","Let's go","Don't show again","Step {current}/{total}","Welcome to SAMEPACE","Find people who train at the same pace and time as you.","My Sport Plan","Add your sport times - every week or just once. With your pace or level.","Buddies","If someone matches your time and pace, we suggest you to each other. Give each other a high five \ud83d\ude4c and you're buddies.","Discover","Discover sport times and events near you - filterable by sport, date and time.","Chat","Chat with the group and set your meeting point on the map.","Profile","Show your sports, your level and your interests - so others can see if you're a match.","Let's go","Later","Back","Which sports do you do?","Pick what we should be looking out for on your behalf. You can add more any time later.","How fit are you?","Helps us bring you together with people at a similar level.","You haven't picked a sport yet - you can add one any time in your profile.","Your {sport} pace ({unit})","Level","For {sport} only the level matters - no pace needed.","A few basics","All optional - but helps others get a better sense of you.","Age","Add a profile photo","Change photo","With a photo, people know right away who they're meeting.","Search a city, e.g. Vienna","Please pick your city from the list.","City","Gender","Who should be suggested to you?","You can change this any time in the settings.","You can always adjust this later in your profile.","Anyone","Only my gender","Set your gender on the previous page to restrict this.","Age range: {min} - {max} years{unlimited}"," (unlimited)","Delete","Edit","My sports plan","Time","Visible time range","Which part of the day should the calendar show?","{start} - {end}","Week calendar view","List view","Add sport time","Delete sport time?","Really delete {sport} on {day}, {time}?","No sport time on this day yet.\nTap below to add one.","No fixed location","One-off, {date}  \xb7  {location}","Show matching people","Open chat","No sport times added yet.\nTap below to add one.","Go to this week","No sport times this week.","Suggestions","New sport time","Edit sport time","Will be published: Public","Will be published in: {circle}","Sport","Do you already have a venue?","Already have a venue","Still looking for a venue","Bike type","Level","When?","Every week","One-off on...","Pick a date","Weekdays","Weekend","Every day","Today","Tomorrow","You already have this sport time - here are your people.","How many people are you still missing?","Already have someone? Only count who's still missing - e.g. 2 for doubles if you're already two.","You're looking for {count} people. Once you've high-fived each other, start a group chat with everyone in the Buddys tab.","1 person","{count} people","looking for {count}","+ Add another date","You can pick several days - e.g. your days off this week.","Where?","Pick a location on the map","How far would you travel?","From the meeting point. You match when both of your circles touch.","Distance (km)","Save","Publish","Publish ({count} days)","{count} sport times added.","Pick a location","Name this meeting point (e.g. Hohe Wand car park)","Pin on the map","Search for a place, e.g. Central Park","Use this location","Save as favorite","Saved as favorite.","Failed: {error}","Contact failed: {error}","{sport} with {name}","Couldn't join: {error}","Filters","Show events nearby","Time: {start} - {end}{any}"," (any)","Reset filters","Within range only","Set location","Remove range filter","{km} km","Host event","Try again","No one has added a sport time on this day yet.","Nothing matches your filters.","Adjust filters","Events nearby","Open events","Community events","All events","Day view","Events","No events found in the next few months.","Matching people","More info","{count} joined","{count}/{max} joined","Open chat","Full","Join","Contact","Edit event","Sport, date/time and location can't be changed after publishing.","Edit failed: {error}","Delete event?","The event will be removed from Discover. The group chat stays intact in case you've already been in touch.","Delete","Delete failed: {error}","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Host event","Couldn't be created: {error}","Title","e.g. Sunday morning run by the river","Until (optional)","Description (optional)","Who's this for, what to bring...","Max. participants (optional)","Publish event","Buddies","Pick who to invite to the group chat.","Pick who to invite to the existing chat.","Create group chat","Chat couldn't be created: {error}","Invite sent - you'll be chatting together once it's accepted.","Already in","Invite pending","Buddy: {name}","No matching people for your sport times yet. Add more times or check back later.","Add sport time","Start chat","1 buddy","{count} buddies","Group chat","Message","Group chat with everyone","{count} more suggestions","1 more suggestion","View","Couldn't load buddies.","Something went wrong: {error}","Matching people","Flexible location","No matching people found yet.","Swipe through who matches you.","Saved! {count} people already fit your sport time \ud83c\udf89","Saved! 1 person already fits your sport time \ud83c\udf89","Saved! Your sport time is in.","Everyone who still matches you.","That was everyone for today.","Nobody at the same time yet","As soon as someone who fits joins, you'll get a push notification.","Turn on push and we'll let you know as soon as someone fits.","New people join all the time - check back soon.","Turn on push","Almost: on other days","{day}: {count} people","{day}: {count} near you","{day}: 1 person","{day}: 1 person near you","+ {day}","{day} added - here are your people.","Almost: {day} at another time","Events & meetups in your city","All in Discover","Know someone who'd join?","The more people join, the faster you find buddies.","Signal & more","Invite copied - paste it into Signal or any other app.","Hey! I'm looking for people for {sport} on {day} on SAMEPACE. Want to join? {url}","As soon as someone adds a similar sport time, they'll show up here.","No more suggestions - check back later.","Same time","Same pace","No one matches these filters.","No one matches these filters right now. Try fewer filters.","Clear filters","Undo last swipe","HIGH FIVE","SKIP","High five","Show as list","Switch to swiping","Open chat","Go to your buddies","Keep swiping","Done","Context: Public (tap to switch)","Context: {circle} (tap to switch)","Couldn't leave: {error}","Circle couldn't be created: {error}",'Joined circle "{circle}".',"Switch context","Your plan, Discover and Buddies will then only show this space.","Public","Visible to everyone, as before","Leave circle","Code: {code}","Create circle","Join","e.g. Vienna Run Club","Create","Join circle","Invite code",'"{circle}" created',"Are you a coach? Tap + below to add training times your people can book here.","Share this code so others can join:","Couldn't load members: {error}","{count} members","Details & management","Description (optional)","Message everyone","A push notification to every other member of this circle, even while SAMEPACE is closed.","e.g. Training is cancelled today","Send","Message sent.","Didn't work: {error}","No description yet.","Training archive","Training archive","No past training times yet.","By person","Last on {date}","{count}x","with {name}","Update failed: {error}","Invite","Tap to copy","Code copied.","WhatsApp","SMS","Show QR code","Scan to join right away - no code to type.","Couldn't open invite.",'Join my SAMEPACE circle "{circle}"! Open the app, tap the context button and enter this code under "Join": {code}',"{name} (You)","Admin","Make admin","Revoke admin","Remove from circle","Remove member","Really remove {name} from the circle?",'You\'re leaving the circle "{circle}". You can rejoin later with the invite code.',"Delete circle","Delete circle?",'The circle "{circle}" will be permanently deleted for everyone. Activities scoped only to it will be deleted too. This can\'t be undone.',"Delete failed: {error}","Leave chat?",'You\'re leaving the chat "{name}".',"Leave","Delete chat?",'The chat "{name}" will be permanently deleted for all members.',"The chat with {name} will be deleted for both of you, including all messages.","Archived chats","Chats","Private chat","Private chats","Groups & events","Show active chats","Show archived chats","No archived chats.","No chats yet. Message someone from Discover or your buddies.","{count} members","Archive","Unarchive","Thanks for letting us know.","Check-in failed: {error}","Meeting point","Open in OpenStreetMap","Report user","Set a meeting point on the map","Add member","Invite a buddy","Send invite","Invite sent.","You've already invited all your buddies, or they're already in.","Remove","Remove member?","{name} will be removed from the group and won't be able to read it anymore.","{name}: invite pending - tap to withdraw","Withdraw","Withdraw invite?","The invite to {name} will be withdrawn.","New group","Pick who to invite.","Group name (optional)","Create group","Pick at least 2 buddies - one person already has a direct chat.","Group invites",'{name} invited you to the group "{group}"',"Chat requests","Add to calendar","Google Calendar","Other calendar app (.ics)","Did the meetup happen?","Quickly rate the others - anonymous, it only counts toward the reliability score.","Didn't meet","Yes, rate","How was the meetup?","Anonymous - nobody sees how you rated. It only counts toward the reliability score.","Showed up?","Did their details match?","What didn't match?","Yes","No","Submit","Thanks! Your rating is anonymous.","Pace","Level","Distance","Punctuality","Meeting point","Other","No messages yet. Say hi!","Search GIFs","No GIFs found.","Couldn't load GIFs right now.","Couldn't send GIF: {error}","Send GIF","Previous shared sport time","Next shared sport time","Another sport time you both have","Make this our meetup","you","Confirmed by both of you","Confirmed by everyone","Confirmed by {names}","Withdraw confirmation","You confirmed the meetup.","{name} confirmed the meetup.","You withdrew your confirmation.","{name} withdrew their confirmation.","Couldn't set the meetup: {error}","This chat no longer exists.","Couldn't send your message. Please try again.","Write a message...","Today","Yesterday","Harassment","Inappropriate behavior","No-show","Fake profile","Other","Report failed: {error}","Thanks, your report has been submitted. We'll take a look.","No other members in this group.","Who do you want to report?","Reason","Details (optional)","Also block this person","No more contact/matching. They won't be notified.","Report","German","English","Other","Travel","Music","Cooking & Baking","Reading","Photography","Movies & TV","Art & Culture","Gaming","Nature & Outdoors","Yoga & Meditation","Nutrition","Animals","Caf\xe9 & Brunch","Festivals & Concerts","Sustainability","Photo couldn't be uploaded: {error}","My Profile","Sign out","{age} years","Edit profile","Verify profile","Verification is coming soon. It lets you show others your profile is genuine.","Okay","Verify profile","My sports & level","Add","No sport added yet.","Interests & languages","My prompts","Reliability","No reviews after meetups yet.","Shows up to meetups","Details match","{count} of {total}","What didn't match","Only visible to you - anonymous, from all reviews.","Sport in the last 7 days","A check for every day with a meetup you confirmed in the chat.","Chat with {name}","Profile","Sports & level","Send message","Block","Block this user?","{name} won't be able to contact you and won't show up as a match/suggestion anymore. {name} won't be notified.","Block","User blocked.","Blocking failed: {error}","Blocked users","You haven't blocked anyone yet.","Unblock","Unblocking failed: {error}","My favorite place to train is...","You'll definitely find me...","After sport I absolutely need...","My craziest sport experience...","What I care about most while training...","Something I'd love to try...","My trick for when I don't feel like it...","A perfect sport date for me...","About me","Tell us briefly who you are and what you're up for...","Set your gender above to restrict this.","Languages","Interests (max. {max})","Prompts (max. {max})","Pick a few questions and answer them briefly - shows more of you than just numbers.","Sport & level","Has venue","Needs venue","Verified profile","{m} min","{s} sec","Run type","Normal Run","Long Run","Speed Run","Which workout?","Strength training","Yoga","Pilates","HIIT","Functional training","Outdoor bootcamp","Stretching & mobility","Bringing a dog?","Have a dog","No dog","Your child","Age","{age} years old","Safety note: Only meet at public, busy places like playgrounds or parks - never in private or secluded ones.","Legal & support","FAQ","Answers to the most common questions","Privacy policy","How we handle your data","Imprint","Legal notice","Send feedback","What do you like, what's missing, what's broken? Every message gets read.","Idea","Bug","Praise","Other","Test protocol","Your message \u2026","Send","Thanks for your feedback! \ud83d\udc9a","Couldn't send feedback: {error}","Admins","Admins see this view with all reports and feedback. Only appoint people you trust.","Add admin","Add admin","{name} will then see all reports, feedback and account reasons and can appoint admins too. Continue?","Appoint","Remove admin?","{name} will no longer be an admin.","Remove","There always has to be at least one admin.","Couldn't change: {error}","Search by name \u2026","{name} (you)","Reports & feedback","Only visible to you \xb7 exportable to Excel","Admin console","Users, chats, events, settings - best on a laptop: samepace.github.io/#/admin","Refresh","Download as Excel (CSV)","Downloading only works in the web app.","Reports","Feedback","Paused/deleted","Couldn't load: {error}","{reporter} reports {reported}","reported {count}\xd7 in total","automatically suspended","chat kept","Deleted account","Account deleted","Account paused","No reason given","Nothing here yet.","Done","New","Send feedback","Tell us what we could do better","Contact","Question or issue? Get in touch","Could not open your email app.","Account","Pause account","Make yourself invisible for a while","Delete account","Permanent and irreversible","Pause your account?","Your profile becomes invisible to others and stops showing up in matches or Discover. Just log back in any time to reactivate it.","Pause","Account paused","Your account is now paused. Log back in any time to reactivate it.","Delete your account for good?","Your profile, activities, matches and chats will be permanently deleted. This cannot be undone.","Delete","Account deleted","Your account and all its data have been deleted. Sorry to see you go!","Reason (optional)","Mind telling us why?","That didn't work: {error}","I'm taking a break from sports right now","I already found a regular training group","I'd rather not be found for a while","I didn't find what I was looking for","Privacy or safety concerns","I'm using a different app","Other","Mind telling us why?","FAQ","Is SAMEPACE a dating app?","No. SAMEPACE only matches you with others by training time, pace and sport - it's about training partners, not dating.","How does matching work?","You enter your planned training times. SAMEPACE shows you people with an overlapping time window and similar pace for the same sport. If you give each other a high five, you're buddies and can chat.","How safe is meeting up with a stranger?","You can block or report any profile at any time. After several reports, an account is automatically suspended. Still: meet in a public place the first time and don't share sensitive personal details.","What is the reliability score?","After a meetup, participants rate each other anonymously: did the person show up, and did their details (pace, level, ...) match? This gives two scores everyone can see: how often someone shows up and how often their details match. What exactly didn't match is only visible to you, on your own profile.","What are Circles?","Circles are private training groups, e.g. for friends or a fixed running group - separate from open matching.","Why do I only see other people's first name?","For privacy and safety, other users only ever see your first name. Your full name is only visible to you, in your own profile.","How do I delete my account?","Email us via the Contact button in Settings - we'll delete your account and all associated data.","Is SAMEPACE free?","Yes, the app is currently completely free to use.","Privacy policy","Imprint","Visibility in Discover","More details (optional)","Now your first sport time \ud83d\ude4c","When would you have time? We'll show you right away who can make it too - and tell you when someone new joins.","Pace, level, radius, visibility - already prefilled from your profile","Visible in Discover","Visible, chat only after request","Only people who match (not in Discover)","Change","New in SAMEPACE","Got it","First sport time is now skippable",'You no longer have to set up a sport time right after registering - "Later" at the top right skips it.',"Chat requests send a real message","A chat request now writes an actual first message instead of just pinging.","Training archive","Past training sessions with a per-person, per-month report - on the Plan screen and in the Kreis.","QR code for your Kreis","Coaches can now show a QR code that takes someone straight into their Kreis - no invite code to type.","Decline a High Five","You no longer have to just ignore a High Five - one tap declines it visibly.","Chat requests, front and centre","New requests now show a banner and a badge in the nav bar, and you can withdraw a request you sent.","Group chats with several people","Invite several buddies into one chat at once, start an open group, and remove a member again if you created the chat.","A checkmark for confirmed meetups","Your week now shows a checkmark on meetups that were actually confirmed - not just suggested.","A reminder to leave a review","About an hour after a confirmed meetup, a pop-up asks how it went - instead of you having to find it in the chat.","Who confirmed the meetup?","The chat now shows who has already confirmed - by you, by both of you, or by everyone in the group.","Send request","Request sent","Request failed: {error}","Message to {name}","Sent as a request - your chat starts once they accept it.","Your message...","Requests","No open requests.","\ud83d\udce9 1 new request","\ud83d\udce9 {count} new requests","Accept","Decline","That didn't work: {error}","Requests"],t.w)
 B.alP={alias:0,allScroll:1,basic:2,cell:3,click:4,contextMenu:5,copy:6,forbidden:7,grab:8,grabbing:9,help:10,move:11,none:12,noDrop:13,precise:14,progress:15,text:16,resizeColumn:17,resizeDown:18,resizeDownLeft:19,resizeDownRight:20,resizeLeft:21,resizeLeftRight:22,resizeRight:23,resizeRow:24,resizeUp:25,resizeUpDown:26,resizeUpLeft:27,resizeUpRight:28,resizeUpLeftDownRight:29,resizeUpRightDownLeft:30,verticalText:31,wait:32,zoomIn:33,zoomOut:34}
 B.aju=new A.az(B.alP,["alias","all-scroll","default","cell","pointer","context-menu","copy","not-allowed","grab","grabbing","help","move","none","no-drop","crosshair","progress","text","col-resize","s-resize","sw-resize","se-resize","w-resize","ew-resize","e-resize","row-resize","n-resize","ns-resize","nw-resize","ne-resize","nwse-resize","nesw-resize","vertical-text","wait","zoom-in","zoom-out"],t.w)
 B.hI=new A.rJ(3,"left")
