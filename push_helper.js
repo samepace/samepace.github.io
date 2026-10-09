@@ -116,7 +116,40 @@ window.samepacePush = (function () {
     return endpoint;
   }
 
+  // Android/desktop Chrome offer a real "install" prompt - keep it for the
+  // app's own install button instead of Chrome's small default bar.
+  var deferredInstall = null;
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault();
+    deferredInstall = e;
+  });
+  window.addEventListener('appinstalled', function () {
+    deferredInstall = null;
+  });
+
+  function canInstall() {
+    return deferredInstall !== null && !standalone();
+  }
+
+  // 'accepted', 'dismissed' or 'unavailable'.
+  async function install() {
+    if (!deferredInstall) return 'unavailable';
+    var prompt = deferredInstall;
+    deferredInstall = null;
+    prompt.prompt();
+    var choice = await prompt.userChoice;
+    return choice.outcome;
+  }
+
+  // iPhone/iPad in the browser, not opened from the home screen.
+  function iosNotInstalled() {
+    return isIos() && !standalone();
+  }
+
   return {
+    canInstall: canInstall,
+    install: install,
+    iosNotInstalled: iosNotInstalled,
     supported: supported,
     needsHomeScreen: needsHomeScreen,
     requestPermission: requestPermission,
